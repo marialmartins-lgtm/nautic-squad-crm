@@ -1,46 +1,75 @@
 <?php
 /**
- * Title: Como funciona (3 passos)
+ * Title: Como funciona (imagem fixa)
  * Slug: nautic-squad/como-funciona
  * Categories: nautic-squad
- * Description: Três cartões com os passos para ser sócio.
+ * Description: Imagem fixa que muda à medida que os passos passam.
  */
-$ns_steps = array(
-	array( 'boat', 'Escolhe o barco e o plano', 'Decide em que barco queres navegar e quantas saídas queres fazer por mês. O plano adapta-se a ti.' ),
-	array( 'calendar', 'Reserva na app', 'Marca as tuas datas na aplicação online, a qualquer hora e onde quer que estejas.' ),
-	array( 'compass', 'Larga amarras', 'Chegas à marina e o barco está pronto. Tu só tens de navegar — nós tratamos do resto.' ),
-);
 ?>
-<!-- wp:group {"tagName":"section","align":"full","anchor":"como-funciona","className":"ns-section","layout":{"type":"default"}} -->
-<section id="como-funciona" class="wp-block-group alignfull ns-section"><!-- wp:group {"className":"ns-wrap","layout":{"type":"default"}} -->
-<div class="wp-block-group ns-wrap"><!-- wp:group {"className":"ns-section__head is-center reveal","layout":{"type":"default"}} -->
-<div class="wp-block-group ns-section__head is-center reveal"><!-- wp:paragraph {"className":"ns-eyebrow"} -->
-<p class="ns-eyebrow">Como funciona</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:heading -->
-<h2 class="wp-block-heading">Três passos até ao mar.</h2>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph {"className":"ns-lead"} -->
-<p class="ns-lead">Ser sócio da Nautic Squad é ter um barco à tua espera, sem o comprar e sem te preocupares com a manutenção.</p>
-<!-- /wp:paragraph --></div>
+<!-- wp:group {"tagName":"section","align":"full","anchor":"como-funciona","className":"ns-section is-ink","layout":{"type":"default"}} -->
+<section id="como-funciona" class="wp-block-group alignfull ns-section is-ink"><!-- wp:group {"className":"ns-wrap ns-steps","layout":{"type":"default"}} -->
+<div class="wp-block-group ns-wrap ns-steps"><!-- wp:group {"className":"ns-steps__media","layout":{"type":"default"}} -->
+<div class="wp-block-group ns-steps__media"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full"><img src="<?php echo esc_url( nautic_squad_img( 'passo-1' ) ); ?>" alt=""/></figure>
+<!-- /wp:image --><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full"><img src="<?php echo esc_url( nautic_squad_img( 'passo-2' ) ); ?>" alt=""/></figure>
+<!-- /wp:image --><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full"><img src="<?php echo esc_url( nautic_squad_img( 'passo-3' ) ); ?>" alt=""/></figure>
+<!-- /wp:image --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"className":"ns-steps reveal-stagger","layout":{"type":"default"}} -->
-<div class="wp-block-group ns-steps reveal-stagger"><?php foreach ( $ns_steps as $ns_step ) : ?><!-- wp:group {"className":"ns-step","layout":{"type":"default"}} -->
-<div class="wp-block-group ns-step"><!-- wp:html -->
-<div class="ns-step__icon"><?php echo nautic_squad_svg( $ns_step[0] ); ?></div>
-<!-- /wp:html -->
+<!-- wp:group {"className":"ns-steps__list","layout":{"type":"default"}} -->
+<div class="wp-block-group ns-steps__list"><!-- wp:group {"className":"ns-steps__head","layout":{"type":"default"}} -->
+<div class="wp-block-group ns-steps__head"><!-- wp:paragraph {"className":"ns-label"} -->
+<p class="ns-label">Como funciona</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"className":"ns-split"} -->
+<h2 class="wp-block-heading ns-split">Três passos <em>até ao mar.</em></h2>
+<!-- /wp:heading --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"ns-step","layout":{"type":"default"}} -->
+<div class="wp-block-group ns-step"><!-- wp:paragraph {"className":"ns-num"} -->
+<p class="ns-num">01</p>
+<!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading"><?php echo esc_html( $ns_step[1] ); ?></h3>
+<h3 class="wp-block-heading">Escolhe <em>o teu barco.</em></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p><?php echo esc_html( $ns_step[2] ); ?></p>
+<p>Veleiro ou lancha, decides em que barco queres navegar e quantas saídas queres fazer por mês. O plano adapta-se a ti.</p>
 <!-- /wp:paragraph --></div>
-<!-- /wp:group --><?php endforeach; ?></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"ns-step","layout":{"type":"default"}} -->
+<div class="wp-block-group ns-step"><!-- wp:paragraph {"className":"ns-num"} -->
+<p class="ns-num">02</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Reserva <em>em segundos.</em></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Marca as tuas datas na aplicação online, a qualquer hora e onde quer que estejas. Sem telefonemas, sem esperas.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"ns-step","layout":{"type":"default"}} -->
+<div class="wp-block-group ns-step"><!-- wp:paragraph {"className":"ns-num"} -->
+<p class="ns-num">03</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Larga <em>amarras.</em></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Chegas à marina e o barco está pronto. Tu só tens de navegar — taxas, seguro, manutenção e limpeza estão incluídos.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></section>
 <!-- /wp:group -->

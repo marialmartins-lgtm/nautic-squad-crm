@@ -9,8 +9,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'NAUTIC_SQUAD_VERSION', '1.0.0' );
+define( 'NAUTIC_SQUAD_VERSION', '2.0.0' );
 
+require_once get_template_directory() . '/inc/media.php';
 require_once get_template_directory() . '/inc/svg.php';
 require_once get_template_directory() . '/inc/barcos.php';
 require_once get_template_directory() . '/inc/contacto.php';
@@ -39,7 +40,7 @@ add_action( 'after_setup_theme', 'nautic_squad_setup' );
  * e remover esta função.
  */
 function nautic_squad_fonts_url() {
-	return 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@500;600;700;800&display=swap';
+	return 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap';
 }
 
 /**
@@ -50,7 +51,8 @@ function nautic_squad_assets() {
 
 	wp_enqueue_style( 'nautic-squad-fonts', nautic_squad_fonts_url(), array(), null );
 	wp_enqueue_style( 'nautic-squad-main', $uri . '/assets/css/main.css', array(), NAUTIC_SQUAD_VERSION );
-	wp_enqueue_script( 'nautic-squad-main', $uri . '/assets/js/main.js', array(), NAUTIC_SQUAD_VERSION, array( 'strategy' => 'defer', 'in_footer' => true ) );
+	wp_enqueue_script( 'lenis', $uri . '/assets/vendor/lenis.min.js', array(), '1.1.20', array( 'strategy' => 'defer', 'in_footer' => true ) );
+	wp_enqueue_script( 'nautic-squad-main', $uri . '/assets/js/main.js', array( 'lenis' ), NAUTIC_SQUAD_VERSION, array( 'strategy' => 'defer', 'in_footer' => true ) );
 }
 add_action( 'wp_enqueue_scripts', 'nautic_squad_assets' );
 

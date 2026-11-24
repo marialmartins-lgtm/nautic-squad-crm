@@ -1,27 +1,33 @@
 <?php
 /**
- * Title: Sailing Academy (faixa)
+ * Title: Sailing Academy (CTA em imagem)
  * Slug: nautic-squad/academia
  * Categories: nautic-squad, call-to-action
- * Description: Faixa em gradiente com chamada para a Sailing Academy.
+ * Description: Imagem em ecrã inteiro com chamada para a Sailing Academy.
  */
 ?>
-<!-- wp:group {"tagName":"section","align":"full","className":"ns-section is-foam","style":{"spacing":{"padding":{"top":"0","bottom":"clamp(4.5rem, 10vw, 8.5rem)"}}},"layout":{"type":"default"}} -->
-<section class="wp-block-group alignfull ns-section is-foam" style="padding-top:0;padding-bottom:clamp(4.5rem, 10vw, 8.5rem)"><!-- wp:group {"className":"ns-banner reveal reveal-zoom","layout":{"type":"default"}} -->
-<div class="wp-block-group ns-banner reveal reveal-zoom"><!-- wp:group {"layout":{"type":"default"}} -->
-<div class="wp-block-group"><!-- wp:heading -->
-<h2 class="wp-block-heading">Sailing Academy</h2>
-<!-- /wp:heading -->
+<!-- wp:group {"tagName":"section","align":"full","className":"ns-cta ns-media","style":{"background":{"backgroundImage":{"url":"<?php echo esc_url( nautic_squad_img( 'academia' ) ); ?>","source":"file","title":"academia"},"backgroundSize":"cover","backgroundPosition":"50% 50%"}},"layout":{"type":"default"}} -->
+<section class="wp-block-group alignfull ns-cta ns-media"><!-- wp:group {"className":"ns-cta__inner","layout":{"type":"default"}} -->
+<div class="wp-block-group ns-cta__inner"><!-- wp:group {"layout":{"type":"default"}} -->
+<div class="wp-block-group"><!-- wp:paragraph {"className":"ns-label reveal"} -->
+<p class="ns-label reveal">Sailing Academy</p>
+<!-- /wp:paragraph -->
 
-<!-- wp:paragraph -->
-<p>Ainda a dar os primeiros bordos? Aprende a velejar connosco e ganha a experiência de que precisas para te tornares sócio.</p>
-<!-- /wp:paragraph --></div>
+<!-- wp:heading {"className":"ns-split"} -->
+<h2 class="wp-block-heading ns-split">Aprende <em>a velejar.</em></h2>
+<!-- /wp:heading --></div>
 <!-- /wp:group -->
+
+<!-- wp:group {"className":"reveal","layout":{"type":"default"}} -->
+<div class="wp-block-group reveal"><!-- wp:paragraph -->
+<p>Ainda a dar os primeiros bordos? Ganha a experiência de que precisas para te tornares sócio, com quem conhece o mar.</p>
+<!-- /wp:paragraph -->
 
 <!-- wp:buttons -->
 <div class="wp-block-buttons"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/' ) ); ?>sailing-academy/">Conhecer a academia</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/sailing-academy/' ) ); ?>">Conhecer a academia</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
+<!-- /wp:group --></div>
 <!-- /wp:group --></section>
 <!-- /wp:group -->

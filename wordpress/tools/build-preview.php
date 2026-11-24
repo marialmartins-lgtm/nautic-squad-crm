@@ -1,15 +1,11 @@
 <?php
 /**
- * Gera wordpress/preview/index.html — uma pré-visualização estática da página
+ * Gera wordpress/preview/index.html — pré-visualização estática da página
  * inicial, montada a partir dos MESMOS padrões, CSS e JS do tema.
  *
  * Uso:  php wordpress/tools/build-preview.php
- *
- * Só para pré-visualização: no WordPress, a frota vem do tipo de conteúdo
- * "Barcos" e o menu do bloco Navegação.
  */
 
-// Stubs mínimos das funções do WordPress usadas pelos padrões.
 function esc_html( $s ) { return htmlspecialchars( $s, ENT_QUOTES ); }
 function esc_attr( $s ) { return htmlspecialchars( $s, ENT_QUOTES ); }
 function esc_url( $s ) { return $s; }
@@ -17,6 +13,7 @@ function home_url( $p = '' ) { return '#'; }
 function admin_url( $p = '' ) { return '#'; }
 
 $theme = dirname( __DIR__ ) . '/nautic-squad';
+require $theme . '/inc/media.php';
 require $theme . '/inc/svg.php';
 
 function ns_render( $file ) {
@@ -25,72 +22,96 @@ function ns_render( $file ) {
 	return ob_get_clean();
 }
 
-$sections = array( 'hero', 'marquee', 'como-funciona', 'numeros', 'incluido', 'frota', 'power-club', 'planos', 'academia', 'faq', 'contacto' );
-
-// Cartões estáticos da frota (no WordPress vêm de Frota → Barcos).
-$boats = array(
-	array( 'Vela', 'sailboat-card', 'Jeanneau Sun Odyssey 349', 'Veleiro de cruzeiro · 2020', array( '10,3 m', 'Vela', '2020' ), false ),
-	array( 'Vela', 'sailboat-card', 'Beneteau Oceanis 37', 'Limited Edition · 2013', array( '11,5 m', 'Vela', '2013' ), false ),
-	array( 'Motor · Power Club', 'motorboat-card', 'FIFTY FIFTY', 'Quicksilver Activ 875', array( '8,7 m', '12 pessoas', 'Oeiras' ), true ),
-);
-$fleet = '<div class="ns-fleet reveal-stagger">';
-foreach ( $boats as $b ) {
-	$fleet .= '<article class="ns-boat' . ( $b[5] ? ' is-featured' : '' ) . '"><div class="ns-boat__media">' . nautic_squad_svg( $b[1] ) . '<span class="ns-boat__tag">' . $b[0] . '</span></div>'
-		. '<div class="ns-boat__body"><h3>' . $b[2] . '</h3><p class="ns-boat__model">' . $b[3] . '</p><div class="ns-specs">';
-	foreach ( $b[4] as $s ) {
-		$fleet .= '<span class="ns-spec">' . $s . '</span>';
-	}
-	$fleet .= '</div></div><a class="ns-boat__link" href="#" aria-label="' . $b[2] . '"></a></article>';
+/**
+ * Faz o que o WordPress faz no servidor: aplica a imagem de fundo do bloco
+ * Grupo (atributo style.background) como style inline.
+ */
+function ns_apply_backgrounds( $html ) {
+	return preg_replace_callback(
+		'/<!-- wp:group (\{.*?\}) -->\s*<(section|div|header|main)([^>]*)>/s',
+		function ( $m ) {
+			$a = json_decode( $m[1], true );
+			$url = $a['style']['background']['backgroundImage']['url'] ?? '';
+			if ( ! $url ) {
+				return $m[0];
+			}
+			$style = 'background-image:url(\'' . $url . '\');background-size:cover;background-position:50% 50%';
+			return '<' . $m[2] . $m[3] . ' style="' . $style . '">';
+		},
+		$html
+	);
 }
-$fleet .= '</div>';
+
+$sections = array( 'hero', 'manifesto', 'como-funciona', 'frota', 'incluido', 'power-club', 'momentos', 'planos', 'academia', 'faq', 'contacto' );
+
+// Frota estática (no WordPress vem de Frota → Barcos).
+$boats = array(
+	array( 'vela-1', 'Vela', 'Sun Odyssey 349', 'Jeanneau · Veleiro de cruzeiro', array( '10,3 m', 'Vela', '2020' ) ),
+	array( 'vela-2', 'Vela', 'Oceanis 37', 'Beneteau · Limited Edition', array( '11,5 m', 'Vela', '2013' ) ),
+	array( 'motor-1', 'Motor · Power Club', 'Fifty Fifty', 'Quicksilver Activ 875', array( '8,7 m', '12 pessoas', 'Oeiras' ) ),
+);
+$fleet = '<div class="ns-track">';
+foreach ( $boats as $i => $b ) {
+	$fleet .= '<article class="ns-boat"><figure class="ns-boat__img"><img src="' . nautic_squad_img( $b[0] ) . '" alt="" loading="lazy"></figure>'
+		. '<span class="ns-boat__tag">' . $b[1] . '</span><span class="ns-boat__idx">0' . ( $i + 1 ) . '</span>'
+		. '<h3>' . $b[2] . '</h3><p class="ns-boat__model">' . $b[3] . '</p><div class="ns-specs">';
+	foreach ( $b[4] as $s ) {
+		$fleet .= '<span>' . $s . '</span>';
+	}
+	$fleet .= '</div><a class="ns-boat__link" href="#contacto" aria-label="' . $b[2] . '"></a></article>';
+}
+$fleet .= '<article class="ns-boat ns-boat--end"><p class="ns-label">Próxima saída</p><h3>O teu lugar <em>a bordo.</em></h3><a class="ns-btn" href="#contacto">Falar connosco</a></article></div>';
 
 $body = '';
 foreach ( $sections as $s ) {
-	$html = ns_render( $theme . '/patterns/' . $s . '.php' );
-	$html = preg_replace( '/<!-- wp:query .*?<!-- \/wp:query -->/s', $fleet, $html );
-	$body .= $html;
+	$html  = ns_render( $theme . '/patterns/' . $s . '.php' );
+	$html  = preg_replace( '/<!-- wp:query .*?<!-- \/wp:query -->/s', $fleet, $html );
+	$body .= ns_apply_backgrounds( $html );
 }
-$body .= ns_render( $theme . '/patterns/footer.php' );
+$footer = ns_render( $theme . '/patterns/footer.php' );
 
-$header = '<div class="ns-progress" aria-hidden="true"></div>
+$logo   = nautic_squad_svg( 'logo' );
+$menu   = array( 'como-funciona' => 'Como funciona', 'frota' => 'Frota', 'power-club' => 'Power Club', 'momentos' => 'Momentos', 'planos' => 'Planos', 'contacto' => 'Contacto' );
+$links  = '';
+foreach ( $menu as $id => $label ) {
+	$links .= '<a href="#' . $id . '"><span>' . $label . '</span></a>';
+}
+$header = '<div class="ns-loader" aria-hidden="true"><div class="ns-loader__inner"><div class="ns-loader__word"><span>Nautic Squad</span></div><div class="ns-loader__bar"></div></div></div><div class="ns-grain" aria-hidden="true"></div>
 <header class="ns-header"><div class="ns-header__inner">
-<a class="ns-logo" href="#">' . nautic_squad_svg( 'logo' ) . 'Nautic Squad</a>
-<button class="ns-burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
-<nav class="ns-nav"><a href="#como-funciona">Como funciona</a><a href="#frota">Frota</a><a href="#power-club">Power Club</a><a href="#planos">Planos</a><a href="#faq">FAQ</a><a class="ns-btn" href="#contacto">Ser sócio</a></nav>
-</div></header>';
+<a class="ns-logo" href="#">' . $logo . 'Nautic Squad</a>
+<div class="ns-header__right"><span class="ns-header__meta">Marina de Oeiras</span><div class="wp-block-buttons"><div class="wp-block-button is-style-ghost"><a class="wp-block-button__link" href="#contacto">Ser sócio</a></div></div>
+<button class="ns-menu-btn" data-menu-toggle aria-label="Abrir menu">Menu <i></i></button></div>
+</div></header>
+<div class="ns-overlay" style="--ns-overlay-img:url(\'' . nautic_squad_img( 'passo-3' ) . '\')"><nav class="ns-overlay__nav">' . $links . '</nav>
+<div class="ns-overlay__aside"><p class="ns-label">Marina de Oeiras</p><p>Avenida Marginal, 2780-267 Oeiras<br><a href="tel:+351911924555">+351 911 924 555</a><br><a href="https://www.instagram.com/nautic.squad/">@nautic.squad</a></p></div>
+<button class="ns-menu-btn ns-overlay__close" data-menu-toggle aria-label="Fechar menu">Fechar <i></i></button></div>';
 
-$html = $header . '<main class="ns-home">' . $body;
-// Fecha o <main> antes do rodapé.
-$html = str_replace( '<footer class="ns-footer">', '</main><footer class="ns-footer">', $html );
-// Remove os comentários de bloco.
+$html = $header . '<main class="ns-home">' . $body . '</main>' . $footer;
 $html = preg_replace( '/<!-- \/?wp:[^>]*-->\s*/', '', $html );
 $html = preg_replace( '/\n{2,}/', "\n", $html );
 
-$css = file_get_contents( $theme . '/assets/css/main.css' );
-$js  = file_get_contents( $theme . '/assets/js/main.js' );
+$css   = file_get_contents( $theme . '/assets/css/main.css' );
+$lenis = file_get_contents( $theme . '/assets/vendor/lenis.min.js' );
+$js    = file_get_contents( $theme . '/assets/js/main.js' );
 
 $page = '<!doctype html>
 <html lang="pt-PT">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nautic Squad — Proposta de redesign</title>
+<title>Nautic Squad — Proposta cinematográfica</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-body{margin:0;font-family:var(--ns-font-text);font-size:1.0625rem;line-height:1.65;color:#071A2C;background:#fff}
-h1,h2,h3,h4{font-family:var(--ns-font-title);font-weight:700;line-height:1.1;letter-spacing:-.02em}
-h2{font-size:clamp(1.9rem,3.6vw,3rem)}h3{font-size:clamp(1.2rem,1.6vw,1.5rem)}
-.wp-block-buttons{display:flex;flex-wrap:wrap;gap:.8rem}
-.wp-block-button__link{background:var(--ns-sol);color:var(--ns-abismo);padding:.95rem 1.7rem;font-size:1rem}
-.ns-hero .wp-block-button__link{}
-.wp-block-buttons[style*="margin-top"]{justify-content:center}
-.wp-block-list{padding-left:0}
+/* Equivalentes mínimos dos estilos base do WordPress */
+.wp-block-image{margin:0}.wp-block-image img{height:auto}
+.wp-block-list{margin:0}
 ' . $css . '
 </style>
 </head>
 <body class="ns-site">
 ' . $html . '
+<script>' . $lenis . '</script>
 <script>' . $js . '</script>
 </body>
 </html>

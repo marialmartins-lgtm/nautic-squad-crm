@@ -1,53 +1,60 @@
-# Nautic Squad — novo site em WordPress
+# Nautic Squad — novo site WordPress (versão cinematográfica)
 
-Proposta de redesign do site da Nautic Squad (atualmente em Wix) como **tema WordPress em blocos**
-(Full Site Editing): moderno, animado e totalmente editável no editor do WordPress, sem page builders.
+Tema em blocos (Full Site Editing), premium e cinematográfico: fotografia em ecrã inteiro, scroll suave,
+títulos que se revelam palavra a palavra, frota em scroll horizontal, galeria com revelação de imagens.
+Tudo editável no editor do WordPress, sem page builders.
 
-- `nautic-squad/` — o tema
-- `preview/index.html` — pré-visualização estática da página inicial (abrir no browser)
-- `tools/build-preview.php` — regenera a pré-visualização a partir dos padrões do tema (`php tools/build-preview.php`)
+- `nautic-squad/` — o tema (também em `nautic-squad.zip`, pronto a carregar)
+- `preview/index.html` — pré-visualização da página inicial (abrir no browser)
+- `tools/build-preview.php` — regenera a pré-visualização a partir do tema: `php wordpress/tools/build-preview.php`
 
 ## Instalar
 
-1. Comprimir a pasta `nautic-squad/` em `nautic-squad.zip` (ou usar o zip gerado).
-2. WordPress → **Aparência → Temas → Adicionar novo → Carregar tema** → ativar. (Requer WordPress 6.5+.)
-3. **Definições → Leitura** → "A página inicial mostra: uma página estática" (qualquer página) — o template `front-page` é usado automaticamente.
-4. **Aparência → Editor → Estilos** para afinar cores/tipos de letra; **Site → Logótipo** para carregar o logótipo oficial.
-5. **Frota → Adicionar barco**: título, imagem de destaque, tipo (Vela/Motor), "Ficha técnica" (modelo, comprimento, capacidade, ano, marina) e a descrição. Os barcos aparecem sozinhos na página inicial e em `/frota`. A ordem é o campo "Ordem".
-6. Criar as páginas `Sailing Academy` (slug `sailing-academy`) e `Política de privacidade` (slug `politica-de-privacidade`). Use o modelo "Página larga" e os padrões **Nautic Squad** no inseridor para montar páginas com o mesmo visual.
+1. WordPress 6.5+ → **Aparência → Temas → Adicionar novo → Carregar tema** → `nautic-squad.zip` → Ativar.
+2. **Definições → Leitura** → página inicial estática (o template "front-page" é usado automaticamente).
+3. **Aparência → Editor → Site → Logótipo**: carregar o logótipo oficial.
+4. **Frota → Adicionar barco**: título, imagem de destaque (vertical 4:5 fica melhor), tipo (Vela/Motor) e a caixa
+   "Ficha técnica". Os barcos aparecem sozinhos na faixa horizontal da página inicial e em `/frota`.
+5. Criar as páginas `sailing-academy` e `politica-de-privacidade`.
+6. Ver o formulário de contacto: os pedidos chegam ao email de **Definições → Geral**.
 
-## O que é dinâmico
+## Fotografias e vídeo
 
-| Elemento | Como funciona |
+| Onde | Como trocar |
 |---|---|
-| Cabeçalho | Transparente sobre o hero, fica em vidro fosco ao fazer scroll; barra de progresso de leitura |
-| Hero | Título que aparece palavra a palavra, ondas e bolhas animadas, cartão em vidro a flutuar, parallax (se colocar imagem/vídeo em `.ns-hero__media`) |
-| Secções | Entram com animação ao fazer scroll (classes `reveal`, `reveal-left`, `reveal-zoom`, `reveal-stagger` — podem ser aplicadas a qualquer bloco em *Avançado → Classes CSS*) |
-| Números | Contadores animados (`data-count`) |
-| Frota | Tipo de conteúdo "Barcos" com campos próprios (block bindings) — gerido no painel |
-| FAQ | Bloco "Detalhes" nativo, com animação |
-| Contacto | Formulário próprio, sem plugins: envia email para o endereço de *Definições → Geral*. Gancho `nautic_squad_contacto_enviado` pronto para ligar ao HubSpot/CRM |
-| Acessibilidade | Respeita "reduzir movimento" do sistema; no editor todo o conteúdo fica visível |
+| Qualquer secção com imagem de fundo (abertura, "Tu navegas", Academia, Contacto) | No editor, selecionar o Grupo → Estilos → **Imagem de fundo** |
+| Imagens normais (passos, Power Club, galeria) | Clicar na imagem → **Substituir** |
+| Sem editor | Colocar ficheiros em `nautic-squad/assets/img/` com o nome do slot: `hero.jpg`, `passo-1.jpg` … `passo-3.jpg`, `incluido.jpg`, `power.jpg`, `momento-1.jpg` … `momento-5.jpg`, `academia.jpg`, `contacto.jpg` |
+| **Vídeo na abertura** | Colocar `nautic-squad/assets/video/hero.mp4` (≈10–20 s, sem som, 1920×1080, < 8 MB). Passa a tocar em loop automaticamente |
+
+> As fotos atuais são **provisórias** (Unsplash, carregadas diretamente do site deles) — não foi possível
+> aceder a www.nauticsquad.com nem verificá-las a partir do ambiente de desenvolvimento. Se alguma não carregar,
+> aparece um fundo azul-escuro no lugar. Devem ser substituídas pelas fotografias da Nautic Squad.
+
+## Efeitos
+
+- Ecrã de entrada (preloader) e barras de cinema que se abrem sobre a imagem/vídeo de abertura
+- Scroll suave (Lenis, MIT), grão de filme, cursor personalizado no desktop
+- Menu em ecrã inteiro (bloco Navegação com sobreposição "Sempre")
+- Cabeçalho que se esconde ao descer e volta ao subir
+- Manifesto cujas palavras se acendem com o scroll
+- "Como funciona": imagem fixa que muda a cada passo
+- Frota em scroll horizontal (no telemóvel passa a deslizar com o dedo)
+- Imagens com parallax e revelação; galeria em mosaico
+- Respeita "reduzir movimento" do sistema; no editor tudo fica visível
+
+Classes reutilizáveis (Avançado → Classes CSS): `ns-split` (título palavra a palavra), `reveal`, `reveal-stagger`,
+`ns-reveal-img` (imagem), `ns-media` (grupo com imagem de fundo animada), `ns-label`, `is-sand`, `is-ink`.
 
 ## Cores (theme.json)
 
-| Nome | Hex | Uso |
-|---|---|---|
-| Abismo | `#071A2C` | fundos escuros, texto |
-| Oceano | `#0C3556` | gradientes, títulos |
-| Mar | `#1673B8` | links, ícones |
-| Turquesa | `#25C2CB` | destaques |
-| Sol | `#FFB547` | botões / chamadas à ação |
-| Espuma | `#F3F8FB` | fundos claros |
+Noite `#050E18` · Tinta `#0A1B2C` · Oceano `#0E3A5B` · Mar `#2A86C1` · Turquesa `#4FC3CF` · Dourado `#C8A36B` · Areia `#EDE4D3`
 
-> ⚠️ A paleta é uma proposta náutica: não foi possível aceder ao site atual para extrair as cores exatas.
-> Para usar as cores oficiais basta trocar os hex em `theme.json` (ou em Aparência → Editor → Estilos) — todo o tema se adapta.
+Tipos de letra: **Cormorant Garamond** (títulos) e **Manrope** (texto), via Google Fonts.
+Para trocar pelas cores oficiais da marca basta alterar os hex no `theme.json` (ou em Aparência → Editor → Estilos).
 
 ## A confirmar antes de publicar
 
-- Logótipo oficial e fotografias reais (barcos, saídas, marina) — o tema usa ilustrações SVG enquanto não houver fotos.
-- Frota atual (a pré-visualização mostra Jeanneau Sun Odyssey 349, Beneteau Oceanis 37 e FIFTY FIFTY / Quicksilver Activ 875, com base em informação pública).
-- Números da faixa de estatísticas (ex.: "2020").
-- Preços dos planos (estão como "À medida" / "Partilhado").
-- Textos da Sailing Academy e links das redes sociais.
-- Tipos de letra: carregados do Google Fonts; para RGPD podem ser instalados localmente na Biblioteca de tipos de letra do WordPress.
+- Fotografias, vídeo e logótipo oficiais
+- Frota atual (pré-visualização: Jeanneau Sun Odyssey 349, Beneteau Oceanis 37, FIFTY FIFTY / Quicksilver Activ 875)
+- Preços dos planos, textos da Sailing Academy, cores oficiais da marca
