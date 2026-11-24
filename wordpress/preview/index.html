@@ -1,0 +1,834 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nautic Squad — Proposta de redesign</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:var(--ns-font-text);font-size:1.0625rem;line-height:1.65;color:#071A2C;background:#fff}
+h1,h2,h3,h4{font-family:var(--ns-font-title);font-weight:700;line-height:1.1;letter-spacing:-.02em}
+h2{font-size:clamp(1.9rem,3.6vw,3rem)}h3{font-size:clamp(1.2rem,1.6vw,1.5rem)}
+.wp-block-buttons{display:flex;flex-wrap:wrap;gap:.8rem}
+.wp-block-button__link{background:var(--ns-sol);color:var(--ns-abismo);padding:.95rem 1.7rem;font-size:1rem}
+.ns-hero .wp-block-button__link{}
+.wp-block-buttons[style*="margin-top"]{justify-content:center}
+.wp-block-list{padding-left:0}
+/* ==========================================================================
+   Nautic Squad — estilos do tema
+   As cores vêm do theme.json (variáveis --wp--preset--color--*). Os valores
+   após a vírgula são apenas fallback para a pré-visualização fora do WordPress.
+   ========================================================================== */
+
+:root {
+	--ns-abismo: var(--wp--preset--color--abismo, #071A2C);
+	--ns-oceano: var(--wp--preset--color--oceano, #0C3556);
+	--ns-mar: var(--wp--preset--color--mar, #1673B8);
+	--ns-turquesa: var(--wp--preset--color--turquesa, #25C2CB);
+	--ns-sol: var(--wp--preset--color--sol, #FFB547);
+	--ns-espuma: var(--wp--preset--color--espuma, #F3F8FB);
+	--ns-branco: var(--wp--preset--color--branco, #FFFFFF);
+	--ns-nevoa: var(--wp--preset--color--nevoa, #5B6E80);
+
+	--ns-font-title: var(--wp--preset--font-family--titulos, "Sora", ui-sans-serif, system-ui, sans-serif);
+	--ns-font-text: var(--wp--preset--font-family--texto, "Inter", ui-sans-serif, system-ui, sans-serif);
+
+	--ns-r-s: 10px;
+	--ns-r-m: 18px;
+	--ns-r-l: 28px;
+	--ns-shadow: 0 24px 60px -28px rgba(7, 26, 44, .45);
+	--ns-ease: cubic-bezier(.22, 1, .36, 1);
+	--ns-wide: var(--wp--style--global--wide-size, 1240px);
+	--ns-gutter: clamp(1rem, 4vw, 2.5rem);
+	--ns-section: clamp(4.5rem, 10vw, 8.5rem);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body.ns-site { overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+::selection { background: var(--ns-turquesa); color: var(--ns-abismo); }
+
+/* Utilitários ------------------------------------------------------------- */
+.ns-wrap { width: min(100%, var(--ns-wide)); margin-inline: auto; }
+.ns-eyebrow {
+	display: inline-flex; align-items: center; gap: .6rem;
+	font-family: var(--ns-font-title); font-size: .8rem; font-weight: 600;
+	letter-spacing: .18em; text-transform: uppercase; color: var(--ns-mar);
+	margin: 0 0 1rem;
+}
+.ns-eyebrow::before { content: ""; width: 28px; height: 2px; background: currentColor; border-radius: 2px; }
+.is-dark .ns-eyebrow, .ns-hero .ns-eyebrow { color: var(--ns-turquesa); }
+.ns-lead { font-size: clamp(1.05rem, 1.4vw, 1.25rem); color: var(--ns-nevoa); max-width: 60ch; }
+.is-dark .ns-lead { color: rgba(255, 255, 255, .72); }
+.ns-gradient-text {
+	background: linear-gradient(100deg, var(--ns-turquesa), var(--ns-sol));
+	-webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.ns-section { padding-block: var(--ns-section); position: relative; }
+.ns-section__head { margin-bottom: clamp(2.5rem, 5vw, 4rem); max-width: 720px; }
+.ns-section__head.is-center { margin-inline: auto; text-align: center; }
+.ns-section__head.is-center .ns-lead { margin-inline: auto; }
+.ns-section__head h2 { margin: 0 0 1rem; }
+.is-dark { background: var(--ns-abismo); color: var(--ns-branco); }
+.is-dark h1, .is-dark h2, .is-dark h3, .is-dark h4 { color: var(--ns-branco); }
+.is-foam { background: var(--ns-espuma); }
+
+/* Botões ------------------------------------------------------------------ */
+.wp-block-button__link, .ns-btn {
+	display: inline-flex; align-items: center; gap: .55rem;
+	border-radius: 999px; text-decoration: none;
+	font-family: var(--ns-font-title); font-weight: 600;
+	transition: transform .35s var(--ns-ease), box-shadow .35s var(--ns-ease), background-color .25s, color .25s;
+}
+.ns-btn { background: var(--ns-sol); color: var(--ns-abismo); padding: .95rem 1.7rem; font-size: 1rem; }
+.wp-block-button__link:hover, .ns-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 30px -12px rgba(255, 181, 71, .7); }
+.wp-block-button__link::after, .ns-btn::after { content: "→"; transition: transform .35s var(--ns-ease); }
+.wp-block-button__link:hover::after, .ns-btn:hover::after { transform: translateX(4px); }
+.is-style-ghost .wp-block-button__link, .ns-btn--ghost {
+	background: transparent !important; color: inherit !important;
+	box-shadow: inset 0 0 0 1.5px currentColor;
+}
+.is-style-ghost .wp-block-button__link:hover, .ns-btn--ghost:hover { box-shadow: inset 0 0 0 1.5px var(--ns-turquesa); color: var(--ns-turquesa) !important; }
+.is-style-ghost .wp-block-button__link::after, .ns-btn--ghost::after { content: none; }
+
+/* Cabeçalho --------------------------------------------------------------- */
+.ns-header {
+	position: fixed; inset: 0 0 auto 0; z-index: 100;
+	padding: 1.1rem var(--ns-gutter);
+	transition: padding .4s var(--ns-ease), background-color .4s, backdrop-filter .4s, box-shadow .4s;
+	color: var(--ns-branco);
+}
+.admin-bar .ns-header { top: 32px; }
+.ns-header.is-scrolled {
+	padding-block: .65rem;
+	background: rgba(7, 26, 44, .78);
+	backdrop-filter: saturate(160%) blur(14px); -webkit-backdrop-filter: saturate(160%) blur(14px);
+	box-shadow: 0 10px 30px -20px rgba(0, 0, 0, .6);
+}
+.ns-header__inner { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; width: min(100%, var(--ns-wide)); margin-inline: auto; }
+.ns-logo, .ns-header .wp-block-site-title a {
+	display: inline-flex; align-items: center; gap: .6rem;
+	font-family: var(--ns-font-title); font-weight: 800; font-size: 1.2rem; letter-spacing: -.01em;
+	color: var(--ns-branco); text-decoration: none;
+}
+.ns-header .wp-block-site-title { margin: 0; }
+.ns-header .wp-block-site-logo img { max-height: 44px; width: auto; }
+.ns-logo__mark { width: 34px; height: 34px; flex: none; }
+.ns-nav { display: flex; align-items: center; gap: clamp(1rem, 2.4vw, 2.2rem); }
+.ns-nav a, .ns-header .wp-block-navigation-item__content {
+	color: rgba(255, 255, 255, .85); text-decoration: none; font-weight: 500; font-size: .95rem; position: relative;
+}
+.ns-nav a:not(.ns-btn)::after, .ns-header .wp-block-navigation-item__content::after {
+	content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 2px;
+	background: var(--ns-turquesa); transform: scaleX(0); transform-origin: left; transition: transform .35s var(--ns-ease);
+}
+.ns-nav a:not(.ns-btn):hover::after, .ns-header .wp-block-navigation-item__content:hover::after { transform: scaleX(1); }
+.ns-nav a:hover { color: var(--ns-branco); }
+.ns-header .ns-btn, .ns-header .wp-block-button__link { padding: .7rem 1.25rem; font-size: .92rem; }
+.ns-header .wp-block-navigation__responsive-container.is-menu-open { background: var(--ns-abismo); color: var(--ns-branco); }
+.ns-burger { display: none; background: none; border: 0; color: inherit; padding: .4rem; cursor: pointer; }
+.ns-burger span { display: block; width: 24px; height: 2px; background: currentColor; margin: 5px 0; border-radius: 2px; transition: transform .3s, opacity .3s; }
+
+@media (max-width: 860px) {
+	.ns-burger { display: block; }
+	.ns-nav {
+		position: fixed; inset: 0; flex-direction: column; justify-content: center; gap: 1.6rem;
+		background: var(--ns-abismo); font-size: 1.4rem;
+		opacity: 0; pointer-events: none; transition: opacity .35s;
+	}
+	.ns-nav a { font-size: 1.35rem; }
+	.ns-header.is-open .ns-nav { opacity: 1; pointer-events: auto; }
+	.ns-header.is-open .ns-burger { position: relative; z-index: 2; }
+	.ns-header.is-open .ns-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+	.ns-header.is-open .ns-burger span:nth-child(2) { opacity: 0; }
+	.ns-header.is-open .ns-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+}
+
+/* Hero -------------------------------------------------------------------- */
+.ns-hero {
+	position: relative; isolation: isolate; overflow: hidden;
+	min-height: 100svh; display: flex; align-items: center;
+	padding: clamp(7rem, 14vh, 10rem) var(--ns-gutter) clamp(9rem, 18vh, 12rem);
+	color: var(--ns-branco);
+	background:
+		radial-gradient(1200px 600px at 85% 10%, rgba(37, 194, 203, .28), transparent 60%),
+		radial-gradient(900px 500px at 0% 100%, rgba(22, 115, 184, .45), transparent 60%),
+		linear-gradient(165deg, var(--ns-abismo) 0%, var(--ns-oceano) 60%, #0f4c7a 100%);
+}
+.ns-hero__media {
+	position: absolute; inset: 0; z-index: -2; overflow: hidden;
+}
+.ns-hero__media img, .ns-hero__media video {
+	width: 100%; height: 100%; object-fit: cover; opacity: .42; mix-blend-mode: luminosity;
+	transform: scale(1.08); will-change: transform;
+}
+.ns-hero__media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7, 26, 44, .2), rgba(7, 26, 44, .85)); }
+.ns-hero__grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: clamp(2rem, 5vw, 5rem); align-items: end; width: min(100%, var(--ns-wide)); margin-inline: auto; }
+.ns-hero h1 { font-size: clamp(2.6rem, 6.6vw, 5.4rem); line-height: 1.02; letter-spacing: -.035em; margin: 0 0 1.5rem; color: var(--ns-branco); }
+.ns-hero .ns-lead { color: rgba(255, 255, 255, .78); margin-bottom: 2.2rem; }
+.ns-hero__actions { display: flex; flex-wrap: wrap; gap: .9rem; }
+.ns-hero__card {
+	border-radius: var(--ns-r-l); padding: 1.6rem;
+	background: rgba(255, 255, 255, .07); border: 1px solid rgba(255, 255, 255, .14);
+	backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+	animation: ns-float 7s ease-in-out infinite;
+}
+.ns-hero__card h3 { font-size: 1rem; margin: 0 0 1rem; color: rgba(255, 255, 255, .7); font-weight: 600; letter-spacing: .02em; }
+.ns-hero__card ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .85rem; }
+.ns-hero__card li { display: flex; gap: .75rem; align-items: center; font-weight: 500; }
+.ns-hero__card li::before {
+	content: "✓"; flex: none; display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%;
+	background: rgba(37, 194, 203, .18); color: var(--ns-turquesa); font-size: .8rem; font-weight: 700;
+}
+.ns-hero__scroll {
+	position: absolute; left: 50%; bottom: clamp(5.5rem, 12vh, 7.5rem); transform: translateX(-50%);
+	width: 26px; height: 42px; border: 2px solid rgba(255, 255, 255, .45); border-radius: 20px; z-index: 2;
+}
+.ns-hero__scroll::after { content: ""; position: absolute; left: 50%; top: 7px; width: 4px; height: 8px; margin-left: -2px; border-radius: 2px; background: var(--ns-branco); animation: ns-scroll 1.8s infinite; }
+
+/* Ondas animadas */
+.ns-waves { position: absolute; left: 0; right: 0; bottom: -1px; height: clamp(70px, 11vw, 140px); z-index: 1; pointer-events: none; }
+.ns-waves svg { position: absolute; bottom: 0; width: 200%; height: 100%; }
+.ns-waves .w1 { animation: ns-wave 18s linear infinite; opacity: .35; }
+.ns-waves .w2 { animation: ns-wave 12s linear infinite reverse; opacity: .55; }
+.ns-waves .w3 { animation: ns-wave 24s linear infinite; }
+.ns-waves path { fill: var(--ns-branco); }
+.ns-waves.is-foam path { fill: var(--ns-espuma); }
+.ns-waves.is-dark path { fill: var(--ns-abismo); }
+
+/* Bolhas decorativas */
+.ns-bubbles { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
+.ns-bubbles span {
+	position: absolute; bottom: -40px; border-radius: 50%;
+	background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, .5), rgba(37, 194, 203, .08));
+	animation: ns-rise linear infinite;
+}
+
+@media (max-width: 900px) {
+	.ns-hero__grid { grid-template-columns: 1fr; }
+	.ns-hero__card { max-width: 420px; }
+}
+
+/* Faixa em movimento ------------------------------------------------------ */
+.ns-marquee { background: var(--ns-branco); padding-block: 1.6rem; overflow: hidden; border-bottom: 1px solid rgba(7, 26, 44, .06); }
+.ns-marquee__track { display: flex; width: max-content; animation: ns-marquee 35s linear infinite; }
+.ns-marquee:hover .ns-marquee__track { animation-play-state: paused; }
+.ns-marquee__item {
+	display: inline-flex; align-items: center; gap: 2.2rem; padding-right: 2.2rem;
+	font-family: var(--ns-font-title); font-weight: 700; font-size: clamp(1.2rem, 2.4vw, 1.9rem);
+	color: var(--ns-oceano); white-space: nowrap;
+}
+.ns-marquee__item::after { content: "✦"; color: var(--ns-turquesa); font-size: .9em; }
+.ns-marquee__item:nth-child(even) { color: transparent; -webkit-text-stroke: 1.2px var(--ns-oceano); }
+
+/* Como funciona ----------------------------------------------------------- */
+.ns-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; counter-reset: step; }
+.ns-step {
+	position: relative; padding: 2.2rem 1.9rem 2rem; border-radius: var(--ns-r-l);
+	background: var(--ns-espuma); overflow: hidden; counter-increment: step;
+	transition: transform .5s var(--ns-ease), box-shadow .5s var(--ns-ease), background-color .4s;
+}
+.ns-step::before {
+	content: "0" counter(step); position: absolute; right: 1.2rem; top: .3rem;
+	font-family: var(--ns-font-title); font-weight: 800; font-size: 5.5rem; line-height: 1;
+	color: transparent; -webkit-text-stroke: 1.5px rgba(22, 115, 184, .18);
+	transition: transform .6s var(--ns-ease);
+}
+.ns-step:hover { transform: translateY(-8px); box-shadow: var(--ns-shadow); background: var(--ns-branco); }
+.ns-step:hover::before { transform: translateY(6px) scale(1.05); }
+.ns-step__icon {
+	width: 56px; height: 56px; border-radius: 16px; display: grid; place-items: center; margin-bottom: 1.4rem;
+	background: linear-gradient(135deg, var(--ns-mar), var(--ns-turquesa)); color: var(--ns-branco);
+}
+.ns-step__icon svg { width: 26px; height: 26px; }
+.ns-step h3 { margin: 0 0 .6rem; font-size: 1.3rem; }
+.ns-step p { margin: 0; color: var(--ns-nevoa); }
+@media (max-width: 860px) { .ns-steps { grid-template-columns: 1fr; } }
+
+/* Números ----------------------------------------------------------------- */
+.ns-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: rgba(255, 255, 255, .1); border-radius: var(--ns-r-l); overflow: hidden; }
+.ns-stat { background: var(--ns-abismo); padding: 2rem 1.6rem; }
+.ns-stat__num { font-family: var(--ns-font-title); font-weight: 800; font-size: clamp(2.4rem, 4.5vw, 3.6rem); line-height: 1; letter-spacing: -.03em; color: var(--ns-branco); }
+.ns-stat__num em { font-style: normal; color: var(--ns-turquesa); }
+.ns-stat__label { margin-top: .6rem; color: rgba(255, 255, 255, .65); font-size: .95rem; }
+@media (max-width: 860px) { .ns-stats { grid-template-columns: repeat(2, 1fr); } }
+
+/* Incluído na mensalidade -------------------------------------------------- */
+.ns-split { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(2rem, 6vw, 6rem); align-items: center; width: min(100%, var(--ns-wide)); margin-inline: auto; }
+@media (max-width: 900px) { .ns-split { grid-template-columns: 1fr; } }
+.ns-included { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; list-style: none; margin: 0; padding: 0; }
+.ns-included li {
+	display: flex; align-items: center; gap: .9rem; padding: 1.1rem 1.2rem; border-radius: var(--ns-r-m);
+	background: var(--ns-branco); box-shadow: 0 1px 0 rgba(7, 26, 44, .06), 0 10px 30px -22px rgba(7, 26, 44, .4);
+	font-weight: 600; transition: transform .4s var(--ns-ease);
+}
+.ns-included li:hover { transform: translateX(6px); }
+.ns-included li::before {
+	content: ""; flex: none; width: 38px; height: 38px; border-radius: 12px;
+	background: var(--ns-espuma) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231673B8' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/18px no-repeat;
+}
+@media (max-width: 560px) { .ns-included { grid-template-columns: 1fr; } }
+
+.ns-visual {
+	position: relative; aspect-ratio: 4/5; border-radius: var(--ns-r-l); overflow: hidden;
+	background: linear-gradient(160deg, var(--ns-mar), var(--ns-abismo));
+	box-shadow: var(--ns-shadow);
+}
+.ns-visual img { width: 100%; height: 100%; object-fit: cover; }
+.ns-visual__badge {
+	position: absolute; left: 1.2rem; bottom: 1.2rem; right: 1.2rem; padding: 1.1rem 1.3rem; border-radius: var(--ns-r-m);
+	background: rgba(255, 255, 255, .14); border: 1px solid rgba(255, 255, 255, .22); color: var(--ns-branco);
+	backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+	display: flex; align-items: center; gap: 1rem;
+}
+.ns-visual__badge strong { font-family: var(--ns-font-title); font-size: 1.6rem; display: block; line-height: 1; }
+
+/* Frota ------------------------------------------------------------------- */
+.ns-fleet, .ns-fleet .wp-block-post-template { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; list-style: none; margin: 0; padding: 0; }
+.ns-fleet .wp-block-post-template { grid-column: 1 / -1; }
+.ns-fleet:has(.wp-block-post-template) { display: block; }
+@media (max-width: 980px) { .ns-fleet, .ns-fleet .wp-block-post-template { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .ns-fleet, .ns-fleet .wp-block-post-template { grid-template-columns: 1fr; } }
+.ns-boat {
+	position: relative; display: flex; flex-direction: column; height: 100%;
+	border-radius: var(--ns-r-l); overflow: hidden; background: var(--ns-branco);
+	box-shadow: 0 1px 0 rgba(7, 26, 44, .06), 0 20px 50px -34px rgba(7, 26, 44, .55);
+	transition: transform .5s var(--ns-ease), box-shadow .5s var(--ns-ease);
+}
+.ns-boat:hover { transform: translateY(-10px); box-shadow: var(--ns-shadow); }
+.ns-boat__media, .ns-boat .wp-block-post-featured-image { position: relative; aspect-ratio: 4/3; overflow: hidden; margin: 0; background: linear-gradient(160deg, var(--ns-oceano), var(--ns-mar)); }
+.ns-boat__media img, .ns-boat .wp-block-post-featured-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .9s var(--ns-ease); }
+.ns-boat:hover .ns-boat__media img, .ns-boat:hover .wp-block-post-featured-image img { transform: scale(1.07); }
+.ns-boat__media svg { width: 100%; height: 100%; display: block; }
+.ns-boat__tag, .ns-boat .wp-block-post-terms {
+	position: absolute; top: 1rem; left: 1rem; z-index: 2; margin: 0;
+	padding: .35rem .8rem; border-radius: 999px; font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+	background: var(--ns-branco); color: var(--ns-oceano);
+}
+.ns-boat .wp-block-post-terms a { color: inherit; text-decoration: none; }
+.ns-boat__body { padding: 1.5rem 1.6rem 1.7rem; display: flex; flex-direction: column; gap: .5rem; flex: 1; }
+.ns-boat__body > * { margin: 0; }
+.ns-boat h3, .ns-boat .wp-block-post-title { font-size: 1.35rem; margin: 0; }
+.ns-boat .wp-block-post-title a { color: inherit; text-decoration: none; }
+.ns-boat__model { color: var(--ns-nevoa); font-size: .95rem; }
+.ns-specs { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: auto !important; padding-top: 1rem; }
+.ns-specs > *, .ns-spec {
+	margin: 0 !important; padding: .4rem .75rem; border-radius: 999px; font-size: .85rem; font-weight: 600;
+	background: var(--ns-espuma); color: var(--ns-oceano);
+}
+.ns-specs > *:empty { display: none; }
+.ns-boat__link { position: absolute; inset: 0; z-index: 3; }
+.ns-boat.is-featured { background: var(--ns-abismo); color: var(--ns-branco); }
+.ns-boat.is-featured .ns-boat__model { color: rgba(255, 255, 255, .7); }
+.ns-boat.is-featured .ns-spec { background: rgba(255, 255, 255, .1); color: var(--ns-branco); }
+
+/* Power Club ------------------------------------------------------------- */
+.ns-power { overflow: hidden; isolation: isolate; }
+.ns-power::before {
+	content: ""; position: absolute; inset: auto -20% -60% 40%; height: 120%; z-index: -1;
+	background: radial-gradient(closest-side, rgba(255, 181, 71, .22), transparent);
+}
+.ns-power__big {
+	font-family: var(--ns-font-title); font-weight: 800; font-size: clamp(4rem, 13vw, 11rem); line-height: .85; letter-spacing: -.05em;
+	margin: 0; color: transparent; -webkit-text-stroke: 2px rgba(255, 255, 255, .25);
+}
+.ns-power__big span { color: var(--ns-sol); -webkit-text-stroke: 0; }
+.ns-power__specs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0 2.4rem; }
+.ns-power__specs div { padding: 1.1rem; border-radius: var(--ns-r-m); border: 1px solid rgba(255, 255, 255, .14); }
+.ns-power__specs strong { display: block; font-family: var(--ns-font-title); font-size: 1.6rem; color: var(--ns-branco); }
+.ns-power__specs span { font-size: .85rem; color: rgba(255, 255, 255, .6); }
+@media (max-width: 560px) { .ns-power__specs { grid-template-columns: 1fr 1fr; } }
+
+/* Planos ------------------------------------------------------------------ */
+.ns-plans { display: grid; grid-template-columns: repeat(2, minmax(0, 420px)); justify-content: center; gap: 1.6rem; }
+@media (max-width: 760px) { .ns-plans { grid-template-columns: 1fr; } }
+.ns-plan {
+	position: relative; padding: 2.4rem 2rem; border-radius: var(--ns-r-l); background: var(--ns-branco);
+	border: 1px solid rgba(7, 26, 44, .08); display: flex; flex-direction: column; gap: 1rem;
+	transition: transform .5s var(--ns-ease), box-shadow .5s var(--ns-ease);
+}
+.ns-plan:hover { transform: translateY(-8px); box-shadow: var(--ns-shadow); }
+.ns-plan > * { margin: 0; }
+.ns-plan h3 { font-size: 1.6rem; }
+.ns-plan__price { font-family: var(--ns-font-title); font-size: 1.05rem; color: var(--ns-nevoa); }
+.ns-plan__price strong { font-size: 2.6rem; color: var(--ns-abismo); letter-spacing: -.03em; }
+.ns-plan ul { list-style: none; padding: 0; margin: .4rem 0 1rem; display: grid; gap: .7rem; }
+.ns-plan li { display: flex; gap: .7rem; }
+.ns-plan li::before { content: "✓"; color: var(--ns-mar); font-weight: 700; }
+.ns-plan .wp-block-buttons, .ns-plan .ns-btn { margin-top: auto; }
+.ns-plan.is-highlight { background: linear-gradient(160deg, var(--ns-oceano), var(--ns-abismo)); color: var(--ns-branco); border-color: transparent; }
+.ns-plan.is-highlight h3, .ns-plan.is-highlight .ns-plan__price strong { color: var(--ns-branco); }
+.ns-plan.is-highlight .ns-plan__price { color: rgba(255, 255, 255, .7); }
+.ns-plan.is-highlight li::before { color: var(--ns-turquesa); }
+.ns-plan__badge {
+	position: absolute; top: -14px; right: 1.6rem; padding: .35rem .9rem; border-radius: 999px;
+	background: var(--ns-sol); color: var(--ns-abismo); font-weight: 700; font-size: .78rem; letter-spacing: .05em; text-transform: uppercase;
+}
+.ns-requirements {
+	margin: 2.4rem auto 0; max-width: 860px; padding: 1.3rem 1.6rem; border-radius: var(--ns-r-m);
+	background: rgba(22, 115, 184, .08); border: 1px dashed rgba(22, 115, 184, .35);
+	display: flex; gap: 1rem; align-items: flex-start; font-size: .95rem;
+}
+.ns-requirements::before { content: "⚓"; font-size: 1.4rem; line-height: 1; }
+.ns-requirements p { margin: 0; }
+
+/* Academia (faixa CTA) ----------------------------------------------------- */
+.ns-banner {
+	position: relative; overflow: hidden; isolation: isolate; border-radius: var(--ns-r-l);
+	padding: clamp(2.5rem, 6vw, 4.5rem); color: var(--ns-branco);
+	background: linear-gradient(120deg, var(--ns-mar), var(--ns-turquesa));
+	display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 2rem;
+	width: min(100%, var(--ns-wide)); margin-inline: auto;
+}
+.ns-banner h2 { color: var(--ns-branco); margin: 0 0 .6rem; }
+.ns-banner p { margin: 0; color: rgba(255, 255, 255, .88); max-width: 52ch; }
+.ns-banner::after {
+	content: ""; position: absolute; right: -80px; top: -80px; width: 320px; height: 320px; border-radius: 50%; z-index: -1;
+	border: 50px solid rgba(255, 255, 255, .12); animation: ns-spin 30s linear infinite;
+}
+.ns-banner .ns-btn, .ns-banner .wp-block-button__link { background: var(--ns-abismo); color: var(--ns-branco); }
+
+/* FAQ --------------------------------------------------------------------- */
+.ns-faq { display: grid; gap: .8rem; max-width: 860px; margin-inline: auto; }
+.ns-faq details { border-radius: var(--ns-r-m); background: var(--ns-branco); border: 1px solid rgba(7, 26, 44, .08); overflow: hidden; transition: box-shadow .3s; }
+.ns-faq details[open] { box-shadow: var(--ns-shadow); }
+.ns-faq summary {
+	cursor: pointer; list-style: none; padding: 1.3rem 1.5rem; font-family: var(--ns-font-title); font-weight: 600; font-size: 1.08rem;
+	display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+}
+.ns-faq summary::-webkit-details-marker { display: none; }
+.ns-faq summary::after {
+	content: "+"; flex: none; width: 32px; height: 32px; display: grid; place-items: center; border-radius: 50%;
+	background: var(--ns-espuma); color: var(--ns-mar); font-size: 1.3rem; transition: transform .35s var(--ns-ease), background-color .3s;
+}
+.ns-faq details[open] summary::after { transform: rotate(45deg); background: var(--ns-sol); color: var(--ns-abismo); }
+.ns-faq details > :not(summary) { padding: 0 1.5rem 1.4rem; margin: 0; color: var(--ns-nevoa); }
+
+/* Contacto ---------------------------------------------------------------- */
+.ns-contact { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 4rem); width: min(100%, var(--ns-wide)); margin-inline: auto; align-items: start; }
+@media (max-width: 900px) { .ns-contact { grid-template-columns: 1fr; } }
+.ns-contact__list { list-style: none; padding: 0; margin: 2rem 0 0; display: grid; gap: 1rem; }
+.ns-contact__list li { display: flex; gap: 1rem; align-items: flex-start; }
+.ns-contact__list .ico { flex: none; width: 46px; height: 46px; display: grid; place-items: center; border-radius: 14px; background: rgba(255, 255, 255, .08); color: var(--ns-turquesa); }
+.ns-contact__list .ico svg { width: 22px; height: 22px; }
+.ns-contact__list small { display: block; color: rgba(255, 255, 255, .55); font-size: .8rem; text-transform: uppercase; letter-spacing: .1em; }
+.ns-contact__list a { color: var(--ns-branco); text-decoration: none; }
+.ns-form {
+	padding: clamp(1.6rem, 3vw, 2.4rem); border-radius: var(--ns-r-l);
+	background: rgba(255, 255, 255, .05); border: 1px solid rgba(255, 255, 255, .12);
+}
+.ns-form h3 { margin: 0 0 1.2rem; }
+.ns-form label { display: block; font-size: .85rem; color: rgba(255, 255, 255, .7); margin-bottom: .35rem; }
+.ns-form input, .ns-form select, .ns-form textarea {
+	width: 100%; box-sizing: border-box; margin-bottom: 1rem; padding: .9rem 1rem; border-radius: var(--ns-r-s);
+	border: 1px solid rgba(255, 255, 255, .16); background: rgba(7, 26, 44, .5); color: var(--ns-branco); font: inherit;
+	transition: border-color .25s, box-shadow .25s;
+}
+.ns-form input:focus, .ns-form select:focus, .ns-form textarea:focus { outline: none; border-color: var(--ns-turquesa); box-shadow: 0 0 0 4px rgba(37, 194, 203, .18); }
+.ns-form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 0 1rem; }
+@media (max-width: 560px) { .ns-form .row { grid-template-columns: 1fr; } }
+.ns-form button { border: 0; cursor: pointer; width: 100%; justify-content: center; }
+
+/* Rodapé ------------------------------------------------------------------ */
+.ns-footer { background: #04111e; color: rgba(255, 255, 255, .7); padding: 4rem var(--ns-gutter) 2rem; font-size: .95rem; }
+.ns-footer a { color: rgba(255, 255, 255, .8); text-decoration: none; }
+.ns-footer a:hover { color: var(--ns-turquesa); }
+.ns-footer__grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 2rem; width: min(100%, var(--ns-wide)); margin-inline: auto; }
+.ns-footer h4 { color: var(--ns-branco); font-size: .85rem; text-transform: uppercase; letter-spacing: .12em; margin: 0 0 1rem; }
+.ns-footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .55rem; }
+.ns-footer__bottom {
+	width: min(100%, var(--ns-wide)); margin: 3rem auto 0; padding-top: 1.6rem; border-top: 1px solid rgba(255, 255, 255, .1);
+	display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; font-size: .85rem;
+}
+.ns-social { display: flex; gap: .6rem; margin-top: 1.2rem; }
+.ns-social a { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 50%; background: rgba(255, 255, 255, .07); transition: background-color .3s, transform .3s; }
+.ns-social a:hover { background: var(--ns-turquesa); color: var(--ns-abismo); transform: translateY(-3px); }
+.ns-social svg { width: 18px; height: 18px; }
+@media (max-width: 860px) { .ns-footer__grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .ns-footer__grid { grid-template-columns: 1fr; } }
+
+/* Páginas interiores ------------------------------------------------------ */
+.ns-page-hero {
+	padding: clamp(8rem, 16vh, 11rem) var(--ns-gutter) clamp(5rem, 10vh, 7rem); position: relative; overflow: hidden;
+	background: linear-gradient(165deg, var(--ns-abismo), var(--ns-oceano)); color: var(--ns-branco);
+}
+.ns-page-hero h1 { color: var(--ns-branco); font-size: clamp(2.2rem, 5vw, 4rem); margin: 0; }
+.ns-main { padding-block: clamp(3rem, 6vw, 5rem); }
+
+/* Botão flutuante "voltar ao topo" ---------------------------------------- */
+.ns-totop {
+	position: fixed; right: 1.2rem; bottom: 1.2rem; z-index: 90; width: 48px; height: 48px; border-radius: 50%; border: 0; cursor: pointer;
+	background: var(--ns-sol); color: var(--ns-abismo); font-size: 1.2rem; box-shadow: var(--ns-shadow);
+	opacity: 0; transform: translateY(20px); transition: opacity .4s, transform .4s var(--ns-ease);
+}
+.ns-totop.is-visible { opacity: 1; transform: none; }
+
+/* Barra de progresso de leitura */
+.ns-progress { position: fixed; top: 0; left: 0; height: 3px; width: 100%; z-index: 101; transform-origin: left; transform: scaleX(0); background: linear-gradient(90deg, var(--ns-turquesa), var(--ns-sol)); }
+
+/* Animações de entrada ---------------------------------------------------- */
+.ns-js .reveal { opacity: 0; transform: translateY(40px); transition: opacity 1s var(--ns-ease), transform 1s var(--ns-ease); transition-delay: var(--d, 0s); }
+.ns-js .reveal.is-visible { opacity: 1; transform: none; }
+.ns-js .reveal-left { transform: translateX(-50px); }
+.ns-js .reveal-zoom { transform: scale(.92); }
+.ns-split-text .w { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: .08em; }
+.ns-split-text .w > span { display: inline-block; transform: translateY(110%); transition: transform 1.1s var(--ns-ease); transition-delay: calc(var(--i) * 60ms + .15s); }
+.ns-split-text.is-visible .w > span { transform: none; }
+/* No editor tudo fica visível */
+.editor-styles-wrapper .reveal { opacity: 1 !important; transform: none !important; }
+
+@keyframes ns-wave { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes ns-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes ns-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+@keyframes ns-scroll { 0% { opacity: 0; transform: translateY(0); } 40% { opacity: 1; } 100% { opacity: 0; transform: translateY(14px); } }
+@keyframes ns-rise { 0% { transform: translateY(0) scale(.6); opacity: 0; } 15% { opacity: 1; } 100% { transform: translateY(-110vh) scale(1.1); opacity: 0; } }
+@keyframes ns-spin { to { transform: rotate(360deg); } }
+@keyframes ns-sail { 0%, 100% { transform: translateY(0) rotate(-1.5deg); } 50% { transform: translateY(-6px) rotate(1.5deg); } }
+.ns-sail { animation: ns-sail 5s ease-in-out infinite; transform-origin: 50% 90%; transform-box: fill-box; }
+
+@media (prefers-reduced-motion: reduce) {
+	*, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
+	.ns-js .reveal, .ns-split-text .w > span { opacity: 1; transform: none; }
+}
+
+/* Mensagem do formulário */
+.ns-form__notice { margin: 0 0 1rem; padding: .9rem 1rem; border-radius: var(--ns-r-s); font-weight: 600; }
+.ns-form__notice.is-ok { background: rgba(37, 194, 203, .16); color: var(--ns-turquesa); }
+.ns-form__notice.is-error { background: rgba(255, 120, 100, .16); color: #ffb3a6; }
+.ns-hp { position: absolute !important; left: -9999px !important; }
+
+/* Grelhas: anular margens de "flow layout" do WordPress */
+.ns-hero__grid > *, .ns-steps > *, .ns-stats > *, .ns-split > *, .ns-fleet > *, .ns-plans > *,
+.ns-contact > *, .ns-footer__grid > *, .ns-power__specs > *, .ns-banner > *, .ns-header__inner > *,
+.ns-boat > *, .ns-boat__body > *, .ns-specs > * { margin-block: 0; }
+.ns-section { padding-inline: var(--ns-gutter); }
+.ns-gradient-text .w > span { background: linear-gradient(100deg, var(--ns-turquesa), var(--ns-sol)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+mark.ns-gradient-text { background-color: transparent !important; }
+.ns-requirements a { color: var(--ns-mar); font-weight: 600; text-underline-offset: 3px; }
+@media (max-width: 900px) { .ns-hero__scroll { display: none; } }
+
+</style>
+</head>
+<body class="ns-site">
+<div class="ns-progress" aria-hidden="true"></div>
+<header class="ns-header"><div class="ns-header__inner">
+<a class="ns-logo" href="#"><svg class="ns-logo__mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="2"/><path d="M21 7 L21 27 L31 27 Z" fill="#25C2CB"/><path d="M19 11 L19 27 L11 27 Z" fill="currentColor"/><path d="M8 30 Q14 34 20 30 T32 30" fill="none" stroke="#FFB547" stroke-width="2.2" stroke-linecap="round"/></svg>Nautic Squad</a>
+<button class="ns-burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+<nav class="ns-nav"><a href="#como-funciona">Como funciona</a><a href="#frota">Frota</a><a href="#power-club">Power Club</a><a href="#planos">Planos</a><a href="#faq">FAQ</a><a class="ns-btn" href="#contacto">Ser sócio</a></nav>
+</div></header><main class="ns-home"><section class="wp-block-group alignfull ns-hero"><div class="ns-hero__media" aria-hidden="true"></div><div class="ns-bubbles" aria-hidden="true"></div>
+<div class="wp-block-group ns-hero__grid"><div class="wp-block-group ns-hero__text"><p class="ns-eyebrow reveal">Clube de vela &amp; motor · Marina de Oeiras</p>
+<h1 class="wp-block-heading ns-split-text">Navega quando quiseres. <mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color ns-gradient-text">Sem teres um barco.</mark></h1>
+<p class="ns-lead reveal">A Nautic Squad é o clube para skippers que querem a liberdade de sair para o mar quando quiserem, com conforto e segurança — sem as despesas e as dores de cabeça de ter barco próprio.</p>
+<div class="wp-block-buttons ns-hero__actions reveal"><div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#contacto">Quero ser sócio</a></div>
+<div class="wp-block-button is-style-ghost"><a class="wp-block-button__link wp-element-button" href="#frota">Conhecer a frota</a></div>
+</div>
+</div>
+<div class="wp-block-group ns-hero__card reveal reveal-zoom"><h3 class="wp-block-heading">A mensalidade já inclui</h3>
+<ul class="wp-block-list"><li>Taxas de marina e portuárias</li>
+<li>Seguro do barco</li>
+<li>Manutenção e limpeza</li>
+<li>Reservas online, 24/7</li>
+</ul>
+</div>
+</div>
+<a class="ns-hero__scroll" href="#como-funciona" aria-label="Descer"></a><div class="ns-waves" aria-hidden="true"><svg class="w1" viewBox="0 0 2400 140" preserveAspectRatio="none"><path d="M0 60 C 150 100 350 0 600 50 C 850 100 1050 10 1200 50 C 1350 90 1550 0 1800 50 C 2050 100 2250 10 2400 50 L2400 140 L0 140 Z"/></svg><svg class="w2" viewBox="0 0 2400 140" preserveAspectRatio="none"><path d="M0 80 C 200 30 400 120 600 80 C 800 40 1000 120 1200 80 C 1400 40 1600 120 1800 80 C 2000 40 2200 120 2400 80 L2400 140 L0 140 Z"/></svg><svg class="w3" viewBox="0 0 2400 140" preserveAspectRatio="none"><path d="M0 100 C 300 70 300 130 600 100 C 900 70 900 130 1200 100 C 1500 70 1500 130 1800 100 C 2100 70 2100 130 2400 100 L2400 140 L0 140 Z"/></svg></div></section>
+<div class="ns-marquee alignfull" aria-hidden="true"><div class="ns-marquee__track"><span class="ns-marquee__item">Sem comprar barco</span><span class="ns-marquee__item">Reserva online</span><span class="ns-marquee__item">Vela &amp; motor</span><span class="ns-marquee__item">Marina de Oeiras</span><span class="ns-marquee__item">Manutenção incluída</span><span class="ns-marquee__item">Partilha com um amigo</span><span class="ns-marquee__item">Sem comprar barco</span><span class="ns-marquee__item">Reserva online</span><span class="ns-marquee__item">Vela &amp; motor</span><span class="ns-marquee__item">Marina de Oeiras</span><span class="ns-marquee__item">Manutenção incluída</span><span class="ns-marquee__item">Partilha com um amigo</span></div></div>
+<section id="como-funciona" class="wp-block-group alignfull ns-section"><div class="wp-block-group ns-wrap"><div class="wp-block-group ns-section__head is-center reveal"><p class="ns-eyebrow">Como funciona</p>
+<h2 class="wp-block-heading">Três passos até ao mar.</h2>
+<p class="ns-lead">Ser sócio da Nautic Squad é ter um barco à tua espera, sem o comprar e sem te preocupares com a manutenção.</p>
+</div>
+<div class="wp-block-group ns-steps reveal-stagger"><div class="wp-block-group ns-step"><div class="ns-step__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13"/><path d="M12 4l7 11h-7"/><path d="M10 6 5 15h5"/><path d="M3 18c2 2 4 2 6 0 2 2 4 2 6 0 2 2 4 2 6 0"/></svg></div>
+<h3 class="wp-block-heading">Escolhe o barco e o plano</h3>
+<p>Decide em que barco queres navegar e quantas saídas queres fazer por mês. O plano adapta-se a ti.</p>
+</div>
+<div class="wp-block-group ns-step"><div class="ns-step__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/><path d="m9 15 2 2 4-4"/></svg></div>
+<h3 class="wp-block-heading">Reserva na app</h3>
+<p>Marca as tuas datas na aplicação online, a qualquer hora e onde quer que estejas.</p>
+</div>
+<div class="wp-block-group ns-step"><div class="ns-step__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg></div>
+<h3 class="wp-block-heading">Larga amarras</h3>
+<p>Chegas à marina e o barco está pronto. Tu só tens de navegar — nós tratamos do resto.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="wp-block-group alignfull ns-section is-dark" style="padding-top:clamp(3rem, 6vw, 5rem);padding-bottom:clamp(3rem, 6vw, 5rem)"><div class="ns-wrap"><div class="ns-stats reveal">
+<div class="ns-stat"><div class="ns-stat__num"><span data-count="2020">2020</span></div><div class="ns-stat__label">o ano em que largámos amarras</div></div>
+<div class="ns-stat"><div class="ns-stat__num"><span data-count="100">100</span><em>%</em></div><div class="ns-stat__label">das despesas do barco incluídas</div></div>
+<div class="ns-stat"><div class="ns-stat__num"><span data-count="12">12</span></div><div class="ns-stat__label">pessoas a bordo no Power Club</div></div>
+<div class="ns-stat"><div class="ns-stat__num"><span data-count="0">0</span><em>€</em></div><div class="ns-stat__label">para comprares um barco</div></div>
+</div></div>
+</section>
+<section class="wp-block-group alignfull ns-section is-foam"><div class="wp-block-group ns-split"><div class="ns-visual reveal reveal-left"><svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="nsSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0C3556"/><stop offset=".55" stop-color="#1673B8"/><stop offset="1" stop-color="#25C2CB"/></linearGradient><linearGradient id="nsSea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0C3556"/><stop offset="1" stop-color="#071A2C"/></linearGradient></defs><rect width="400" height="500" fill="url(#nsSky)"/><circle cx="300" cy="120" r="46" fill="#FFB547" opacity=".9"/><circle cx="300" cy="120" r="80" fill="#FFB547" opacity=".12"/><g class="ns-sail"><path d="M200 120 L200 330 L290 330 Z" fill="#fff"/><path d="M192 140 L192 330 L120 330 Z" fill="#F3F8FB" opacity=".85"/><path d="M110 340 L300 340 L280 372 L135 372 Z" fill="#071A2C"/><rect x="196" y="110" width="4" height="232" fill="#071A2C"/></g><path d="M0 360 Q50 345 100 360 T200 360 T300 360 T400 360 V500 H0 Z" fill="url(#nsSea)"/><path d="M0 395 Q50 382 100 395 T200 395 T300 395 T400 395" stroke="#25C2CB" stroke-opacity=".35" stroke-width="3" fill="none"/><path d="M0 430 Q50 417 100 430 T200 430 T300 430 T400 430" stroke="#fff" stroke-opacity=".15" stroke-width="3" fill="none"/></svg><div class="ns-visual__badge"><div><strong>TEAM</strong>Partilha o teu plano com um amigo e dividam a mensalidade.</div></div></div>
+<div class="wp-block-group reveal"><p class="ns-eyebrow">Tudo incluído</p>
+<h2 class="wp-block-heading">Tu navegas. Nós tratamos do resto.</h2>
+<p class="ns-lead">Uma única mensalidade cobre todas as despesas do barco. Sem surpresas no fim do mês, sem faturas de estaleiro.</p>
+<ul class="wp-block-list ns-included reveal-stagger"><li>Taxas de marina</li>
+<li>Seguro</li>
+<li>Manutenção</li>
+<li>Limpeza</li>
+<li>Gestão administrativa e operacional</li>
+<li>Impostos e taxas portuárias</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="frota" class="wp-block-group alignfull ns-section"><div class="wp-block-group ns-wrap"><div class="wp-block-group ns-section__head reveal"><p class="ns-eyebrow">A frota</p>
+<h2 class="wp-block-heading">Escolhe o teu barco.</h2>
+<p class="ns-lead">Veleiros para quem vive o vento, lancha para quem procura velocidade. Todos prontos a sair da Marina de Oeiras.</p>
+</div>
+<div class="ns-fleet reveal-stagger"><article class="ns-boat"><div class="ns-boat__media"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="300" fill="#1673B8"/><circle cx="320" cy="70" r="30" fill="#FFB547" opacity=".85"/><g class="ns-sail"><path d="M200 50 L200 205 L268 205 Z" fill="#fff"/><path d="M193 66 L193 205 L140 205 Z" fill="#F3F8FB" opacity=".85"/><path d="M130 212 L275 212 L260 236 L148 236 Z" fill="#071A2C"/></g><path d="M0 230 Q50 218 100 230 T200 230 T300 230 T400 230 V300 H0 Z" fill="#0C3556"/><path d="M0 258 Q50 246 100 258 T200 258 T300 258 T400 258" stroke="#25C2CB" stroke-opacity=".4" stroke-width="3" fill="none"/></svg><span class="ns-boat__tag">Vela</span></div><div class="ns-boat__body"><h3>Jeanneau Sun Odyssey 349</h3><p class="ns-boat__model">Veleiro de cruzeiro · 2020</p><div class="ns-specs"><span class="ns-spec">10,3 m</span><span class="ns-spec">Vela</span><span class="ns-spec">2020</span></div></div><a class="ns-boat__link" href="#" aria-label="Jeanneau Sun Odyssey 349"></a></article><article class="ns-boat"><div class="ns-boat__media"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="300" fill="#1673B8"/><circle cx="320" cy="70" r="30" fill="#FFB547" opacity=".85"/><g class="ns-sail"><path d="M200 50 L200 205 L268 205 Z" fill="#fff"/><path d="M193 66 L193 205 L140 205 Z" fill="#F3F8FB" opacity=".85"/><path d="M130 212 L275 212 L260 236 L148 236 Z" fill="#071A2C"/></g><path d="M0 230 Q50 218 100 230 T200 230 T300 230 T400 230 V300 H0 Z" fill="#0C3556"/><path d="M0 258 Q50 246 100 258 T200 258 T300 258 T400 258" stroke="#25C2CB" stroke-opacity=".4" stroke-width="3" fill="none"/></svg><span class="ns-boat__tag">Vela</span></div><div class="ns-boat__body"><h3>Beneteau Oceanis 37</h3><p class="ns-boat__model">Limited Edition · 2013</p><div class="ns-specs"><span class="ns-spec">11,5 m</span><span class="ns-spec">Vela</span><span class="ns-spec">2013</span></div></div><a class="ns-boat__link" href="#" aria-label="Beneteau Oceanis 37"></a></article><article class="ns-boat is-featured"><div class="ns-boat__media"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="300" fill="#0C3556"/><circle cx="80" cy="70" r="28" fill="#FFB547" opacity=".85"/><g class="ns-sail"><path d="M95 200 L300 200 L325 178 L230 178 L205 160 L150 160 L135 178 L95 178 Z" fill="#fff"/><path d="M160 166 L200 166 L215 178 L150 178 Z" fill="#25C2CB"/><path d="M88 200 L330 200 L310 228 L110 228 Z" fill="#071A2C"/></g><path d="M0 222 Q50 210 100 222 T200 222 T300 222 T400 222 V300 H0 Z" fill="#071A2C"/><path d="M330 214 Q360 206 400 214" stroke="#fff" stroke-opacity=".5" stroke-width="3" fill="none"/></svg><span class="ns-boat__tag">Motor · Power Club</span></div><div class="ns-boat__body"><h3>FIFTY FIFTY</h3><p class="ns-boat__model">Quicksilver Activ 875</p><div class="ns-specs"><span class="ns-spec">8,7 m</span><span class="ns-spec">12 pessoas</span><span class="ns-spec">Oeiras</span></div></div><a class="ns-boat__link" href="#" aria-label="FIFTY FIFTY"></a></article></div>
+<div class="wp-block-buttons reveal" style="margin-top:2.5rem"><div class="wp-block-button is-style-ghost"><a class="wp-block-button__link wp-element-button" href="#frota/">Ver toda a frota</a></div>
+</div>
+</div>
+</section>
+<section id="power-club" class="wp-block-group alignfull ns-section is-dark ns-power"><div class="wp-block-group ns-split"><div class="wp-block-group reveal reveal-left"><p class="ns-eyebrow">Power Club</p>
+<p class="ns-power__big" aria-label="FIFTY FIFTY">FIFTY<br><span>FIFTY</span></p>
+</div>
+<div class="wp-block-group reveal"><h2 class="wp-block-heading">Para quem tem paixão pelo mar e pela velocidade.</h2>
+<p class="ns-lead">O Power Club leva o conceito Nautic Squad para o motor: experiências exclusivas a bordo de uma Quicksilver Activ 875, com base na Marina de Oeiras.</p>
+<div class="ns-power__specs"><div><strong>8,7 m</strong><span>comprimento</span></div><div><strong>12</strong><span>pessoas a bordo</span></div><div><strong>Oeiras</strong><span>marina base</span></div></div>
+<div class="wp-block-buttons"><div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#contacto">Quero entrar no Power Club</a></div>
+</div>
+</div>
+</div>
+</section>
+<section id="planos" class="wp-block-group alignfull ns-section is-foam"><div class="wp-block-group ns-wrap"><div class="wp-block-group ns-section__head is-center reveal"><p class="ns-eyebrow">Planos</p>
+<h2 class="wp-block-heading">Um plano à medida das tuas saídas.</h2>
+<p class="ns-lead">O valor depende do barco e do número de saídas por mês. Fala connosco e montamos a proposta certa para ti.</p>
+</div>
+<div class="wp-block-group ns-plans reveal-stagger"><div class="wp-block-group ns-plan"><h3 class="wp-block-heading">Individual</h3>
+<p>O barco é teu nos dias que reservas.</p>
+<p class="ns-plan__price"><strong>À medida</strong> / mês</p>
+<ul class="wp-block-list"><li>Escolhes o barco</li>
+<li>N.º de saídas por mês à tua medida</li>
+<li>Reservas na app online</li>
+<li>Todas as despesas incluídas</li>
+</ul>
+<div class="wp-block-buttons"><div class="wp-block-button is-style-ghost"><a class="wp-block-button__link wp-element-button" href="#contacto">Pedir valores</a></div>
+</div>
+</div>
+<div class="wp-block-group ns-plan is-highlight"><span class="ns-plan__badge">A dois sabe melhor</span>
+<h3 class="wp-block-heading">TEAM</h3>
+<p>Partilha o plano com um amigo e dividam a mensalidade.</p>
+<p class="ns-plan__price"><strong>Partilhado</strong> / mês</p>
+<ul class="wp-block-list"><li>Tudo o que o plano Individual inclui</li>
+<li>Dois sócios, um só plano</li>
+<li>Custos divididos a meias</li>
+<li>Mais tripulação, mais saídas</li>
+</ul>
+<div class="wp-block-buttons"><div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#contacto">Pedir valores TEAM</a></div>
+</div>
+</div>
+</div>
+<div class="wp-block-group ns-requirements reveal"><p><strong>Requisitos:</strong> todos os sócios precisam da carta de <strong>Patrão Local</strong> e de um curso de vela ou experiência equivalente a <strong>RYA Day Skipper</strong>. Ainda não tens? A nossa <a href="#sailing-academy/">Sailing Academy</a> ajuda-te.</p>
+</div>
+</div>
+</section>
+<section class="wp-block-group alignfull ns-section is-foam" style="padding-top:0;padding-bottom:clamp(4.5rem, 10vw, 8.5rem)"><div class="wp-block-group ns-banner reveal reveal-zoom"><div class="wp-block-group"><h2 class="wp-block-heading">Sailing Academy</h2>
+<p>Ainda a dar os primeiros bordos? Aprende a velejar connosco e ganha a experiência de que precisas para te tornares sócio.</p>
+</div>
+<div class="wp-block-buttons"><div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#sailing-academy/">Conhecer a academia</a></div>
+</div>
+</div>
+</section>
+<section id="faq" class="wp-block-group alignfull ns-section is-foam"><div class="wp-block-group ns-section__head is-center reveal"><p class="ns-eyebrow">Perguntas frequentes</p>
+<h2 class="wp-block-heading">Tudo o que precisas de saber.</h2>
+</div>
+<div class="wp-block-group ns-faq reveal-stagger"><details class="wp-block-details"><summary>Preciso de ter barco próprio?</summary><p>Não. Esse é precisamente o conceito da Nautic Squad: escolhes o barco e o plano, reservas as tuas datas e navegas. O barco é do clube.</p>
+</details>
+<details class="wp-block-details"><summary>O que está incluído na mensalidade?</summary><p>Taxas de marina, seguro, manutenção, limpeza, gestão administrativa e operacional, impostos e taxas portuárias. Tu só tens de aparecer.</p>
+</details>
+<details class="wp-block-details"><summary>Que carta ou experiência preciso?</summary><p>Todos os sócios têm de ter a carta de Patrão Local e um curso de vela ou experiência equivalente a RYA Day Skipper. Se ainda não tens, a Sailing Academy ajuda-te a chegar lá.</p>
+</details>
+<details class="wp-block-details"><summary>Como faço as reservas?</summary><p>Através da nossa aplicação online, onde vês a disponibilidade dos barcos e marcas as tuas saídas.</p>
+</details>
+<details class="wp-block-details"><summary>Posso partilhar o plano com alguém?</summary><p>Sim. Com a opção TEAM partilhas o plano com um amigo e dividem a mensalidade.</p>
+</details>
+<details class="wp-block-details"><summary>Onde estão os barcos?</summary><p>Na Marina de Oeiras, na Avenida Marginal — a poucos minutos de Lisboa e de Cascais.</p>
+</details>
+</div>
+</section>
+<section id="contacto" class="wp-block-group alignfull ns-section is-dark"><div class="wp-block-group ns-contact"><div class="wp-block-group reveal"><p class="ns-eyebrow">Contacto</p>
+<h2 class="wp-block-heading">Vamos para o mar?</h2>
+<p class="ns-lead">Diz-nos como gostas de navegar e com que frequência. Respondemos com a proposta ideal para ti.</p>
+<ul class="ns-contact__list">
+<li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><div><small>Morada</small>Avenida Marginal, Marina de Oeiras<br>2780-267 Oeiras</div></li>
+<li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><div><small>Telefone</small><a href="tel:+351911924555">911 924 555</a></div></li>
+<li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></span><div><small>Instagram</small><a href="https://www.instagram.com/nautic.squad/" target="_blank" rel="noopener">@nautic.squad</a></div></li>
+</ul>
+</div>
+<form class="ns-form reveal" method="post" action="#">
+<h3>Pede informações</h3>
+<input type="hidden" name="action" value="ns_contacto">
+<input type="text" name="ns_website" class="ns-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+<div class="row"><div><label for="ns_nome">Nome</label><input id="ns_nome" name="ns_nome" required autocomplete="name"></div>
+<div><label for="ns_telefone">Telefone</label><input id="ns_telefone" name="ns_telefone" type="tel" autocomplete="tel"></div></div>
+<label for="ns_email">Email</label><input id="ns_email" name="ns_email" type="email" required autocomplete="email">
+<label for="ns_interesse">Tenho interesse em</label>
+<select id="ns_interesse" name="ns_interesse"><option>Clube de vela</option><option>Power Club</option><option>Plano TEAM</option><option>Sailing Academy</option><option>Outro assunto</option></select>
+<label for="ns_mensagem">Mensagem</label><textarea id="ns_mensagem" name="ns_mensagem" rows="4" placeholder="Quantas saídas por mês gostavas de fazer?"></textarea>
+<button type="submit" class="ns-btn">Enviar pedido</button>
+</form>
+</div>
+</section>
+</main><footer class="ns-footer">
+<div class="ns-footer__grid">
+<div><a class="ns-logo" href="#"><svg class="ns-logo__mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="2"/><path d="M21 7 L21 27 L31 27 Z" fill="#25C2CB"/><path d="M19 11 L19 27 L11 27 Z" fill="currentColor"/><path d="M8 30 Q14 34 20 30 T32 30" fill="none" stroke="#FFB547" stroke-width="2.2" stroke-linecap="round"/></svg>Nautic Squad</a>
+<p style="max-width:34ch;margin-top:1rem">O clube para quem quer navegar sem ter barco. Vela e motor, a partir da Marina de Oeiras.</p>
+<div class="ns-social"><a href="https://www.instagram.com/nautic.squad/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></a></div></div>
+<div><h4>Clube</h4><ul><li><a href="##como-funciona">Como funciona</a></li><li><a href="#frota/">Frota</a></li><li><a href="##power-club">Power Club</a></li><li><a href="##planos">Planos</a></li></ul></div>
+<div><h4>Aprender</h4><ul><li><a href="#sailing-academy/">Sailing Academy</a></li><li><a href="##planos">Requisitos</a></li><li><a href="##faq">Perguntas frequentes</a></li></ul></div>
+<div><h4>Contacto</h4><ul><li>Avenida Marginal, Marina de Oeiras<br>2780-267 Oeiras</li><li><a href="tel:+351911924555">911 924 555</a></li></ul></div>
+</div>
+<div class="ns-footer__bottom"><span>© 2026 Nautic Squad. Todos os direitos reservados.</span><span><a href="#politica-de-privacidade/">Política de privacidade</a> · <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener">Livro de Reclamações</a></span></div>
+</footer>
+<button class="ns-totop" type="button" aria-label="Voltar ao topo">↑</button>
+
+<script>/**
+ * Nautic Squad — interações (sem dependências).
+ * - cabeçalho que muda ao fazer scroll + menu móvel
+ * - animações de entrada (classe .reveal) e títulos palavra a palavra (.ns-split-text)
+ * - contadores animados ([data-count])
+ * - parallax suave no hero, barra de progresso, botão "voltar ao topo"
+ * - bolhas decorativas no hero
+ */
+(function () {
+	'use strict';
+
+	var doc = document.documentElement;
+	doc.classList.add('ns-js');
+
+	var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+	var header = document.querySelector('.ns-header');
+	var progress = document.querySelector('.ns-progress');
+	var toTop = document.querySelector('.ns-totop');
+	var heroMedia = document.querySelector('.ns-hero__media img, .ns-hero__media video');
+
+	/* Scroll: cabeçalho, progresso, topo, parallax --------------------------- */
+	var ticking = false;
+	function onScroll() {
+		var y = window.scrollY;
+		if (header) header.classList.toggle('is-scrolled', y > 40);
+		if (toTop) toTop.classList.toggle('is-visible', y > 700);
+		if (progress) {
+			var max = document.documentElement.scrollHeight - window.innerHeight;
+			progress.style.transform = 'scaleX(' + (max > 0 ? y / max : 0) + ')';
+		}
+		if (heroMedia && !reduceMotion && y < window.innerHeight) {
+			heroMedia.style.transform = 'scale(1.08) translateY(' + y * 0.25 + 'px)';
+		}
+		ticking = false;
+	}
+	window.addEventListener('scroll', function () {
+		if (!ticking) { window.requestAnimationFrame(onScroll); ticking = true; }
+	}, { passive: true });
+	onScroll();
+
+	if (toTop) toTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+	/* Menu móvel ------------------------------------------------------------- */
+	var burger = document.querySelector('.ns-burger');
+	if (burger && header) {
+		burger.addEventListener('click', function () {
+			var open = header.classList.toggle('is-open');
+			burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+			document.body.style.overflow = open ? 'hidden' : '';
+		});
+		header.querySelectorAll('.ns-nav a').forEach(function (a) {
+			a.addEventListener('click', function () {
+				header.classList.remove('is-open');
+				burger.setAttribute('aria-expanded', 'false');
+				document.body.style.overflow = '';
+			});
+		});
+	}
+
+	/* Títulos palavra a palavra --------------------------------------------- */
+	document.querySelectorAll('.ns-split-text').forEach(function (el) {
+		var i = 0;
+		function wrap(node) {
+			Array.prototype.slice.call(node.childNodes).forEach(function (child) {
+				if (child.nodeType === 3) {
+					var frag = document.createDocumentFragment();
+					child.textContent.split(/(\s+)/).forEach(function (part) {
+						if (!part) return;
+						if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(part)); return; }
+						var w = document.createElement('span');
+						w.className = 'w';
+						var inner = document.createElement('span');
+						inner.style.setProperty('--i', i++);
+						inner.textContent = part;
+						w.appendChild(inner);
+						frag.appendChild(w);
+					});
+					child.parentNode.replaceChild(frag, child);
+				} else if (child.nodeType === 1) {
+					wrap(child);
+				}
+			});
+		}
+		wrap(el);
+		el.classList.add('reveal-text');
+	});
+
+	/* Contadores ------------------------------------------------------------- */
+	function countUp(el) {
+		var target = parseFloat(el.getAttribute('data-count'));
+		var dur = 1800;
+		var start = null;
+		if (reduceMotion || isNaN(target)) { el.textContent = el.getAttribute('data-count'); return; }
+		function step(ts) {
+			if (!start) start = ts;
+			var p = Math.min((ts - start) / dur, 1);
+			var eased = 1 - Math.pow(1 - p, 4);
+			el.textContent = Math.round(target * eased).toLocaleString('pt-PT');
+			if (p < 1) window.requestAnimationFrame(step);
+		}
+		window.requestAnimationFrame(step);
+	}
+
+	/* Entrada ao scroll ------------------------------------------------------ */
+	var targets = document.querySelectorAll('.reveal, .ns-split-text, [data-count]');
+	if ('IntersectionObserver' in window) {
+		var io = new IntersectionObserver(function (entries) {
+			entries.forEach(function (entry) {
+				if (!entry.isIntersecting) return;
+				var el = entry.target;
+				el.classList.add('is-visible');
+				if (el.hasAttribute('data-count')) countUp(el);
+				io.unobserve(el);
+			});
+		}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+		targets.forEach(function (el) { io.observe(el); });
+	} else {
+		targets.forEach(function (el) { el.classList.add('is-visible'); });
+	}
+
+	/* Atraso em cascata para grelhas (.reveal-stagger > *) ------------------- */
+	document.querySelectorAll('.reveal-stagger').forEach(function (group) {
+		Array.prototype.forEach.call(group.querySelectorAll(':scope > *, :scope > .wp-block-post-template > *'), function (child, idx) {
+			child.classList.add('reveal');
+			child.style.setProperty('--d', (idx * 0.1) + 's');
+			if (io) io.observe(child); else child.classList.add('is-visible');
+		});
+	});
+
+	/* Bolhas no hero --------------------------------------------------------- */
+	var bubbles = document.querySelector('.ns-bubbles');
+	if (bubbles && !reduceMotion) {
+		for (var b = 0; b < 14; b++) {
+			var s = document.createElement('span');
+			var size = 6 + Math.random() * 22;
+			s.style.width = s.style.height = size + 'px';
+			s.style.left = Math.random() * 100 + '%';
+			s.style.animationDuration = 10 + Math.random() * 14 + 's';
+			s.style.animationDelay = -Math.random() * 20 + 's';
+			bubbles.appendChild(s);
+		}
+	}
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+/*
+Theme Name: Nautic Squad
+Theme URI: https://www.nauticsquad.com
+Description: Tema em blocos (Full Site Editing) para o clube Nautic Squad — moderno, dinâmico e totalmente editável no editor do WordPress. Inclui tipo de conteúdo "Barcos", padrões de secções e animações ao scroll.
+Version: 1.0.0
+Requires at least: 6.5
+Tested up to: 6.7
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: nautic-squad
+Tags: full-site-editing, block-patterns, custom-colors, one-column, wide-blocks
+*/
+
+/* Os estilos principais estão em assets/css/main.css (carregado via functions.php). */

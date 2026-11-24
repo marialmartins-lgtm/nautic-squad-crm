@@ -1,0 +1,101 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.5/theme.json",
+	"version": 2,
+	"settings": {
+		"appearanceTools": true,
+		"useRootPaddingAwareAlignments": true,
+		"color": {
+			"defaultPalette": false,
+			"defaultGradients": false,
+			"palette": [
+				{ "slug": "abismo", "name": "Abismo (azul-marinho profundo)", "color": "#071A2C" },
+				{ "slug": "oceano", "name": "Oceano", "color": "#0C3556" },
+				{ "slug": "mar", "name": "Mar", "color": "#1673B8" },
+				{ "slug": "turquesa", "name": "Turquesa", "color": "#25C2CB" },
+				{ "slug": "sol", "name": "Sol (destaque)", "color": "#FFB547" },
+				{ "slug": "espuma", "name": "Espuma", "color": "#F3F8FB" },
+				{ "slug": "branco", "name": "Branco", "color": "#FFFFFF" },
+				{ "slug": "nevoa", "name": "Névoa (texto secundário)", "color": "#5B6E80" }
+			],
+			"gradients": [
+				{ "slug": "profundidade", "name": "Profundidade", "gradient": "linear-gradient(160deg,#071A2C 0%,#0C3556 55%,#1673B8 100%)" },
+				{ "slug": "lagoa", "name": "Lagoa", "gradient": "linear-gradient(135deg,#1673B8 0%,#25C2CB 100%)" }
+			]
+		},
+		"typography": {
+			"fluid": true,
+			"defaultFontSizes": false,
+			"fontFamilies": [
+				{ "slug": "titulos", "name": "Sora", "fontFamily": "\"Sora\", ui-sans-serif, system-ui, sans-serif" },
+				{ "slug": "texto", "name": "Inter", "fontFamily": "\"Inter\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif" }
+			],
+			"fontSizes": [
+				{ "slug": "small", "name": "Pequeno", "size": "0.875rem", "fluid": false },
+				{ "slug": "medium", "name": "Médio", "size": "1.0625rem", "fluid": false },
+				{ "slug": "large", "name": "Grande", "size": "1.375rem", "fluid": { "min": "1.2rem", "max": "1.5rem" } },
+				{ "slug": "x-large", "name": "Muito grande", "size": "2.5rem", "fluid": { "min": "1.9rem", "max": "3rem" } },
+				{ "slug": "huge", "name": "Enorme", "size": "4.5rem", "fluid": { "min": "2.6rem", "max": "5.25rem" } }
+			]
+		},
+		"spacing": {
+			"units": ["px", "em", "rem", "vh", "vw", "%"],
+			"spacingSizes": [
+				{ "slug": "20", "name": "XS", "size": "0.5rem" },
+				{ "slug": "30", "name": "S", "size": "1rem" },
+				{ "slug": "40", "name": "M", "size": "1.5rem" },
+				{ "slug": "50", "name": "L", "size": "clamp(2rem, 4vw, 3rem)" },
+				{ "slug": "60", "name": "XL", "size": "clamp(3rem, 7vw, 6rem)" },
+				{ "slug": "70", "name": "XXL", "size": "clamp(4.5rem, 10vw, 9rem)" }
+			]
+		},
+		"layout": {
+			"contentSize": "760px",
+			"wideSize": "1240px"
+		},
+		"custom": {
+			"radius": { "s": "10px", "m": "18px", "l": "28px" },
+			"shadow": { "card": "0 18px 50px -20px rgba(7,26,44,.35)" }
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--branco)",
+			"text": "var(--wp--preset--color--abismo)"
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--texto)",
+			"fontSize": "var(--wp--preset--font-size--medium)",
+			"lineHeight": "1.65"
+		},
+		"spacing": {
+			"padding": { "left": "clamp(1rem, 4vw, 2.5rem)", "right": "clamp(1rem, 4vw, 2.5rem)" },
+			"blockGap": "1.25rem"
+		},
+		"elements": {
+			"heading": {
+				"typography": { "fontFamily": "var(--wp--preset--font-family--titulos)", "fontWeight": "700", "lineHeight": "1.1", "letterSpacing": "-0.02em" }
+			},
+			"h1": { "typography": { "fontSize": "var(--wp--preset--font-size--huge)" } },
+			"h2": { "typography": { "fontSize": "var(--wp--preset--font-size--x-large)" } },
+			"h3": { "typography": { "fontSize": "var(--wp--preset--font-size--large)" } },
+			"link": {
+				"color": { "text": "var(--wp--preset--color--mar)" },
+				":hover": { "color": { "text": "var(--wp--preset--color--turquesa)" } }
+			},
+			"button": {
+				"border": { "radius": "999px" },
+				"color": { "background": "var(--wp--preset--color--sol)", "text": "var(--wp--preset--color--abismo)" },
+				"typography": { "fontFamily": "var(--wp--preset--font-family--titulos)", "fontWeight": "600", "fontSize": "1rem" },
+				"spacing": { "padding": { "top": "0.95rem", "bottom": "0.95rem", "left": "1.7rem", "right": "1.7rem" } },
+				":hover": { "color": { "background": "var(--wp--preset--color--branco)", "text": "var(--wp--preset--color--abismo)" } }
+			}
+		}
+	},
+	"templateParts": [
+		{ "name": "header", "title": "Cabeçalho", "area": "header" },
+		{ "name": "footer", "title": "Rodapé", "area": "footer" }
+	],
+	"customTemplates": [
+		{ "name": "page-full", "title": "Página larga (sem título)", "postTypes": ["page"] }
+	]
+}
