@@ -46,15 +46,24 @@ Tudo editável no editor do WordPress, sem page builders.
 Classes reutilizáveis (Avançado → Classes CSS): `ns-split` (título palavra a palavra), `reveal`, `reveal-stagger`,
 `ns-reveal-img` (imagem), `ns-media` (grupo com imagem de fundo animada), `ns-label`, `is-sand`, `is-ink`.
 
-## Cores (theme.json)
+## Cores (theme.json) — paleta do site atual nauticsquad.com
 
-Noite `#050E18` · Tinta `#0A1B2C` · Oceano `#0E3A5B` · Mar `#2A86C1` · Turquesa `#4FC3CF` · Dourado `#C8A36B` · Areia `#EDE4D3`
+| Nome | Hex | Origem no site atual |
+|---|---|---|
+| Turquesa | `#04BDC7` | botões "Secure your place" |
+| Turquesa faixa | `#10B0B9` | faixa "Schedule your visit" |
+| Teal títulos | `#0397AB` | títulos (GALLERY, BOATS, CONTACT US) |
+| Teal | `#09848F` | logótipo e secção FAQ |
+| Aqua | `#A8D7DC` | cabeçalho |
+| Água clara | `#DBECEE` | fundos claros |
+| Espuma | `#E7F3F4` | texto sobre fundos escuros |
+| Abismo / Teal profundo | `#042A2F` / `#06404A` | fundos cinematográficos (versão profunda do teal da marca) |
 
 Tipos de letra: **Cormorant Garamond** (títulos) e **Manrope** (texto), via Google Fonts.
-Para trocar pelas cores oficiais da marca basta alterar os hex no `theme.json` (ou em Aparência → Editor → Estilos).
 
 ## A confirmar antes de publicar
 
 - Fotografias, vídeo e logótipo oficiais
-- Frota atual (pré-visualização: Jeanneau Sun Odyssey 349, Beneteau Oceanis 37, FIFTY FIFTY / Quicksilver Activ 875)
-- Preços dos planos, textos da Sailing Academy, cores oficiais da marca
+- Frota (pré-visualização, segundo o site atual): OCEANBLISS (Sun Odyssey 350, Oeiras), OCEANESCAPE (Oceanis 37 LE, Oeiras),
+  OCEANVIBES (Dufour 45 Classic, Cascais), OCEANFUN (Jeanneau Sun 2500, Academia), FIFTY FIFTY (Power Club)
+- Preços dos planos Weekday / Weekend / Team e textos da Sailing Academy

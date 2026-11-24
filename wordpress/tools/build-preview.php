@@ -46,9 +46,11 @@ $sections = array( 'hero', 'manifesto', 'como-funciona', 'frota', 'incluido', 'p
 
 // Frota estática (no WordPress vem de Frota → Barcos).
 $boats = array(
-	array( 'vela-1', 'Vela', 'Sun Odyssey 349', 'Jeanneau · Veleiro de cruzeiro', array( '10,3 m', 'Vela', '2020' ) ),
-	array( 'vela-2', 'Vela', 'Oceanis 37', 'Beneteau · Limited Edition', array( '11,5 m', 'Vela', '2013' ) ),
-	array( 'motor-1', 'Motor · Power Club', 'Fifty Fifty', 'Quicksilver Activ 875', array( '8,7 m', '12 pessoas', 'Oeiras' ) ),
+	array( 'vela-1', 'Sailing Club · Oeiras', 'Oceanbliss', 'Jeanneau Sun Odyssey 350', array( 'Vela', 'Cockpit duplo leme', 'Oeiras' ) ),
+	array( 'vela-2', 'Sailing Club · Oeiras', 'Oceanescape', 'Beneteau Oceanis 37 Limited Edition', array( '3 cabines', '2013', 'Oeiras' ) ),
+	array( 'passo-3', 'Sailing Club · Cascais', 'Oceanvibes', 'Dufour 45 Classic', array( '13,67 m', '1998', 'Cascais' ) ),
+	array( 'oceanfun', 'Sailing Academy · Oeiras', 'Oceanfun', 'Jeanneau Sun 2500', array( '7,50 m', 'Academia', 'Oeiras' ) ),
+	array( 'motor-1', 'Power Club · Oeiras', 'Fifty Fifty', 'Quicksilver Activ 875', array( '8,7 m', '12 pessoas', 'Oeiras' ) ),
 );
 $fleet = '<div class="ns-track">';
 foreach ( $boats as $i => $b ) {
@@ -79,7 +81,7 @@ foreach ( $menu as $id => $label ) {
 $header = '<div class="ns-loader" aria-hidden="true"><div class="ns-loader__inner"><div class="ns-loader__word"><span>Nautic Squad</span></div><div class="ns-loader__bar"></div></div></div><div class="ns-grain" aria-hidden="true"></div>
 <header class="ns-header"><div class="ns-header__inner">
 <a class="ns-logo" href="#">' . $logo . 'Nautic Squad</a>
-<div class="ns-header__right"><span class="ns-header__meta">Marina de Oeiras</span><div class="wp-block-buttons"><div class="wp-block-button is-style-ghost"><a class="wp-block-button__link" href="#contacto">Ser sócio</a></div></div>
+<div class="ns-header__right"><span class="ns-header__meta">Oeiras · Cascais</span><div class="wp-block-buttons"><div class="wp-block-button is-style-ghost"><a class="wp-block-button__link" href="#contacto">Ser sócio</a></div></div>
 <button class="ns-menu-btn" data-menu-toggle aria-label="Abrir menu">Menu <i></i></button></div>
 </div></header>
 <div class="ns-overlay" style="--ns-overlay-img:url(\'' . nautic_squad_img( 'passo-3' ) . '\')"><nav class="ns-overlay__nav">' . $links . '</nav>

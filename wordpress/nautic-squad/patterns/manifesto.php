@@ -13,7 +13,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"ns-manifesto__text"} -->
-<p class="ns-manifesto__text">Não precisas de ter um barco para viver o mar. Precisas de tempo, de vento e de uma boa tripulação. Tudo o resto — marina, seguro, manutenção, limpeza — deixa connosco.</p>
+<p class="ns-manifesto__text">Velejar é uma paixão. Mas a falta de tempo e os custos de ter um barco são um obstáculo? Na Nautic Squad, tu escolhes quando sair. Marina, seguro, manutenção e limpeza — deixa connosco.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:group {"className":"ns-manifesto__foot","layout":{"type":"default"}} -->
@@ -22,7 +22,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Veleiros e lancha prontos a sair da Marina de Oeiras, a poucos minutos de Lisboa e de Cascais.</p>
+<p>Veleiros nas marinas de Oeiras e de Cascais e a lancha do Power Club, prontos a sair.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></section>

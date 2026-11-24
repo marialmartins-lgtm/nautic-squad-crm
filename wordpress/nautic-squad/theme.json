@@ -9,56 +9,66 @@
 			"defaultGradients": false,
 			"palette": [
 				{
-					"slug": "noite",
-					"name": "Noite",
-					"color": "#050E18"
+					"slug": "abismo",
+					"name": "Abismo (teal profundo)",
+					"color": "#042A2F"
 				},
 				{
-					"slug": "tinta",
-					"name": "Tinta (azul profundo)",
-					"color": "#0A1B2C"
+					"slug": "profundo",
+					"name": "Teal profundo",
+					"color": "#06404A"
 				},
 				{
-					"slug": "oceano",
-					"name": "Oceano",
-					"color": "#0E3A5B"
+					"slug": "teal",
+					"name": "Teal Nautic Squad (logótipo)",
+					"color": "#09848F"
 				},
 				{
-					"slug": "mar",
-					"name": "Mar",
-					"color": "#2A86C1"
+					"slug": "titulo",
+					"name": "Teal títulos",
+					"color": "#0397AB"
 				},
 				{
 					"slug": "turquesa",
-					"name": "Turquesa",
-					"color": "#4FC3CF"
+					"name": "Turquesa (botões)",
+					"color": "#04BDC7"
 				},
 				{
-					"slug": "dourado",
-					"name": "Dourado",
-					"color": "#C8A36B"
+					"slug": "faixa",
+					"name": "Turquesa faixa",
+					"color": "#10B0B9"
 				},
 				{
-					"slug": "areia",
-					"name": "Areia",
-					"color": "#EDE4D3"
+					"slug": "aqua",
+					"name": "Aqua (cabeçalho)",
+					"color": "#A8D7DC"
+				},
+				{
+					"slug": "agua",
+					"name": "Água clara",
+					"color": "#DBECEE"
+				},
+				{
+					"slug": "espuma",
+					"name": "Espuma",
+					"color": "#E7F3F4"
 				},
 				{
 					"slug": "branco",
 					"name": "Branco",
 					"color": "#FFFFFF"
-				},
-				{
-					"slug": "nevoa",
-					"name": "Névoa",
-					"color": "#8DA0B2"
 				}
 			],
 			"gradients": [
 				{
 					"slug": "profundidade",
 					"name": "Profundidade",
-					"gradient": "linear-gradient(180deg,#050E18 0%,#0A1B2C 60%,#0E3A5B 100%)"
+					"gradient": "linear-gradient(180deg,#042A2F 0%,#06404A 60%,#09848F 100%)"
+				},
+				{
+					"slug": "lagoa",
+					"name": "Lagoa",
+					"gradient": "linear-gradient(135deg,#09848F 0%,#04BDC7 100%)"
 				}
 			]
 		},
@@ -178,8 +188,8 @@
 	},
 	"styles": {
 		"color": {
-			"background": "var(--wp--preset--color--noite)",
-			"text": "var(--wp--preset--color--areia)"
+			"background": "var(--wp--preset--color--abismo)",
+			"text": "var(--wp--preset--color--espuma)"
 		},
 		"typography": {
 			"fontFamily": "var(--wp--preset--font-family--texto)",
@@ -222,11 +232,11 @@
 			},
 			"link": {
 				"color": {
-					"text": "var(--wp--preset--color--areia)"
+					"text": "var(--wp--preset--color--espuma)"
 				},
 				":hover": {
 					"color": {
-						"text": "var(--wp--preset--color--dourado)"
+						"text": "var(--wp--preset--color--turquesa)"
 					}
 				}
 			},
@@ -235,8 +245,8 @@
 					"radius": "0"
 				},
 				"color": {
-					"background": "var(--wp--preset--color--areia)",
-					"text": "var(--wp--preset--color--noite)"
+					"background": "var(--wp--preset--color--turquesa)",
+					"text": "var(--wp--preset--color--branco)"
 				},
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--texto)",
@@ -255,8 +265,8 @@
 				},
 				":hover": {
 					"color": {
-						"background": "var(--wp--preset--color--dourado)",
-						"text": "var(--wp--preset--color--noite)"
+						"background": "var(--wp--preset--color--teal)",
+						"text": "var(--wp--preset--color--branco)"
 					}
 				}
 			}

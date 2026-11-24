@@ -14,7 +14,7 @@ $ns_video = nautic_squad_video( 'hero' );
 
 <!-- wp:group {"className":"ns-hero__content","layout":{"type":"default"}} -->
 <div class="wp-block-group ns-hero__content"><!-- wp:paragraph {"className":"ns-label reveal"} -->
-<p class="ns-label reveal">Clube de vela &amp; motor — Marina de Oeiras</p>
+<p class="ns-label reveal">Sailing Club · Academy · Power Club — Oeiras &amp; Cascais</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":1,"className":"ns-split"} -->
@@ -28,7 +28,7 @@ $ns_video = nautic_squad_video( 'hero' );
 
 <!-- wp:buttons {"className":"reveal"} -->
 <div class="wp-block-buttons reveal"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#contacto">Tornar-me sócio</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#contacto">Marcar visita</a></div>
 <!-- /wp:button -->
 
 <!-- wp:button {"className":"is-style-ghost"} -->

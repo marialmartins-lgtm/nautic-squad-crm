@@ -20,7 +20,7 @@
 
 <!-- wp:group {"className":"reveal","layout":{"type":"default"}} -->
 <div class="wp-block-group reveal"><!-- wp:paragraph -->
-<p>Ainda a dar os primeiros bordos? Ganha a experiência de que precisas para te tornares sócio, com quem conhece o mar.</p>
+<p>Ainda a dar os primeiros bordos? A bordo do OCEANFUN, um Jeanneau Sun 2500 ágil e fácil de manobrar, ganhas a experiência de que precisas para te tornares sócio.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons -->

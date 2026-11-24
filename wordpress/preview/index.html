@@ -17,15 +17,20 @@
    ========================================================================== */
 
 :root {
-	--noite: var(--wp--preset--color--noite, #050E18);
-	--tinta: var(--wp--preset--color--tinta, #0A1B2C);
-	--oceano: var(--wp--preset--color--oceano, #0E3A5B);
-	--mar: var(--wp--preset--color--mar, #2A86C1);
-	--turquesa: var(--wp--preset--color--turquesa, #4FC3CF);
-	--dourado: var(--wp--preset--color--dourado, #C8A36B);
-	--areia: var(--wp--preset--color--areia, #EDE4D3);
+	/* Paleta oficial Nautic Squad (theme.json) */
+	--noite: var(--wp--preset--color--abismo, #042A2F);
+	--tinta: var(--wp--preset--color--profundo, #06404A);
+	--oceano: var(--wp--preset--color--teal, #09848F);
+	--mar: var(--wp--preset--color--titulo, #0397AB);
+	--turquesa: var(--wp--preset--color--turquesa, #04BDC7);
+	--faixa: var(--wp--preset--color--faixa, #10B0B9);
+	--aqua: var(--wp--preset--color--aqua, #A8D7DC);
+	--agua: var(--wp--preset--color--agua, #DBECEE);
+	--areia: var(--wp--preset--color--espuma, #E7F3F4);
 	--branco: var(--wp--preset--color--branco, #FFFFFF);
-	--nevoa: var(--wp--preset--color--nevoa, #8DA0B2);
+	--nevoa: #8FBFC4;
+	/* acento (itálicos, etiquetas, linhas) */
+	--dourado: var(--wp--preset--color--turquesa, #04BDC7);
 
 	--serif: var(--wp--preset--font-family--titulos, "Cormorant Garamond", "Times New Roman", serif);
 	--sans: var(--wp--preset--font-family--texto, "Manrope", ui-sans-serif, system-ui, sans-serif);
@@ -34,8 +39,8 @@
 	--ease-io: cubic-bezier(.77, 0, .175, 1);
 	--gutter: clamp(1.25rem, 4.5vw, 4rem);
 	--wide: 1360px;
-	--line: rgba(237, 228, 211, .14);
-	--fallback-img: radial-gradient(120% 90% at 70% 20%, #16496e 0%, #0A1B2C 45%, #050E18 100%);
+	--line: rgba(231, 243, 244, .14);
+	--fallback-img: radial-gradient(120% 90% at 70% 20%, #0f6f78 0%, #06404A 45%, #042A2F 100%);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -62,16 +67,17 @@ a { color: inherit; }
 	color: var(--dourado); margin: 0 0 1.6rem; display: flex; align-items: center; gap: 1rem;
 }
 .ns-label::before { content: ""; width: 42px; height: 1px; background: currentColor; }
-.ns-lead { font-size: clamp(1rem, 1.25vw, 1.15rem); color: rgba(237, 228, 211, .72); max-width: 46ch; font-weight: 300; }
+.ns-lead { font-size: clamp(1rem, 1.25vw, 1.15rem); color: rgba(231, 243, 244, .72); max-width: 46ch; font-weight: 300; }
 .ns-num { font-family: var(--serif); font-style: italic; color: var(--dourado); font-size: 1.2rem; }
 
 /* Estrutura ----------------------------------------------------------------- */
 .ns-section { position: relative; padding: clamp(6rem, 14vw, 12rem) var(--gutter); }
 .ns-wrap { width: min(100%, var(--wide)); margin-inline: auto; }
 .ns-section > *, .ns-wrap > *, .ns-grid > * { margin-block: 0; }
-.is-sand { background: var(--areia); color: var(--noite); }
+.is-sand { background: var(--agua); color: var(--noite); }
+.is-sand em, .is-sand .ns-italic { color: var(--mar) !important; }
 .is-sand h2, .is-sand h3 { color: var(--noite); }
-.is-sand .ns-lead { color: rgba(5, 14, 24, .7); }
+.is-sand .ns-lead { color: rgba(4, 42, 47, .7); }
 .is-sand .ns-label { color: var(--oceano); }
 .is-ink { background: var(--tinta); }
 
@@ -80,19 +86,21 @@ a { color: inherit; }
 	position: relative; overflow: hidden; isolation: isolate; display: inline-flex; align-items: center; gap: 1rem;
 	border-radius: 0; text-decoration: none; cursor: pointer; border: 0;
 	font-family: var(--sans); font-weight: 600; font-size: .74rem; letter-spacing: .24em; text-transform: uppercase;
-	background: var(--areia); color: var(--noite); padding: 1.15rem 2.2rem;
+	background: var(--turquesa); color: var(--branco); padding: 1.15rem 2.2rem;
 	transition: color .6s var(--ease);
 }
 .wp-block-button__link::before, .ns-btn::before {
-	content: ""; position: absolute; inset: 0; z-index: -1; background: var(--dourado);
+	content: ""; position: absolute; inset: 0; z-index: -1; background: var(--oceano);
 	transform: scaleY(0); transform-origin: bottom; transition: transform .6s var(--ease);
 }
 .wp-block-button__link:hover::before, .ns-btn:hover::before { transform: scaleY(1); }
 .wp-block-button__link::after, .ns-btn::after { content: ""; width: 28px; height: 1px; background: currentColor; transition: width .6s var(--ease); }
 .wp-block-button__link:hover::after, .ns-btn:hover::after { width: 44px; }
-.is-style-ghost .wp-block-button__link, .ns-btn--ghost { background: transparent; color: var(--areia); box-shadow: inset 0 0 0 1px rgba(237, 228, 211, .45); }
-.is-style-ghost .wp-block-button__link:hover, .ns-btn--ghost:hover { color: var(--noite); }
-.is-sand .is-style-ghost .wp-block-button__link { color: var(--noite); box-shadow: inset 0 0 0 1px rgba(5, 14, 24, .35); }
+.is-style-ghost .wp-block-button__link, .ns-btn--ghost { background: transparent; color: var(--areia); box-shadow: inset 0 0 0 1px rgba(231, 243, 244, .45); }
+.is-style-ghost .wp-block-button__link:hover, .ns-btn--ghost:hover { color: var(--branco); }
+.is-style-ghost .wp-block-button__link::before { background: var(--turquesa); }
+.is-sand .is-style-ghost .wp-block-button__link { color: var(--oceano); box-shadow: inset 0 0 0 1px var(--oceano); }
+.is-sand .is-style-ghost .wp-block-button__link:hover { color: var(--branco); }
 .wp-block-buttons { display: flex; flex-wrap: wrap; gap: 1rem; }
 .ns-link { text-decoration: none; font-size: .74rem; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; display: inline-flex; gap: .8rem; align-items: center; }
 .ns-link::after { content: "→"; transition: transform .5s var(--ease); }
@@ -104,8 +112,8 @@ a { color: inherit; }
 .ns-media__layer, .ns-media > video { transform: scale(1.12); transition: transform 2.4s var(--ease); }
 .ns-media.is-visible .ns-media__layer, .ns-media.is-visible > video { transform: scale(1); }
 .ns-media > video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
-.ns-media::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(5, 14, 24, .55) 0%, rgba(5, 14, 24, .15) 40%, rgba(5, 14, 24, .85) 100%); pointer-events: none; }
-.ns-media.is-darker::after { background: rgba(5, 14, 24, .62); }
+.ns-media::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(4, 42, 47, .55) 0%, rgba(4, 42, 47, .15) 40%, rgba(4, 42, 47, .85) 100%); pointer-events: none; }
+.ns-media.is-darker::after { background: rgba(4, 42, 47, .62); }
 
 /* Imagens com revelação (clip) */
 .ns-reveal-img { position: relative; overflow: hidden; background: var(--fallback-img); margin: 0; }
@@ -140,7 +148,7 @@ html:not(.ns-js) .ns-loader { display: none; }
 /* Cabeçalho ----------------------------------------------------------------- */
 .ns-header { position: fixed; inset: 0 0 auto; z-index: 500; padding: 1.6rem var(--gutter); color: var(--areia); transition: transform .8s var(--ease), padding .6s var(--ease), background-color .6s; }
 .admin-bar .ns-header { top: 32px; }
-.ns-header.is-scrolled { padding-block: 1rem; background: linear-gradient(180deg, rgba(5, 14, 24, .85), rgba(5, 14, 24, 0)); }
+.ns-header.is-scrolled { padding-block: 1rem; background: linear-gradient(180deg, rgba(4, 42, 47, .85), rgba(4, 42, 47, 0)); }
 .ns-header.is-hidden { transform: translateY(-110%); }
 .ns-header__inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; width: min(100%, var(--wide)); margin-inline: auto; }
 .ns-header__inner > * { margin: 0; }
@@ -149,7 +157,7 @@ html:not(.ns-js) .ns-loader { display: none; }
 .ns-header .wp-block-site-logo img { max-height: 46px; width: auto; }
 .ns-logo__mark { width: 34px; height: 34px; flex: none; }
 .ns-header__right { display: flex; align-items: center; gap: 2rem; }
-.ns-header__meta { font-size: .7rem; letter-spacing: .28em; text-transform: uppercase; color: rgba(237, 228, 211, .6); }
+.ns-header__meta { font-size: .7rem; letter-spacing: .28em; text-transform: uppercase; color: rgba(231, 243, 244, .6); }
 @media (max-width: 900px) { .ns-header__meta, .ns-header .wp-block-buttons { display: none; } }
 .ns-header .wp-block-button__link { padding: .9rem 1.4rem; }
 
@@ -183,7 +191,7 @@ html:not(.ns-js) .ns-loader { display: none; }
 .ns-menu-open .ns-overlay__nav a:nth-child(2) span { transition-delay: .06s; } .ns-menu-open .ns-overlay__nav a:nth-child(3) span { transition-delay: .12s; }
 .ns-menu-open .ns-overlay__nav a:nth-child(4) span { transition-delay: .18s; } .ns-menu-open .ns-overlay__nav a:nth-child(5) span { transition-delay: .24s; }
 .ns-menu-open .ns-overlay__nav a:nth-child(6) span { transition-delay: .3s; }
-.ns-overlay__aside { position: relative; display: flex; flex-direction: column; justify-content: flex-end; padding: 6rem var(--gutter) 3rem; gap: 1.2rem; font-size: .9rem; color: rgba(237, 228, 211, .7); }
+.ns-overlay__aside { position: relative; display: flex; flex-direction: column; justify-content: flex-end; padding: 6rem var(--gutter) 3rem; gap: 1.2rem; font-size: .9rem; color: rgba(231, 243, 244, .7); }
 .ns-overlay__aside::before { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--ns-overlay-img, var(--fallback-img)) center/cover; opacity: .35; }
 .ns-overlay__close { position: absolute; top: 1.6rem; right: var(--gutter); }
 @media (max-width: 900px) { .ns-overlay { grid-template-columns: 1fr; } .ns-overlay__aside { display: none; } }
@@ -192,15 +200,15 @@ html:not(.ns-js) .ns-loader { display: none; }
 
 /* Hero ---------------------------------------------------------------------- */
 .ns-hero { min-height: 100svh; display: flex; flex-direction: column; justify-content: flex-end; padding: 8rem var(--gutter) 2.4rem; color: var(--areia); }
-.ns-hero::after { background: linear-gradient(180deg, rgba(5, 14, 24, .55) 0%, rgba(5, 14, 24, .05) 35%, rgba(5, 14, 24, .35) 65%, rgba(5, 14, 24, .95) 100%); }
+.ns-hero::after { background: linear-gradient(180deg, rgba(4, 42, 47, .55) 0%, rgba(4, 42, 47, .05) 35%, rgba(4, 42, 47, .35) 65%, rgba(4, 42, 47, .95) 100%); }
 .ns-hero__content { width: min(100%, var(--wide)); margin: 0 auto; position: relative; }
 .ns-hero__content > * { margin-block: 0; }
 .ns-hero h1 { font-size: clamp(4.2rem, 13.5vw, 13rem); line-height: .86; letter-spacing: -.03em; margin-bottom: 2.4rem !important; }
 .ns-hero__row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 2rem; }
 .ns-hero__row > * { margin: 0; }
-.ns-hero__bottom { width: min(100%, var(--wide)); margin: 3.6rem auto 0; padding-top: 1.4rem; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 1rem; font-size: .7rem; letter-spacing: .28em; text-transform: uppercase; color: rgba(237, 228, 211, .6); }
+.ns-hero__bottom { width: min(100%, var(--wide)); margin: 3.6rem auto 0; padding-top: 1.4rem; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 1rem; font-size: .7rem; letter-spacing: .28em; text-transform: uppercase; color: rgba(231, 243, 244, .6); }
 .ns-hero__bottom .ns-scroll { display: inline-flex; align-items: center; gap: .9rem; }
-.ns-scroll i { width: 1px; height: 38px; background: rgba(237, 228, 211, .25); position: relative; overflow: hidden; }
+.ns-scroll i { width: 1px; height: 38px; background: rgba(231, 243, 244, .25); position: relative; overflow: hidden; }
 .ns-scroll i::after { content: ""; position: absolute; left: 0; top: 0; width: 1px; height: 50%; background: var(--areia); animation: ns-drip 2s var(--ease-io) infinite; }
 .ns-bars i { position: absolute; left: 0; right: 0; height: 12vh; background: var(--noite); z-index: 3; transition: transform 1.8s var(--ease-io) .4s; }
 .ns-bars i:first-child { top: 0; } .ns-bars i:last-child { bottom: 0; }
@@ -224,7 +232,7 @@ html:not(.ns-js) .ns-loader { display: none; }
 .ns-manifesto__text .mw { opacity: .14; transition: opacity .3s linear; }
 .ns-manifesto__text .mw.on { opacity: 1; }
 .ns-manifesto__foot { display: flex; gap: 3rem; flex-wrap: wrap; margin-top: 4rem !important; padding-top: 2rem; border-top: 1px solid var(--line); }
-.ns-manifesto__foot > * { margin: 0; max-width: 34ch; color: rgba(237, 228, 211, .65); font-size: .95rem; }
+.ns-manifesto__foot > * { margin: 0; max-width: 34ch; color: rgba(231, 243, 244, .65); font-size: .95rem; }
 
 /* Passos com imagem fixa ---------------------------------------------------- */
 .ns-steps { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 7vw, 8rem); align-items: start; }
@@ -238,7 +246,7 @@ html:not(.ns-js) .ns-loader { display: none; }
 .ns-step.is-active { opacity: 1; }
 .ns-step > * { margin: 0; }
 .ns-step h3 { font-size: clamp(2.2rem, 4vw, 3.8rem); margin: 1rem 0 1.4rem; }
-.ns-step p { color: rgba(237, 228, 211, .7); max-width: 40ch; }
+.ns-step p { color: rgba(231, 243, 244, .7); max-width: 40ch; }
 .ns-steps__head { margin-bottom: 2rem !important; }
 @media (max-width: 900px) {
 	.ns-steps { grid-template-columns: 1fr; }
@@ -264,20 +272,22 @@ html:not(.ns-js) .ns-loader { display: none; }
 .ns-boat__img, .ns-boat .wp-block-post-featured-image { position: absolute !important; inset: 0; z-index: 0 !important; margin: 0; height: 100%; }
 .ns-boat__img img, .ns-boat .wp-block-post-featured-image img { width: 100%; height: 100% !important; object-fit: cover; transition: transform 1.6s var(--ease); }
 .ns-boat:hover .ns-boat__img img, .ns-boat:hover .wp-block-post-featured-image img { transform: scale(1.06); }
-.ns-boat::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(5, 14, 24, 0) 35%, rgba(5, 14, 24, .92) 100%); pointer-events: none; }
+.ns-boat::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(4, 42, 47, 0) 35%, rgba(4, 42, 47, .92) 100%); pointer-events: none; }
 .ns-boat__tag, .ns-boat .wp-block-post-terms { position: absolute !important; top: 1.6rem; left: 2rem; font-size: .68rem; letter-spacing: .3em; text-transform: uppercase; color: var(--areia); }
 .ns-boat .wp-block-post-terms a { color: inherit; text-decoration: none; }
 .ns-boat__idx { position: absolute !important; top: 1.3rem; right: 2rem; font: italic 300 1.4rem var(--serif); color: var(--dourado); }
 .ns-boat h3, .ns-boat .wp-block-post-title { font-size: clamp(2rem, 3vw, 2.9rem); color: var(--branco); }
 .ns-boat .wp-block-post-title a { color: inherit; text-decoration: none; }
-.ns-boat__model { color: rgba(237, 228, 211, .7); font-size: .92rem; margin-top: .5rem !important; }
+.ns-boat__model { color: rgba(231, 243, 244, .7); font-size: .92rem; margin-top: .5rem !important; }
 .ns-specs { display: flex; gap: 1.6rem; flex-wrap: wrap; margin-top: 1.4rem !important; padding-top: 1.2rem; border-top: 1px solid var(--line); font-size: .7rem; letter-spacing: .22em; text-transform: uppercase; }
 .ns-specs > * { margin: 0; }
 .ns-specs > *:empty { display: none; }
 .ns-boat__link { position: absolute !important; inset: 0; z-index: 3 !important; }
-.ns-boat--end { background: var(--areia); color: var(--noite); justify-content: center; align-items: flex-start; gap: 1.5rem; }
+.ns-boat--end { background: var(--faixa); color: var(--branco); justify-content: center; align-items: flex-start; gap: 1.5rem; }
 .ns-boat--end::after { content: none; }
-.ns-boat--end h3 { color: var(--noite); }
+.ns-boat--end h3, .ns-boat--end .ns-label { color: var(--branco); }
+.ns-boat--end h3 em { color: var(--noite); }
+.ns-boat--end .ns-btn { background: var(--branco); color: var(--oceano); }
 @media (max-width: 900px) {
 	.ns-hscroll { height: auto !important; }
 	.ns-hscroll__sticky { position: relative; height: auto; padding-block: 6rem 4rem; }
@@ -313,7 +323,7 @@ html:not(.ns-js) .ns-loader { display: none; }
 .ns-power__specs { display: grid; grid-template-columns: repeat(3, 1fr); margin: 2.6rem 0 !important; border-top: 1px solid var(--line); }
 .ns-power__specs div { padding: 1.4rem 0; border-bottom: 1px solid var(--line); }
 .ns-power__specs strong { display: block; font: 300 2.4rem/1 var(--serif); color: var(--branco); }
-.ns-power__specs span { font-size: .66rem; letter-spacing: .24em; text-transform: uppercase; color: rgba(237, 228, 211, .55); }
+.ns-power__specs span { font-size: .66rem; letter-spacing: .24em; text-transform: uppercase; color: rgba(231, 243, 244, .55); }
 @media (max-width: 900px) { .ns-power { grid-template-columns: 1fr; } }
 
 /* Momentos (galeria) ------------------------------------------------------- */
@@ -339,15 +349,15 @@ html:not(.ns-js) .ns-loader { display: none; }
 /* Planos -------------------------------------------------------------------- */
 .ns-plans-head { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: end; margin-bottom: clamp(3rem, 6vw, 5rem) !important; }
 .ns-plans-head > * { margin: 0; }
-.ns-plans { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid rgba(5, 14, 24, .15); }
+.ns-plans { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid rgba(4, 42, 47, .15); }
 .ns-plans > * { margin: 0; }
-.ns-plan { padding: 3rem 3rem 3rem 0; display: flex; flex-direction: column; gap: 1.2rem; border-bottom: 1px solid rgba(5, 14, 24, .15); }
-.ns-plan + .ns-plan { padding-left: 3rem; border-left: 1px solid rgba(5, 14, 24, .15); }
+.ns-plan { padding: 3rem 3rem 3rem 0; display: flex; flex-direction: column; gap: 1.2rem; border-bottom: 1px solid rgba(4, 42, 47, .15); }
+.ns-plan + .ns-plan { padding-left: 3rem; border-left: 1px solid rgba(4, 42, 47, .15); }
 .ns-plan > * { margin: 0; }
 .ns-plan h3 { font-size: clamp(2.6rem, 4.4vw, 4.4rem); }
 .ns-plan__price { font-size: .72rem; letter-spacing: .26em; text-transform: uppercase; color: var(--oceano); }
 .ns-plan ul { list-style: none; padding: 0; margin: .6rem 0 1.4rem; }
-.ns-plan li { padding: .85rem 0; border-top: 1px solid rgba(5, 14, 24, .1); display: flex; justify-content: space-between; gap: 1rem; }
+.ns-plan li { padding: .85rem 0; border-top: 1px solid rgba(4, 42, 47, .1); display: flex; justify-content: space-between; gap: 1rem; }
 .ns-plan li::after { content: "✓"; color: var(--oceano); }
 .ns-plan .wp-block-buttons { margin-top: auto; }
 .ns-plan.is-dark { background: var(--noite); color: var(--areia); padding: 3rem; }
@@ -355,8 +365,8 @@ html:not(.ns-js) .ns-loader { display: none; }
 .ns-plan.is-dark .ns-plan__price { color: var(--dourado); }
 .ns-plan.is-dark li { border-color: var(--line); }
 .ns-plan.is-dark li::after { color: var(--dourado); }
-.ns-plan.is-dark .wp-block-button__link { background: var(--areia); color: var(--noite); }
-.ns-requirements { margin-top: 2.4rem !important; font-size: .95rem; color: rgba(5, 14, 24, .75); max-width: 70ch; }
+.ns-plan.is-dark .wp-block-button__link { background: var(--turquesa); color: var(--branco); }
+.ns-requirements { margin-top: 2.4rem !important; font-size: .95rem; color: rgba(4, 42, 47, .75); max-width: 70ch; }
 .ns-requirements a { color: var(--oceano); }
 @media (max-width: 860px) {
 	.ns-plans-head, .ns-plans { grid-template-columns: 1fr; }
@@ -369,7 +379,7 @@ html:not(.ns-js) .ns-loader { display: none; }
 .ns-cta__inner { width: min(100%, var(--wide)); margin-inline: auto; display: flex; justify-content: space-between; align-items: flex-end; gap: 2rem; flex-wrap: wrap; }
 .ns-cta__inner > * { margin: 0; }
 .ns-cta h2 { font-size: clamp(3.4rem, 9vw, 9rem); }
-.ns-cta p { max-width: 38ch; color: rgba(237, 228, 211, .8); }
+.ns-cta p { max-width: 38ch; color: rgba(231, 243, 244, .8); }
 
 /* FAQ ----------------------------------------------------------------------- */
 .ns-faq-wrap { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(2rem, 6vw, 6rem); }
@@ -383,7 +393,7 @@ html:not(.ns-js) .ns-loader { display: none; }
 .ns-faq summary::-webkit-details-marker { display: none; }
 .ns-faq summary::after { content: ""; flex: none; width: 14px; height: 14px; background: linear-gradient(currentColor, currentColor) center/100% 1px no-repeat, linear-gradient(currentColor, currentColor) center/1px 100% no-repeat; transition: transform .6s var(--ease); }
 .ns-faq details[open] summary::after { transform: rotate(135deg); }
-.ns-faq details > :not(summary) { margin: 0; padding: 0 3rem 2rem 0; color: rgba(237, 228, 211, .7); max-width: 60ch; }
+.ns-faq details > :not(summary) { margin: 0; padding: 0 3rem 2rem 0; color: rgba(231, 243, 244, .7); max-width: 60ch; }
 @media (max-width: 900px) { .ns-faq-wrap { grid-template-columns: 1fr; } .ns-faq-wrap .ns-sticky { position: static; } }
 
 /* Contacto ------------------------------------------------------------------ */
@@ -395,12 +405,12 @@ html:not(.ns-js) .ns-loader { display: none; }
 .ns-contact__list small { display: block; font-size: .64rem; letter-spacing: .28em; text-transform: uppercase; color: var(--dourado); margin-bottom: .3rem; }
 .ns-contact__list a { text-decoration: none; }
 .ns-contact__list li { font-size: 1.05rem; }
-.ns-form { background: rgba(5, 14, 24, .55); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--line); padding: clamp(1.8rem, 3.4vw, 3rem); }
+.ns-form { background: rgba(4, 42, 47, .55); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--line); padding: clamp(1.8rem, 3.4vw, 3rem); }
 .ns-form h3 { margin: 0 0 1.8rem; font-size: 2.2rem; }
 .ns-form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 0 1.4rem; }
-.ns-form label { display: block; font-size: .64rem; letter-spacing: .26em; text-transform: uppercase; color: rgba(237, 228, 211, .55); }
+.ns-form label { display: block; font-size: .64rem; letter-spacing: .26em; text-transform: uppercase; color: rgba(231, 243, 244, .55); }
 .ns-form input, .ns-form select, .ns-form textarea {
-	width: 100%; margin: .4rem 0 1.6rem; padding: .7rem 0; background: transparent; border: 0; border-bottom: 1px solid rgba(237, 228, 211, .3);
+	width: 100%; margin: .4rem 0 1.6rem; padding: .7rem 0; background: transparent; border: 0; border-bottom: 1px solid rgba(231, 243, 244, .3);
 	color: var(--areia); font: 300 1.05rem var(--sans); border-radius: 0; transition: border-color .4s;
 }
 .ns-form select option { background: var(--noite); }
@@ -413,13 +423,13 @@ html:not(.ns-js) .ns-loader { display: none; }
 @media (max-width: 560px) { .ns-form .row { grid-template-columns: 1fr; } }
 
 /* Rodapé -------------------------------------------------------------------- */
-.ns-footer { background: var(--noite); padding: 6rem var(--gutter) 2rem; border-top: 1px solid var(--line); overflow: hidden; font-size: .92rem; color: rgba(237, 228, 211, .65); }
+.ns-footer { background: var(--noite); padding: 6rem var(--gutter) 2rem; border-top: 1px solid var(--line); overflow: hidden; font-size: .92rem; color: rgba(231, 243, 244, .65); }
 .ns-footer__grid { width: min(100%, var(--wide)); margin-inline: auto; display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 2.4rem; }
 .ns-footer h4 { font: 600 .66rem var(--sans); letter-spacing: .3em; text-transform: uppercase; color: var(--dourado); margin: 0 0 1.4rem; }
 .ns-footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .7rem; }
 .ns-footer a { text-decoration: none; transition: color .3s; }
 .ns-footer a:hover { color: var(--dourado); }
-.ns-footer__big { font-family: var(--serif); font-weight: 300; font-size: 16vw; line-height: 1; padding-bottom: .12em; letter-spacing: -.04em; text-align: center; margin: 4rem 0 1rem; color: transparent; -webkit-text-stroke: 1px rgba(237, 228, 211, .22); white-space: nowrap; user-select: none; }
+.ns-footer__big { font-family: var(--serif); font-weight: 300; font-size: 16vw; line-height: 1; padding-bottom: .12em; letter-spacing: -.04em; text-align: center; margin: 4rem 0 1rem; color: transparent; -webkit-text-stroke: 1px rgba(231, 243, 244, .22); white-space: nowrap; user-select: none; }
 .ns-footer__big em { color: var(--dourado); -webkit-text-stroke: 0; }
 .ns-footer__bottom { width: min(100%, var(--wide)); margin-inline: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; padding-top: 1.6rem; border-top: 1px solid var(--line); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; }
 @media (max-width: 860px) { .ns-footer__grid { grid-template-columns: 1fr 1fr; } }
@@ -458,22 +468,34 @@ html:not(.ns-js) .ns-loader { display: none; }
 /* Imagem que não carregou: fica o fundo escuro, sem ícone partido */
 img.ns-img-failed { visibility: hidden; }
 
+/* Faixa turquesa (como a faixa "Schedule your visit" do site atual) */
+.is-band { background: var(--faixa); color: var(--branco); }
+.is-band h2, .is-band h3 { color: var(--branco); }
+.is-band em { color: var(--noite) !important; }
+.is-band .ns-label { color: var(--branco); }
+.ns-loader__bar::after { background: var(--turquesa); }
+.ns-team { display: grid; grid-template-columns: auto 1fr; gap: 3rem; align-items: center; margin-top: 3rem !important; padding: 2.4rem 3rem; background: var(--faixa); color: var(--branco); }
+.ns-team > * { margin: 0; }
+.ns-team h3 { color: var(--branco) !important; font-size: clamp(2.2rem, 3.6vw, 3.4rem); }
+.ns-team h3 em { color: var(--noite) !important; }
+@media (max-width: 760px) { .ns-team { grid-template-columns: 1fr; gap: 1rem; padding: 2rem 1.6rem; } }
+
 </style>
 </head>
 <body class="ns-site">
 <div class="ns-loader" aria-hidden="true"><div class="ns-loader__inner"><div class="ns-loader__word"><span>Nautic Squad</span></div><div class="ns-loader__bar"></div></div></div><div class="ns-grain" aria-hidden="true"></div>
 <header class="ns-header"><div class="ns-header__inner">
 <a class="ns-logo" href="#"><svg class="ns-logo__mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="2"/><path d="M21 7 L21 27 L31 27 Z" fill="#25C2CB"/><path d="M19 11 L19 27 L11 27 Z" fill="currentColor"/><path d="M8 30 Q14 34 20 30 T32 30" fill="none" stroke="#FFB547" stroke-width="2.2" stroke-linecap="round"/></svg>Nautic Squad</a>
-<div class="ns-header__right"><span class="ns-header__meta">Marina de Oeiras</span><div class="wp-block-buttons"><div class="wp-block-button is-style-ghost"><a class="wp-block-button__link" href="#contacto">Ser sócio</a></div></div>
+<div class="ns-header__right"><span class="ns-header__meta">Oeiras · Cascais</span><div class="wp-block-buttons"><div class="wp-block-button is-style-ghost"><a class="wp-block-button__link" href="#contacto">Ser sócio</a></div></div>
 <button class="ns-menu-btn" data-menu-toggle aria-label="Abrir menu">Menu <i></i></button></div>
 </div></header>
 <div class="ns-overlay" style="--ns-overlay-img:url('https://images.unsplash.com/photo-1528154291023-a6525fabe5b4?auto=format&fit=crop&w=2000&q=80')"><nav class="ns-overlay__nav"><a href="#como-funciona"><span>Como funciona</span></a><a href="#frota"><span>Frota</span></a><a href="#power-club"><span>Power Club</span></a><a href="#momentos"><span>Momentos</span></a><a href="#planos"><span>Planos</span></a><a href="#contacto"><span>Contacto</span></a></nav>
 <div class="ns-overlay__aside"><p class="ns-label">Marina de Oeiras</p><p>Avenida Marginal, 2780-267 Oeiras<br><a href="tel:+351911924555">+351 911 924 555</a><br><a href="https://www.instagram.com/nautic.squad/">@nautic.squad</a></p></div>
 <button class="ns-menu-btn ns-overlay__close" data-menu-toggle aria-label="Fechar menu">Fechar <i></i></button></div><main class="ns-home"><section class="wp-block-group alignfull ns-hero ns-media" style="background-image:url('https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=2000&q=80');background-size:cover;background-position:50% 50%">
-<div class="wp-block-group ns-hero__content"><p class="ns-label reveal">Clube de vela &amp; motor — Marina de Oeiras</p>
+<div class="wp-block-group ns-hero__content"><p class="ns-label reveal">Sailing Club · Academy · Power Club — Oeiras &amp; Cascais</p>
 <h1 class="wp-block-heading ns-split">O mar <em>é teu.</em></h1>
 <div class="wp-block-group ns-hero__row"><p class="ns-lead reveal">Navega quando quiseres, sem teres um barco. A Nautic Squad dá-te a frota, a marina e a tranquilidade — tu só tens de largar amarras.</p>
-<div class="wp-block-buttons reveal"><div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#contacto">Tornar-me sócio</a></div>
+<div class="wp-block-buttons reveal"><div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#contacto">Marcar visita</a></div>
 <div class="wp-block-button is-style-ghost"><a class="wp-block-button__link wp-element-button" href="#frota">Ver a frota</a></div>
 </div>
 </div>
@@ -481,9 +503,9 @@ img.ns-img-failed { visibility: hidden; }
 <div class="ns-bars" aria-hidden="true"><i></i><i></i></div><div class="ns-hero__bottom reveal"><span>38°41′ N — 9°19′ W</span><span>Vela · Motor · Academia</span><a class="ns-scroll" href="#manifesto" style="text-decoration:none">Descer <i></i></a></div>
 </section>
 <section id="manifesto" class="wp-block-group alignfull ns-section ns-manifesto"><div class="wp-block-group ns-wrap"><p class="ns-label">O clube</p>
-<p class="ns-manifesto__text">Não precisas de ter um barco para viver o mar. Precisas de tempo, de vento e de uma boa tripulação. Tudo o resto — marina, seguro, manutenção, limpeza — deixa connosco.</p>
+<p class="ns-manifesto__text">Velejar é uma paixão. Mas a falta de tempo e os custos de ter um barco são um obstáculo? Na Nautic Squad, tu escolhes quando sair. Marina, seguro, manutenção e limpeza — deixa connosco.</p>
 <div class="wp-block-group ns-manifesto__foot"><p>Um clube para skippers que querem a liberdade de navegar quando quiserem, com conforto e segurança.</p>
-<p>Veleiros e lancha prontos a sair da Marina de Oeiras, a poucos minutos de Lisboa e de Cascais.</p>
+<p>Veleiros nas marinas de Oeiras e de Cascais e a lancha do Power Club, prontos a sair.</p>
 </div>
 </div>
 </section>
@@ -514,7 +536,7 @@ img.ns-img-failed { visibility: hidden; }
 </div>
 <div class="ns-hscroll__progress" aria-hidden="true"><i></i></div>
 </div>
-<div class="ns-track"><article class="ns-boat"><figure class="ns-boat__img"><img src="https://images.unsplash.com/photo-1520645521318-f03a712f0e67?auto=format&fit=crop&w=2000&q=80" alt="" loading="lazy"></figure><span class="ns-boat__tag">Vela</span><span class="ns-boat__idx">01</span><h3>Sun Odyssey 349</h3><p class="ns-boat__model">Jeanneau · Veleiro de cruzeiro</p><div class="ns-specs"><span>10,3 m</span><span>Vela</span><span>2020</span></div><a class="ns-boat__link" href="#contacto" aria-label="Sun Odyssey 349"></a></article><article class="ns-boat"><figure class="ns-boat__img"><img src="https://images.unsplash.com/photo-1540946485063-a40da27545f8?auto=format&fit=crop&w=2000&q=80" alt="" loading="lazy"></figure><span class="ns-boat__tag">Vela</span><span class="ns-boat__idx">02</span><h3>Oceanis 37</h3><p class="ns-boat__model">Beneteau · Limited Edition</p><div class="ns-specs"><span>11,5 m</span><span>Vela</span><span>2013</span></div><a class="ns-boat__link" href="#contacto" aria-label="Oceanis 37"></a></article><article class="ns-boat"><figure class="ns-boat__img"><img src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=2000&q=80" alt="" loading="lazy"></figure><span class="ns-boat__tag">Motor · Power Club</span><span class="ns-boat__idx">03</span><h3>Fifty Fifty</h3><p class="ns-boat__model">Quicksilver Activ 875</p><div class="ns-specs"><span>8,7 m</span><span>12 pessoas</span><span>Oeiras</span></div><a class="ns-boat__link" href="#contacto" aria-label="Fifty Fifty"></a></article><article class="ns-boat ns-boat--end"><p class="ns-label">Próxima saída</p><h3>O teu lugar <em>a bordo.</em></h3><a class="ns-btn" href="#contacto">Falar connosco</a></article></div></div>
+<div class="ns-track"><article class="ns-boat"><figure class="ns-boat__img"><img src="https://images.unsplash.com/photo-1520645521318-f03a712f0e67?auto=format&fit=crop&w=2000&q=80" alt="" loading="lazy"></figure><span class="ns-boat__tag">Sailing Club · Oeiras</span><span class="ns-boat__idx">01</span><h3>Oceanbliss</h3><p class="ns-boat__model">Jeanneau Sun Odyssey 350</p><div class="ns-specs"><span>Vela</span><span>Cockpit duplo leme</span><span>Oeiras</span></div><a class="ns-boat__link" href="#contacto" aria-label="Oceanbliss"></a></article><article class="ns-boat"><figure class="ns-boat__img"><img src="https://images.unsplash.com/photo-1540946485063-a40da27545f8?auto=format&fit=crop&w=2000&q=80" alt="" loading="lazy"></figure><span class="ns-boat__tag">Sailing Club · Oeiras</span><span class="ns-boat__idx">02</span><h3>Oceanescape</h3><p class="ns-boat__model">Beneteau Oceanis 37 Limited Edition</p><div class="ns-specs"><span>3 cabines</span><span>2013</span><span>Oeiras</span></div><a class="ns-boat__link" href="#contacto" aria-label="Oceanescape"></a></article><article class="ns-boat"><figure class="ns-boat__img"><img src="https://images.unsplash.com/photo-1528154291023-a6525fabe5b4?auto=format&fit=crop&w=2000&q=80" alt="" loading="lazy"></figure><span class="ns-boat__tag">Sailing Club · Cascais</span><span class="ns-boat__idx">03</span><h3>Oceanvibes</h3><p class="ns-boat__model">Dufour 45 Classic</p><div class="ns-specs"><span>13,67 m</span><span>1998</span><span>Cascais</span></div><a class="ns-boat__link" href="#contacto" aria-label="Oceanvibes"></a></article><article class="ns-boat"><figure class="ns-boat__img"><img src="../nautic-squad/assets/img/oceanfun.jpg" alt="" loading="lazy"></figure><span class="ns-boat__tag">Sailing Academy · Oeiras</span><span class="ns-boat__idx">04</span><h3>Oceanfun</h3><p class="ns-boat__model">Jeanneau Sun 2500</p><div class="ns-specs"><span>7,50 m</span><span>Academia</span><span>Oeiras</span></div><a class="ns-boat__link" href="#contacto" aria-label="Oceanfun"></a></article><article class="ns-boat"><figure class="ns-boat__img"><img src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=2000&q=80" alt="" loading="lazy"></figure><span class="ns-boat__tag">Power Club · Oeiras</span><span class="ns-boat__idx">05</span><h3>Fifty Fifty</h3><p class="ns-boat__model">Quicksilver Activ 875</p><div class="ns-specs"><span>8,7 m</span><span>12 pessoas</span><span>Oeiras</span></div><a class="ns-boat__link" href="#contacto" aria-label="Fifty Fifty"></a></article><article class="ns-boat ns-boat--end"><p class="ns-label">Próxima saída</p><h3>O teu lugar <em>a bordo.</em></h3><a class="ns-btn" href="#contacto">Falar connosco</a></article></div></div>
 </section>
 <section class="wp-block-group alignfull ns-quote ns-media" style="background-image:url('https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=2000&q=80');background-size:cover;background-position:50% 50%"><div class="wp-block-group"><p class="ns-label reveal">Tudo incluído</p>
 <h2 class="wp-block-heading ns-split">Tu navegas. <em>Nós tratamos do resto.</em></h2>
@@ -556,32 +578,35 @@ img.ns-img-failed { visibility: hidden; }
 </div>
 </section>
 <section id="planos" class="wp-block-group alignfull ns-section is-sand"><div class="wp-block-group ns-wrap"><div class="wp-block-group ns-plans-head"><div class="wp-block-group"><p class="ns-label">Planos</p>
-<h2 class="wp-block-heading ns-split">À medida <em>das tuas saídas.</em></h2>
+<h2 class="wp-block-heading ns-split">Escolhe <em>o teu ritmo.</em></h2>
 </div>
-<p class="ns-lead reveal">O valor depende do barco e do número de saídas por mês. Fala connosco e preparamos a proposta certa para ti.</p>
+<p class="ns-lead reveal">Três formas de fazer parte do clube. Escolhe o nível que encaixa na tua vida — e, se quiseres, partilha-o com um amigo.</p>
 </div>
-<div class="wp-block-group ns-plans reveal-stagger"><div class="wp-block-group ns-plan"><p class="ns-plan__price">Mensalidade à medida</p>
-<h3 class="wp-block-heading">Individual</h3>
-<p>O barco é teu nos dias que reservas. Escolhes o barco e o número de saídas por mês.</p>
-<ul class="wp-block-list"><li>Escolha do barco</li>
-<li>Saídas por mês à tua medida</li>
+<div class="wp-block-group ns-plans reveal-stagger"><div class="wp-block-group ns-plan"><p class="ns-plan__price">6 saídas por mês</p>
+<h3 class="wp-block-heading">Weekday</h3>
+<p>Saídas durante a semana. O favorito dos velejadores: mais acessível e com saídas mais longas — podes até reservar alguns dias para um cruzeiro.</p>
+<ul class="wp-block-list"><li>6 saídas por mês, à semana</li>
+<li>Possibilidade de cruzeiro de vários dias</li>
 <li>Reservas na app online</li>
 <li>Todas as despesas incluídas</li>
 </ul>
-<div class="wp-block-buttons"><div class="wp-block-button is-style-ghost"><a class="wp-block-button__link wp-element-button" href="#contacto">Pedir valores</a></div>
+<div class="wp-block-buttons"><div class="wp-block-button is-style-ghost"><a class="wp-block-button__link wp-element-button" href="#contacto">Garantir o meu lugar</a></div>
 </div>
 </div>
-<div class="wp-block-group ns-plan is-dark"><p class="ns-plan__price">Plano partilhado</p>
-<h3 class="wp-block-heading"><em>Team</em></h3>
-<p>Partilha o plano com um amigo, dividam a mensalidade e multipliquem as saídas.</p>
-<ul class="wp-block-list"><li>Tudo o que o Individual inclui</li>
-<li>Dois sócios, um só plano</li>
-<li>Custos divididos</li>
-<li>Mais tripulação, mais mar</li>
+<div class="wp-block-group ns-plan is-dark"><p class="ns-plan__price">3 saídas por mês</p>
+<h3 class="wp-block-heading">Weekend</h3>
+<p>Saídas ao fim de semana. Perfeito para quem tem pouco tempo e quer começar a velejar sem compromissos de agenda.</p>
+<ul class="wp-block-list"><li>3 saídas por mês, ao fim de semana</li>
+<li>Ideal para começar</li>
+<li>Reservas na app online</li>
+<li>Todas as despesas incluídas</li>
 </ul>
-<div class="wp-block-buttons"><div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#contacto">Pedir valores Team</a></div>
+<div class="wp-block-buttons"><div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#contacto">Garantir o meu lugar</a></div>
 </div>
 </div>
+</div>
+<div class="wp-block-group ns-team reveal"><h3 class="wp-block-heading">Team <em>sailing</em></h3>
+<p>Partilha qualquer um destes níveis com um amigo. Ambos podem ser skippers e sair juntos ou separadamente — mais divertido e ainda mais económico.</p>
 </div>
 <p class="ns-requirements reveal"><strong>Requisitos:</strong> carta de Patrão Local e curso de vela ou experiência equivalente a RYA Day Skipper. Ainda não tens? A <a href="#">Sailing Academy</a> prepara-te.</p>
 </div>
@@ -589,7 +614,7 @@ img.ns-img-failed { visibility: hidden; }
 <section class="wp-block-group alignfull ns-cta ns-media" style="background-image:url('https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?auto=format&fit=crop&w=2000&q=80');background-size:cover;background-position:50% 50%"><div class="wp-block-group ns-cta__inner"><div class="wp-block-group"><p class="ns-label reveal">Sailing Academy</p>
 <h2 class="wp-block-heading ns-split">Aprende <em>a velejar.</em></h2>
 </div>
-<div class="wp-block-group reveal"><p>Ainda a dar os primeiros bordos? Ganha a experiência de que precisas para te tornares sócio, com quem conhece o mar.</p>
+<div class="wp-block-group reveal"><p>Ainda a dar os primeiros bordos? A bordo do OCEANFUN, um Jeanneau Sun 2500 ágil e fácil de manobrar, ganhas a experiência de que precisas para te tornares sócio.</p>
 <div class="wp-block-buttons"><div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#">Conhecer a academia</a></div>
 </div>
 </div>
