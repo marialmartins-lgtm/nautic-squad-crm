@@ -10,13 +10,15 @@ Tudo editável no editor do WordPress, sem page builders.
 
 ## Instalar
 
-1. WordPress 6.5+ → **Aparência → Temas → Adicionar novo → Carregar tema** → `nautic-squad.zip` → Ativar.
-2. **Definições → Leitura** → página inicial estática (o template "front-page" é usado automaticamente).
-3. **Aparência → Editor → Site → Logótipo**: carregar o logótipo oficial.
-4. **Frota → Adicionar barco**: título, imagem de destaque (vertical 4:5 fica melhor), tipo (Vela/Motor) e a caixa
-   "Ficha técnica". Os barcos aparecem sozinhos na faixa horizontal da página inicial e em `/frota`.
-5. Criar as páginas `sailing-club`, `sailing-academy`, `power-club` e `politica-de-privacidade` (os padrões "Nautic Squad" no inseridor ajudam a montá-las).
-6. Ver o formulário de contacto: os pedidos chegam ao email de **Definições → Geral**.
+Guia completo da mudança Wix → WordPress (alojamento, DNS, email): **[MIGRACAO.md](MIGRACAO.md)**.
+
+1. WordPress 6.5+ (testado em 7.1) → **Aparência → Temas → Adicionar novo → Carregar tema** → `nautic-squad.zip` → Ativar.
+2. Clicar em **Importar conteúdo da Nautic Squad** no aviso do painel: cria a frota (5 barcos com fotos e ficha técnica),
+   as páginas Sailing Club / Sailing Academy / Power Club, a página inicial e um rascunho da política de privacidade.
+3. **Definições → Geral**: email de administração `sales@nauticsquad.com` (recebe os pedidos do formulário).
+4. Para editar a frota: **Frota** no menu lateral (foto de destaque, tipo Vela/Motor, caixa "Ficha técnica", campo "Ordem").
+
+Os endereços antigos da Wix (`/en/...`, `/home`, `/copy-of-sailing-club`) são redirecionados automaticamente.
 
 ## Fotografias e vídeo
 

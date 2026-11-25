@@ -139,3 +139,13 @@ function nautic_squad_hide_custom_fields_panel() {
 	remove_meta_box( 'postcustom', 'barco', 'normal' );
 }
 add_action( 'add_meta_boxes', 'nautic_squad_hide_custom_fields_panel', 20 );
+
+/**
+ * Arquivo /frota: ordenar pelo campo "Ordem" (como na página inicial).
+ */
+function nautic_squad_barco_order( $q ) {
+	if ( ! is_admin() && $q->is_main_query() && ( $q->is_post_type_archive( 'barco' ) || $q->is_tax( 'tipo_barco' ) ) ) {
+		$q->set( 'orderby', array( 'menu_order' => 'ASC', 'title' => 'ASC' ) );
+	}
+}
+add_action( 'pre_get_posts', 'nautic_squad_barco_order' );

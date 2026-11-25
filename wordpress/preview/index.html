@@ -529,6 +529,17 @@ img.ns-img-failed { visibility: hidden; }
 .ns-social a:hover { background: var(--turquesa); border-color: var(--turquesa); color: var(--branco); }
 .ns-social svg { width: 18px; height: 18px; }
 
+/* Introdução das páginas dos clubes */
+.ns-intro__grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 6vw, 6rem); align-items: start; }
+.ns-intro__grid > * { margin: 0; }
+.ns-intro__grid .reveal > * { margin: 0 0 1.2rem; }
+.ns-intro__grid .reveal p:not(.ns-lead) { color: rgba(231, 243, 244, .7); }
+@media (max-width: 900px) { .ns-intro__grid { grid-template-columns: 1fr; } }
+.ns-home .wp-block-post-content > * { margin-block: 0; }
+
+/* Sem espaço entre as partes do modelo (cabeçalho, conteúdo, rodapé) */
+.wp-site-blocks > * { margin-block: 0 !important; }
+
 </style>
 </head>
 <body class="ns-site">

@@ -9,12 +9,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'NAUTIC_SQUAD_VERSION', '2.0.0' );
+define( 'NAUTIC_SQUAD_VERSION', '3.0.0' );
 
 require_once get_template_directory() . '/inc/media.php';
 require_once get_template_directory() . '/inc/svg.php';
 require_once get_template_directory() . '/inc/barcos.php';
 require_once get_template_directory() . '/inc/contacto.php';
+require_once get_template_directory() . '/inc/setup.php';
 
 /**
  * Suportes do tema.
