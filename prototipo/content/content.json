@@ -1,0 +1,1478 @@
+{
+ "pt": {
+  "home": {
+   "meta_title": "Nautic Squad | Clube de Vela para Skippers | Oeiras | Lisboa",
+   "menu": [
+    "SAILING CLUB",
+    "Conceito",
+    "Tipos de Associação",
+    "Frota",
+    "FAQ",
+    "SAILING ACADEMY",
+    "Conceito",
+    "Tipos de Associação",
+    "Frota",
+    "FAQ",
+    "POWER CLUB",
+    "FROTA",
+    "OCEANVIEW",
+    "OCEANESCAPE",
+    "OCEANFUN",
+    "QUEM SOMOS",
+    "GALERIA",
+    "CONTACTOS"
+   ],
+   "hero": "A vela é uma paixão, mas a falta de tempo e os custos associados são um obstáculo?",
+   "hero_cta": "Agende a sua visita",
+   "clubs": [
+    {
+     "key": "sailing-club",
+     "name": "SAILING CLUB",
+     "text": [
+      "Um clube para skippers que desejam ter a liberdade de velejar quando quiser, com conforto e segurança, tal como se tivesse o barco próprio, mas por uma fração do custo e da dor de cabeça.",
+      "Os sócios da Nautic Squad escolhem o veleiro e o modelo de associação que melhor se adapta às suas necessidades, consoante o número de saídas mensais desejadas. Depois, basta agendar as datas na nossa aplicação online e partir para desfrutar do mar e do vento."
+     ],
+     "more": "Saiba mais sobre o Sailing Club"
+    },
+    {
+     "key": "sailing-academy",
+     "name": "SAILING ACADEMY",
+     "text": [
+      "A alternativa perfeita para os marinheiros que desejam ganhar experiência prática de navegação, que adoram uma competição ou que sonham em fazer passeios tranquilos.",
+      "No Sailing Academy, os sócios têm acesso a um veleiro menor, leve e de controlo fácil, que foi projetado para oferecer a melhor experiência de aprendizagem e desempenho competitivo."
+     ],
+     "more": "Saiba mais sobre o Sailing Academy"
+    },
+    {
+     "key": "power-club",
+     "name": "POWER CLUB",
+     "text": [
+      "O Power Club da Nautic Squad foi criado para quem vive a paixão pelo mar, pela velocidade e por experiências exclusivas. Este clube oferece acesso a uma lancha de alto desempenho, cuidadosamente mantida e pronta para proporcionar momentos de pura adrenalina e conforto.",
+      "Este clube proporciona um ambiente exclusivo, onde cada experiência é adaptada às preferências dos membros."
+     ],
+     "more": "Saiba mais sobre o Power Club"
+    }
+   ],
+   "contact_btn": "Contacte-nos",
+   "legacy_anchor": "OCEANVIEW",
+   "fleet_label": "FROTA",
+   "boats": [
+    {
+     "label": "Sailing Club - Marina de Oeiras",
+     "text": [
+      "O OceanBliss é um Sun Odyssey 350 que se destaca pelo seu casco totalmente novo, silhueta moderna e excelente desempenho ao leme, oferecendo manobras fáceis e maior conforto no cockpit. O layout inteligente, com passadiços laterais contínuos e dupla roda de leme, garante segurança, fluidez de movimentos e boa visibilidade. No interior, os espaços luminosos e acolhedores, com design contemporâneo e mais de 1,85 m de altura livre, tornam este veleiro ideal para cruzeiros em família com conforto, bem-estar e tranquilidade."
+     ]
+    },
+    {
+     "label": "Sailing Club - Marina de Oeiras",
+     "text": [
+      "O OCEANESCAPE é um BENETEAU OCEANIS 37 LIMITED EDITION muito sedutor, construído em 2013. O Oceanis 37 chama a atenção pelo seu design inovador e exclusivo, com equilíbrio perfeito entre linhas fluidas e layout. Um veleiro aerodinâmico, rápido, prático e, sobretudo, seguro e confortável no mar. O LIMITED EDITION desperta desejo e curiosidade nos marinheiros, que rapidamente querem viver as incríveis sensações proporcionadas por ele.",
+      "Com três cabines, cozinha espaçosa e um confortável salão, o OCEANESCAPE é o convite irrecusável para escapar da monotonia do dia a dia e criar memórias incríveis, únicas e especiais com os seus convidados de eleição."
+     ]
+    },
+    {
+     "label": "Sailing Club- Marina de Cascais",
+     "text": [
+      "O OCEANVIBES é um DUFOUR 45 CLASSIC de 1998, ancorado na Marina de Cascais. Com 13,67 metros de elegância intemporal, combina desempenho sólido com o conforto de um veleiro clássico. A sua construção robusta e design equilibrado garantem estabilidade e prazer em cada milha navegada. Com um interior acolhedor e espaçoso, é o refúgio perfeito para quem procura momentos inesquecíveis no mar, onde a liberdade e a tranquilidade se encontram em perfeita harmonia."
+     ]
+    },
+    {
+     "label": "Sailing Academy - Marina de Oeiras",
+     "text": [
+      "O OCEANFUN é um JEANNEAU SUN 2500, um veleiro versátil, ágil e fácil de manobrar, que proporciona uma experiência de navegação dinâmica, segura e divertida. Ideal tanto para quem está a dar os primeiros passos na vela como para quem pretende aperfeiçoar as suas competências, combina conforto, estabilidade e um excelente desempenho à vela. Com 7,50 metros de comprimento, o OCEANFUN destaca-se pelo seu design funcional, cockpit ergonómico e facilidade de manobra, sendo a escolha perfeita para desfrutar da vela de forma prática e descontraída."
+     ]
+    },
+    {
+     "label": "Power Club- Marina de Oeiras",
+     "text": [
+      "A FIFTY FIFTY é um QUICKSILVER ACTIV 875, com 8,7m, e tem uma capacidade para 12 pessoas, oferecendo uma experiência de navegação versátil e emocionante.",
+      "Com uma lancha de alto desempenho, pode desfrutar de velocidade, conforto e liberdade no mar. Garantimos a disponibilidade da lancha, adaptando a frota às preferências e necessidades de cada sócio, para que cada saída seja uma experiência memorável."
+     ]
+    }
+   ],
+   "about": {
+    "label": "QUEM SOMOS",
+    "title": "Dois empreendedores, uma paixão: velejar com amigos",
+    "text": [
+     "Dois empreendedores que são, acima de tudo, amigos marítimos apaixonados pela vela!",
+     "Rui Alexandre, engenheiro e empresário, e Carlos Dias, engenheiro informático, viram na vela a oportunidade de unir duas paixões: velejar com os amigos e os negócios.",
+     "Foi assim que nasceu a Nautic Squad, um clube exclusivo para sócios, concebido para quem deseja a liberdade de velejar sem as preocupações de possuir um barco próprio, proporcionando experiências únicas e memoráveis no mar."
+    ],
+    "caption": "Rui Alexandre (à esquerda) e Carlos Dias (à direita)",
+    "label2": "QUEM SOMOS?"
+   },
+   "gallery_label": "GALERIA DE FOTOS",
+   "gallery": [
+    "FIFTY FIFTY, Rio Tejo, Agosto 2025",
+    "OCEANESCAPE, Sicília - Itália Agosto 2021",
+    "OCEANESCAPE, Rio Tejo, Maio 2022",
+    "OCEANVIEW II, Marina Oeiras",
+    "OCEANVIEW, Rio Tejo, Maio 2022",
+    "OCEANVIEW, La Rochelle - França, Agosto 2020",
+    "OCEANFUN, Marina Oeiras",
+    "OCEANFUN, Marina Oeiras",
+    "OCEANVIBES, Oeiras, Junho 2023"
+   ],
+   "gallery_label2": "GALERIA",
+   "cta": "Está na hora de tirar do papel o seu sonho de ter um barco!",
+   "contacts_label": "CONTACTOS",
+   "contact": {
+    "title": "FALE CONNOSCO",
+    "intro": "A Nautic Squad navega consigo em cada etapa, por isso queremos oferecer-lhe a melhor experiência possível.",
+    "select": "Selecione o tipo de pedido que deseja realizar:",
+    "forms": [
+     {
+      "label": "Explorar mais informações sobre o clube",
+      "url": "https://forms.office.com/e/6nTuwHtfwU"
+     },
+     {
+      "label": "Agendar uma visita ou receber contacto da equipa",
+      "url": "https://forms.office.com/e/ugmNhFpCvC"
+     },
+     {
+      "label": "Aderir ao clube ou ficar em lista de espera",
+      "url": "https://forms.office.com/e/0076apC7rm"
+     }
+    ]
+   }
+  },
+  "sailing-club": {
+   "title": "Junte-se ao Sailing Club!",
+   "meta_title": "NAUTIC SQUAD | Clube de Vela para Skippers, Lisboa",
+   "club_label": "O CLUBE",
+   "concept": [
+    "O Sailing Club é um clube de vela pensado para skippers que querem desfrutar da liberdade de navegar com amigos ou família, sem os custos e responsabilidades de ter um barco próprio.",
+    "Ao tornar-se sócio da Nautic Squad, passa a ter acesso a um veleiro específico, partilhado com outros membros que partilham o mesmo amor pelo mar, com utilização mensal garantida de acordo com a disponibilidade do barco. Poderá navegar quando e para onde quiser, com tempo suficiente para chegar a praias isoladas, apanhar sol com tranquilidade, desfrutar de sunsets românticos, reunir amigos e família para refeições a bordo ou viver experiências únicas que ficarão para sempre na memória.",
+    "A mensalidade inclui todas as despesas: taxas de marina, seguro, manutenção, limpeza, gestão administrativa e operacional, impostos e taxas portuárias."
+   ],
+   "benefits_intro": "Como membro da Nautic Squad, beneficia de um conjunto de vantagens exclusivas:",
+   "benefits": [
+    "Acesso a um veleiro como skipper",
+    "Barco com cozinha 100% equipada",
+    "Serviços de manutenção",
+    "Gestão administrativa e operacional",
+    "Apoio na evolução como skipper",
+    "Apoio na preparação de viagens",
+    "Eventos e uma comunidade náutica ativa"
+   ],
+   "after": [
+    "As reservas são feitas de forma simples através de uma aplicação web, acessível por telemóvel ou computador. O dia está dividido em três períodos fixos, manhã (9h–13h), tarde (14h–18h) e noite (19h–08h), sendo possível reservar períodos consecutivos até ao limite da quota de cada membro.",
+    "Basta agendar, comparecer no horário reservado e aproveitar.",
+    "Ser membro da Nautic Squad proporciona o mesmo prazer de ter um barco próprio: desde um rápido passeio ao pôr do sol, uma saída de sexta-feira, um fim de semana no mar ou até uma semana inteira de aventura ou relaxamento, tudo sem preocupações com manutenção ou reparações.",
+    "Parece um sonho, mas é realidade.",
+    "O número de inscrições é limitado à disponibilidade do veleiro.",
+    "Assegure o seu barco e passe a ter mais tempo para navegar!"
+   ],
+   "types_label": "TIPOS DE ASSOCIAÇÃO",
+   "types_intro": [
+    "Escolha o tipo de associação mais adequado a si e desfrute do mar e do vento!"
+   ],
+   "types": [
+    {
+     "name": "Full light",
+     "text": [
+      "6 saídas por mês (4 durante a semana e 2 ao fim de semana). Uma opção mais viável para quem tem pouco tempo, mas que não perde a oportunidade para conseguir usufruir do veleiro durante um dia de semana e aproveitar com a familia e amigos aos fins de semana."
+     ]
+    },
+    {
+     "name": "Week light",
+     "text": [
+      "3 saídas por mês durante a semana:",
+      "uma versão mais económica que o weekdays, perfeito para quem começou a velejar, sem saber quanto tempo tem para se dedicar e com mais tempo livre durante a semana."
+     ]
+    },
+    {
+     "name": "Weekday",
+     "text": [
+      "6 saídas por mês durante a semana: os marinheiros adoram porque oferece uma opção de navegação muito acessível e durante mais tempo. Pode fazer saídas durante o mês e ainda pode reservar algum tempo para organizar um cruzeiro de alguns dias."
+     ]
+    },
+    {
+     "name": "Weekend",
+     "text": [
+      "3 saídas ao mês durante o fim-de-semana. Esta opção é perfeita para o marinheiro que não tem muito tempo para velejar. Este nível é uma boa maneira para quem quer começar a velejar, sem saber quanto tempo tem para se dedicar e só o pode fazer aos fins de semana."
+     ]
+    },
+    {
+     "name": "Full week",
+     "text": [
+      "9 saídas por mês (6 durante a semana e 3 ao fim de semana). Com este nível de utilização consegue reservar o veleiro durante uma semana inteira, o que durante o verão poderá representar as suas férias de sonho no Algarve numa marina ou a navegar de porto em porto."
+     ]
+    }
+   ],
+   "types_note": [
+    "Os sócios podem reservar os horários de navegação como saídas individuais ou consecutivas até uma semana inteira."
+   ],
+   "team": {
+    "name": "Team - Navegue em equipa",
+    "text": [
+     "Se preferir, pode optar pela modalidade “TEAM” em que partilha qualquer um destes níveis de associação com um amigo, podendo ambos ser skippers e fazerem saídas em conjunto ou separadamente. Isso torna a navegação mais agradável e permite um custo ainda inferior."
+    ]
+   },
+   "types_cta": "Garanta o seu barco",
+   "fleet_label": "FROTA",
+   "boats": [
+    {
+     "label": "Sailing Club - Marina de Oeiras",
+     "text": [
+      "O OCEANBLISS é um SUN ODYSSEY 350 que se destaca pelo seu casco totalmente novo, silhueta moderna e excelente desempenho ao leme, oferecendo manobras fáceis e maior conforto no cockpit. O layout inteligente, com passadiços laterais contínuos e dupla roda de leme, garante segurança, fluidez de movimentos e boa visibilidade. No interior, os espaços luminosos e acolhedores, com design contemporâneo e mais de 1,85 m de altura livre, tornam este veleiro ideal para cruzeiros em família com conforto, bem-estar e tranquilidade."
+     ]
+    },
+    {
+     "label": "Sailing Club - Marina de Oeiras",
+     "text": [
+      "O OCEANESCAPE é um BENETEAU OCEANIS 37 LIMITED EDITION muito sedutor, construído em 2013. O Oceanis 37 chama a atenção pelo seu design inovador e exclusivo, com equilíbrio perfeito entre linhas fluidas e layout. Um veleiro aerodinâmico, rápido, prático e, sobretudo, seguro e confortável no mar. O LIMITED EDITION desperta desejo e curiosidade nos marinheiros, que rapidamente querem viver as incríveis sensações proporcionadas por ele.",
+      "Com três cabines, cozinha espaçosa e um confortável salão, o OCEANESCAPE é o convite irrecusável para escapar da monotonia do dia a dia e criar memórias incríveis, únicas e especiais com os seus convidados de eleição."
+     ]
+    },
+    {
+     "label": "Sailing Club- Marina de Cascais",
+     "text": [
+      "O OCEANVIBES é um DUFOUR 45 CLASSIC de 1998, ancorado na Marina de Cascais. Com 13,67 metros de elegância intemporal, combina desempenho sólido com o conforto de um veleiro clássico. A sua construção robusta e design equilibrado garantem estabilidade e prazer em cada milha navegada. Com um interior acolhedor e espaçoso, é o refúgio perfeito para quem procura momentos inesquecíveis no mar, onde a liberdade e a tranquilidade se encontram em perfeita harmonia."
+     ]
+    }
+   ],
+   "faq_label": "QUESTÕES FREQUENTES",
+   "faq": [
+    {
+     "q": "Como funciona a associação Nautic Squad?",
+     "a": [
+      "A Nautic Squad é como um ginásio, mas na água e para onde pode convidar família e amigos. Paga uma taxa mensal, usa o equipamento, limpa quando terminar e sai, sem todas as responsabilidades de propriedade, manutenção e administrativas. A Nautic Squad fornece um sistema de agendamento online e um sistema eletrónico de check-in e check-out que facilita o agendamento do seu tempo de navegação e ainda garante que o barco esteja sempre limpo e pronto para sair. Este método é perfeito para quem procura uma forma mais inteligente e realista de navegar num novo barco."
+     ]
+    },
+    {
+     "q": "Quantos sócios utilizam o barco?",
+     "a": [
+      "Devido aos nossos diferentes níveis de associação, os nossos barcos têm um número variável de sócios. Para assegurar a disponibilidade e a exclusividade, o clube limita o número de sócios, sendo o usual 8 por embarcação."
+     ]
+    },
+    {
+     "q": "Qual o custo?",
+     "a": [
+      "Depende do tamanho do barco e do tipo de associação, mas diríamos que muito menos do que possa imaginar! Peça uma visita para analisar as alternativas."
+     ]
+    },
+    {
+     "q": "Posso experimentar o veleiro?",
+     "a": [
+      "Claro! Basta ligar para agendar uma visita."
+     ]
+    },
+    {
+     "q": "Qual a duração do contrato?",
+     "a": [
+      "Os contratos têm a duração de 12 meses"
+     ]
+    },
+    {
+     "q": "Há taxas de manutenção não incluídas?",
+     "a": [
+      "Não, mas se perder um equipamento ou danificar a embarcação, terá que pagar a substituição ou reparação até à franquia do seguro. Se precisar de serviços extras, solicite o custo."
+     ]
+    },
+    {
+     "q": "2 pessoas podem partilhar o mesmo barco?",
+     "a": [
+      "Sim. Disponibilizamos um modelo de associação em equipa, que permite partilhar o barco com um amigo. Em qualquer momento, pelo menos um dos sócios deve estar a bordo, não sendo permitida a cedência do barco a terceiros."
+     ]
+    },
+    {
+     "q": "Qual a duração dos períodos de saída?",
+     "a": [
+      "Todos os dias são divididos em três períodos:",
+      "9h às 13h, 14h às 18h e das 19h até às 8h da manhã seguinte. Pode reservar um único período ou combinar vários períodos consecutivos para uma saída prolongada ou uma viagem de vários dias."
+     ]
+    },
+    {
+     "q": "Posso passar a noite no veleiro?",
+     "a": [
+      "Sim, desde que reserve o período da noite das 19h às 8h do dia seguinte."
+     ]
+    },
+    {
+     "q": "Quem é o responsável por lavar o barco?",
+     "a": [
+      "No fim de cada utilização é obrigação do sócio lavar o veleiro e remover o lixo de forma a ficar disponível para a próxima utilização. No início de cada saída, deverá fazer CHECK-IN na aplicação indicando o estado em que encontrou a embarcação, e CHECK-OUT quando terminar, indicando os acontecimentos e eventuais necessidades de manutenção. O CHECK-IN ajuda a responsabilizar os sócios individualmente, relatando as condições do barco quando eles embarcam e desembarcam."
+     ]
+    },
+    {
+     "q": "Quais são os requisitos para ser sócio da Nautic Squad?",
+     "a": [
+      "Todos os sócios devem ter carta de navegação de “Patrão Local” e um curso de navegação ou experiência equivalente a RYA DAY SKIPPER."
+     ]
+    },
+    {
+     "q": "Posso usar para além da minha quota?",
+     "a": [
+      "Cada sócio tem direito a utilização ilimitada da embarcação, desde que a mesma se encontre disponível. As reservas podem ser efetuadas a partir de 24 horas antes, sem qualquer custo adicional.",
+      "A Nautic Squad investiu tempo, esforço e tecnologia no desenvolvimento de um programa inovador que torna o mundo da vela mais acessível, permitindo que muidas pessoas, que embora gostem de velejar não tinham oportunidade, possam agora desenvolver a sua experiencia de forma simples e segura."
+     ]
+    },
+    {
+     "q": "Como são geridos comportamentos abusivos?",
+     "a": [
+      "Como qualquer clube, temos um regulamento que prevê a exclusão de sócios que abusam das políticas da Nautic Squad e prejudicam os restantes membros. A prioridade é o respeito dos sócios entre si e assegurar a disponibilidade das embarcações para os sócios seguintes. Prezamos um ambiente cordial e colaborativo entre todos."
+     ]
+    }
+   ],
+   "closing": "Está na hora de navegar o ano todo, sem se afogar o mês inteiro!",
+   "contact": {
+    "title": "FALE CONNOSCO",
+    "intro": "A Nautic Squad navega consigo em cada etapa, por isso queremos oferecer-lhe a melhor experiência possível.",
+    "select": "Selecione o tipo de pedido que deseja realizar:",
+    "forms": [
+     {
+      "label": "Explorar mais informações sobre o clube",
+      "url": "https://forms.office.com/e/6nTuwHtfwU"
+     },
+     {
+      "label": "Agendar uma visita ou receber contacto da equipa",
+      "url": "https://forms.office.com/e/ugmNhFpCvC"
+     },
+     {
+      "label": "Aderir ao clube ou ficar em lista de espera",
+      "url": "https://forms.office.com/e/0076apC7rm"
+     }
+    ]
+   }
+  },
+  "sailing-academy": {
+   "title": "Junte-se ao Sailing Academy!",
+   "meta_title": "Sailing Academy | Ganhe Experiência & Viva Aventuras Abordo da Nautic Squad",
+   "club_label": "O CLUBE",
+   "concept": [
+    "O Sailing Academy é um clube de vela pensado para skippers que querem desfrutar da liberdade de navegar com amigos ou família, sem os custos e responsabilidades de ter um barco próprio.",
+    "Ao tornar-se sócio da Nautic Squad, passa a ter acesso a um veleiro específico, partilhado com outros membros que partilham o mesmo amor pelo mar, com utilização mensal garantida de acordo com a disponibilidade do barco. Poderá navegar quando e para onde quiser, com tempo suficiente para chegar a praias isoladas, apanhar sol com tranquilidade, desfrutar de sunsets românticos, reunir amigos e família para refeições a bordo ou viver experiências únicas que ficarão para sempre na memória.",
+    "A mensalidade inclui todas as despesas: taxas de marina, seguro, manutenção, limpeza, gestão administrativa e operacional, impostos e taxas portuárias."
+   ],
+   "benefits_intro": "Como membro da Nautic Squad, beneficia de um conjunto de vantagens exclusivas:",
+   "benefits": [
+    "Acesso a um veleiro como skipper",
+    "Barco com cozinha 100% equipada",
+    "Serviços de manutenção",
+    "Gestão administrativa e operacional",
+    "Apoio na evolução como skipper",
+    "Apoio na preparação de viagens",
+    "Eventos e uma comunidade náutica ativa"
+   ],
+   "after": [
+    "As reservas são feitas de forma simples através de uma aplicação web, acessível por telemóvel ou computador. O dia está dividido em três períodos fixos, manhã (9h–13h), tarde (14h–18h) e noite (19h–08h), sendo possível reservar períodos consecutivos até ao limite da quota de cada membro.",
+    "Basta agendar, comparecer no horário reservado e aproveitar.",
+    "Ser membro da Nautic Squad proporciona o mesmo prazer de ter um barco próprio: desde um rápido passeio ao pôr do sol, uma saída de sexta-feira, um fim de semana no mar ou até uma semana inteira de aventura ou relaxamento, tudo sem preocupações com manutenção ou reparações.",
+    "Parece um sonho, mas é realidade.",
+    "O número de inscrições é limitado à disponibilidade do veleiro.",
+    "Assegure o seu barco e passe a ter mais tempo para navegar!"
+   ],
+   "types_label": "TIPOS DE ASSOCIAÇÃO",
+   "types_intro": [
+    "A aventura está ao alcance de uma vela.",
+    "Escolha o tipo de associação mais adequado a si e aventure-se!"
+   ],
+   "types": [
+    {
+     "name": "Full light",
+     "text": [
+      "6 saídas por mês (4 durante a semana e 2 ao fim de semana). Uma opção mais viável para quem tem pouco tempo, mas que não perde a oportunidade para conseguir usufruir do veleiro durante um dia de semana e aproveitar com a familia e amigos aos fins de semana."
+     ]
+    },
+    {
+     "name": "Week light",
+     "text": [
+      "3 saídas por mês durante a semana:",
+      "uma versão mais económica que o weekdays, perfeito para quem começou a velejar, sem saber quanto tempo tem para se dedicar e com mais tempo livre durante a semana."
+     ]
+    },
+    {
+     "name": "Full week",
+     "text": [
+      "9 saídas por mês (6 durante a semana e 3 ao fim de semana). Com este nível de utilização consegue reservar o veleiro durante uma semana inteira, o que durante o verão poderá representar as suas férias de sonho no Algarve numa marina ou a navegar de porto em porto."
+     ]
+    },
+    {
+     "name": "Weekday",
+     "text": [
+      "6 saídas por mês durante a semana: os marinheiros adoram porque oferece uma opção de navegação muito acessível e durante mais tempo. Pode fazer saídas durante o mês e ainda pode reservar algum tempo para organizar um cruzeiro de alguns dias."
+     ]
+    },
+    {
+     "name": "Weekend",
+     "text": [
+      "3 saídas ao mês durante o fim-de-semana. Esta opção é perfeita para o marinheiro que não tem muito tempo para velejar. Este nível é uma boa maneira para quem quer começar a velejar, sem saber quanto tempo tem para se dedicar e só o pode fazer aos fins de semana."
+     ]
+    }
+   ],
+   "types_note": [
+    "Os sócios podem reservar os horários de navegação como saídas individuais ou consecutivas até uma semana inteira."
+   ],
+   "team": {
+    "name": "Team - Navegue em equipa",
+    "text": [
+     "Se preferir, pode optar pela modalidade “TEAM” em que partilha qualquer um destes níveis de associação com um amigo, podendo ambos ser skippers e fazerem saídas em conjunto ou separadamente. Isso torna a navegação mais agradável e permite um custo ainda inferior."
+    ]
+   },
+   "types_cta": "Garanta o seu lugar",
+   "fleet_label": "FROTA",
+   "boats": [
+    {
+     "label": "Sailing Academy - Marina de Oeiras",
+     "text": [
+      "O OCEANFUN é um JEANNEAU SUN 2500, um veleiro versátil, ágil e fácil de manobrar, que proporciona uma experiência de navegação dinâmica, segura e divertida. Ideal tanto para quem está a dar os primeiros passos na vela como para quem pretende aperfeiçoar as suas competências, combina conforto, estabilidade e um excelente desempenho à vela. Com 7,50 metros de comprimento, o OCEANFUN destaca-se pelo seu design funcional, cockpit ergonómico e facilidade de manobra, sendo a escolha perfeita para desfrutar da vela de forma prática e descontraída."
+     ]
+    }
+   ],
+   "faq_label": "QUESTÕES FREQUENTES",
+   "faq": [
+    {
+     "q": "Como funciona a associação Nautic Squad?",
+     "a": [
+      "A Nautic Squad é como um ginásio, mas na água e para onde pode convidar família e amigos. Paga uma taxa mensal, usa o equipamento, limpa quando terminar e sai, sem todas as responsabilidades de propriedade, manutenção e administrativas. A Nautic Squad fornece um sistema de agendamento online e um sistema eletrónico de check-in e check-out que facilita o agendamento do seu tempo de navegação e ainda garante que o barco esteja sempre limpo e pronto para sair."
+     ]
+    },
+    {
+     "q": "Quantos sócios utilizam o barco?",
+     "a": [
+      "Devido aos nossos diferentes níveis de associação, os nossos barcos têm um número variável de sócios. Para assegurar a disponibilidade e a exclusividade, o clube limita o número de sócios, sendo o usual 8 por embarcação."
+     ]
+    },
+    {
+     "q": "Qual o custo?",
+     "a": [
+      "Depende do tipo de associação, mas diríamos que muito menos do que possa imaginar! Peça uma visita para analisar as alternativas."
+     ]
+    },
+    {
+     "q": "Posso experimentar o veleiro?",
+     "a": [
+      "Claro! Basta ligar para agendar uma visita."
+     ]
+    },
+    {
+     "q": "Qual a duração do compromisso?",
+     "a": [
+      "Os contratos têm a duração de 12 meses"
+     ]
+    },
+    {
+     "q": "Há taxas de manutenção não incluídas?",
+     "a": [
+      "Não, mas se perder um equipamento ou danificar a embarcação, terá que pagar a substituição ou reparação até à franquia do seguro. Se precisar de serviços extras, solicite o custo."
+     ]
+    },
+    {
+     "q": "2 pessoas podem partilhar o mesmo barco?",
+     "a": [
+      "Sim, temos um modelo de associação em equipa com um amigo. A cada momento, um dos sócios deve estar a bordo e não pode emprestar o barco a terceiros."
+     ]
+    },
+    {
+     "q": "Quanto dura um período de saída?",
+     "a": [
+      "Todos os dias são divididos em dois períodos:",
+      "9h às 14h e das 15h até às 8h da manhã seguinte. Pode agendar um período de cada vez ou períodos consecutivos."
+     ]
+    },
+    {
+     "q": "Posso passar a noite no veleiro?",
+     "a": [
+      "Sim, desde que reserve o período que incluí a noite."
+     ]
+    },
+    {
+     "q": "Quem é o responsável para lavar o barco?",
+     "a": [
+      "No fim de cada utilização é obrigação do sócio lavar o veleiro e remover o lixo de forma a ficar disponível para a próxima utilização. No início de cada saída, deverá fazer CHECK-IN na aplicação indicando o estado em que encontrou a embarcação, e CHECK-OUT quando terminar, indicando os acontecimentos e eventuais necessidades de manutenção. O CHECK-IN ajuda a responsabilizar os sócios individualmente, relatando as condições do barco quando eles embarcam e desembarcam."
+     ]
+    },
+    {
+     "q": "Quais são os requisitos para ser sócio da Nautic Squad?",
+     "a": [
+      "Todos os sócios devem ter carta de navegação de “Patrão Local” e um curso de navegação ou experiência equivalente a RYA DAY SKIPPER."
+     ]
+    },
+    {
+     "q": "Posso usar para além da minha quota?",
+     "a": [
+      "Claro! Cada sócio tem direito ao uso ilimitado desde que a embarcação esteja disponível. Pode fazer a reserva a partir de 24 horas antes, sem nenhum custo extra. A Nautic Squad investiu muito tempo, esforço e tecnologia na criação de um programa que abre o mundo da vela a muitas pessoas que mesmo gostando, não tinham oportunidade de desenvolver a sua experiência."
+     ]
+    },
+    {
+     "q": "Como são geridos comportamentos abusivos?",
+     "a": [
+      "Como qualquer clube, temos um regulamento que prevê a exclusão de sócios que abusam das políticas da Nautic Squad e prejudicam os restantes membros. A prioridade é o respeito dos sócios entre si e assegurar a disponibilidade das embarcações para os sócios seguintes. Prezamos um ambiente cordial e colaborativo entre todos."
+     ]
+    }
+   ],
+   "closing": "Está pronto para ganhar experiência e viver aventuras inesquecíveis a bordo?",
+   "contact": {
+    "title": "FALE CONNOSCO",
+    "intro": "A Nautic Squad navega consigo em cada etapa, por isso queremos oferecer-lhe a melhor experiência possível.",
+    "select": "Selecione o tipo de pedido que deseja realizar:",
+    "forms": [
+     {
+      "label": "Explorar mais informações sobre o clube",
+      "url": "https://forms.office.com/e/6nTuwHtfwU"
+     },
+     {
+      "label": "Agendar uma visita ou receber contacto da equipa",
+      "url": "https://forms.office.com/e/ugmNhFpCvC"
+     },
+     {
+      "label": "Aderir ao clube ou ficar em lista de espera",
+      "url": "https://forms.office.com/e/0076apC7rm"
+     }
+    ]
+   }
+  },
+  "power-club": {
+   "title": "Junte-se ao Power Club!",
+   "meta_title": "POWER CLUB | Nautic Squad",
+   "club_label": "O CLUBE",
+   "concept": [
+    "O Power Club foi criado para quem vive a paixão pelo mar, pela velocidade e por experiências exclusivas.",
+    "Ao tornar-se sócio da Nautic Squad, passa a ter acesso a um veleiro específico, partilhado com outros membros que partilham o mesmo amor pelo mar, com utilização mensal garantida de acordo com a disponibilidade do barco. Poderá navegar quando e para onde quiser, com tempo suficiente para chegar a praias isoladas, apanhar sol com tranquilidade, desfrutar de sunsets românticos, reunir amigos e família para refeições a bordo ou viver experiências únicas que ficarão para sempre na memória.",
+    "A mensalidade inclui todas as despesas: taxas de marina, seguro, manutenção, limpeza, gestão administrativa e operacional, impostos e taxas portuárias."
+   ],
+   "benefits_intro": "Como membro da Nautic Squad, beneficia de um conjunto de vantagens exclusivas:",
+   "benefits": [
+    "Acesso a um veleiro como skipper",
+    "Barco com cozinha 100% equipada",
+    "Serviços de manutenção",
+    "Gestão administrativa e operacional",
+    "Apoio na evolução como skipper",
+    "Apoio na preparação de viagens",
+    "Eventos e uma comunidade náutica ativa"
+   ],
+   "after": [
+    "As reservas são feitas de forma simples através de uma aplicação web, acessível por telemóvel ou computador. O dia está dividido em três períodos fixos, manhã (9h–13h), tarde (14h–18h) e noite (19h–20h), sendo possível reservar períodos consecutivos até ao limite da quota de cada membro.",
+    "Basta agendar, comparecer no horário reservado e aproveitar.",
+    "Ser membro da Nautic Squad proporciona o mesmo prazer de ter um barco próprio: desde um rápido passeio ao pôr do sol, uma saída de sexta-feira, um fim de semana no mar ou até uma semana inteira de aventura ou relaxamento, tudo sem preocupações com manutenção ou reparações.",
+    "Parece um sonho, mas é realidade.",
+    "O número de inscrições é limitado à disponibilidade do veleiro.",
+    "Assegure o seu barco e passe a ter mais tempo para navegar!"
+   ],
+   "types_label": "TIPOS DE ASSOCIAÇÃO",
+   "types_intro": [
+    "Escolha o tipo de associação mais adequado a si e desfrute do mar e do vento!"
+   ],
+   "types": [
+    {
+     "name": "Full light",
+     "text": [
+      "6 saídas por mês (4 durante a semana e 2 ao fim de semana). Uma opção mais viável para quem tem pouco tempo, mas que não perde a oportunidade para conseguir usufruir do veleiro durante um dia de semana e aproveitar com a familia e amigos aos fins de semana."
+     ]
+    },
+    {
+     "name": "Week light",
+     "text": [
+      "3 saídas por mês durante a semana:",
+      "uma versão mais económica que o weekdays, perfeito para quem começou a velejar, sem saber quanto tempo tem para se dedicar e com mais tempo livre durante a semana."
+     ]
+    },
+    {
+     "name": "Full week",
+     "text": [
+      "9 saídas por mês (6 durante a semana e 3 ao fim de semana). Com este nível de utilização consegue reservar o veleiro durante uma semana inteira, o que durante o verão poderá representar as suas férias de sonho no Algarve numa marina ou a navegar de porto em porto."
+     ]
+    },
+    {
+     "name": "Weekend",
+     "text": [
+      "3 saídas ao mês durante o fim-de-semana. Esta opção é perfeita para o marinheiro que não tem muito tempo para velejar. Este nível é uma boa maneira para quem quer começar a velejar, sem saber quanto tempo tem para se dedicar e só o pode fazer aos fins de semana."
+     ]
+    },
+    {
+     "name": "Weekday",
+     "text": [
+      "6 saídas por mês durante a semana: os marinheiros adoram porque oferece uma opção de navegação muito acessível e durante mais tempo. Pode fazer saídas durante o mês e ainda pode reservar algum tempo para organizar um cruzeiro de alguns dias."
+     ]
+    }
+   ],
+   "types_note": [
+    "Os sócios podem reservar os horários de navegação como saídas individuais ou consecutivas até uma semana inteira."
+   ],
+   "team": {
+    "name": "Team - Navegue em equipa",
+    "text": [
+     "Se preferir, pode optar pela modalidade “TEAM” em que partilha qualquer um destes níveis de associação com um amigo, podendo ambos ser skippers e fazerem saídas em conjunto ou separadamente. Isso torna a navegação mais agradável e permite um custo ainda inferior."
+    ]
+   },
+   "types_cta": "Garanta o seu barco",
+   "fleet_label": "FROTA",
+   "boats": [
+    {
+     "label": "Power Club - Marina de Oeiras",
+     "text": [
+      "A FIFTY FIFTY é um QUICKSILVER ACTIV 875, com 8,7m, e tem uma capacidade para 12 pessoas.",
+      "Oferece um interior moderno, funcional e surpreendentemente espaçoso para a sua categoria, pensado para maximizar o conforto em passeios de dia ou pequenas estadias a bordo.",
+      "A cabine principal é luminosa e bem ventilada, com linhas contemporâneas e acabamentos cuidados. Dispõe de uma cama confortável na proa, ideal para descanso, com arrumação integrada que permite manter o espaço organizado.",
+      "A zona interior inclui um pequeno espaço de estar versátil, que pode ser utilizado para relaxar ou convertido conforme as necessidades. Os materiais utilizados são resistentes e de fácil manutenção, sem comprometer a elegância e o conforto.",
+      "No geral, o interior da A FIFTY FIFTY combina praticidade, conforto e um design inteligente, tornando-a ideal para quem procura uma lancha versátil, confortável e pronta para desfrutar do mar com total liberdade."
+     ]
+    }
+   ],
+   "faq_label": "QUESTÕES FREQUENTES",
+   "faq": [
+    {
+     "q": "Como funciona a associação Nautic Squad?",
+     "a": [
+      "A Nautic Squad é como um ginásio, mas na água e para onde pode convidar família e amigos. Paga uma taxa mensal, usa o equipamento, limpa quando terminar e sai, sem todas as responsabilidades de propriedade, manutenção e administrativas. A Nautic Squad fornece um sistema de agendamento online e um sistema eletrónico de check-in e check-out que facilita o agendamento do seu tempo de navegação e ainda garante que o barco esteja sempre limpo e pronto para sair. Este método é perfeito para quem procura uma forma mais inteligente e realista de navegar num novo barco."
+     ]
+    },
+    {
+     "q": "Quantos sócios utilizam o barco?",
+     "a": [
+      "Devido aos nossos diferentes níveis de associação, os nossos barcos têm um número variável de sócios. Para assegurar a disponibilidade e a exclusividade, o clube limita o número de sócios, sendo o usual 8 por embarcação."
+     ]
+    },
+    {
+     "q": "Qual o custo?",
+     "a": [
+      "Depende do tamanho do barco e do tipo de associação, mas diríamos que muito menos do que possa imaginar! Peça uma visita para analisar as alternativas."
+     ]
+    },
+    {
+     "q": "Posso experimentar o barco?",
+     "a": [
+      "Claro! Basta ligar para agendar uma visita."
+     ]
+    },
+    {
+     "q": "Qual a duração dos contratos?",
+     "a": [
+      "Os contratos têm a duração de 12 meses"
+     ]
+    },
+    {
+     "q": "Há taxas de manutenção não incluídas?",
+     "a": [
+      "Não, mas se perder um equipamento ou danificar a embarcação, terá que pagar a substituição ou reparação até à franquia do seguro. Se precisar de serviços extras, solicite o custo."
+     ]
+    },
+    {
+     "q": "2 pessoas podem partilhar o mesmo barco?",
+     "a": [
+      "Sim. Disponibilizamos um modelo de associação em equipa, que permite partilhar o barco com um amigo. Em qualquer momento, pelo menos um dos sócios deve estar a bordo, não sendo permitida a cedência do barco a terceiros."
+     ]
+    },
+    {
+     "q": "Qual é a duração dos períodos de saída?",
+     "a": [
+      "Todos os dias são divididos em três períodos:",
+      "9h às 13h, 14h às 18h e das 19h até às 8h da manhã seguinte. Pode reservar um único período ou combinar vários períodos consecutivos para uma saída prolongada ou uma viagem de vários dias."
+     ]
+    },
+    {
+     "q": "Posso passar a noite no veleiro?",
+     "a": [
+      "Sim, desde que reserve o período da noite das 19h às 8h do dia seguinte."
+     ]
+    },
+    {
+     "q": "Quem é o responsável por lavar o barco?",
+     "a": [
+      "No fim de cada utilização é obrigação do sócio lavar o veleiro e remover o lixo de forma a ficar disponível para a próxima utilização. No início de cada saída, deverá fazer CHECK-IN na aplicação indicando o estado em que encontrou a embarcação, e CHECK-OUT quando terminar, indicando os acontecimentos e eventuais necessidades de manutenção. O CHECK-IN ajuda a responsabilizar os sócios individualmente, relatando as condições do barco quando eles embarcam e desembarcam."
+     ]
+    },
+    {
+     "q": "Quais são os requisitos para ser sócio da Nautic Squad?",
+     "a": [
+      "Todos os sócios devem ter carta de navegação de “Patrão Local” e um curso de navegação ou experiência equivalente a RYA DAY SKIPPER."
+     ]
+    },
+    {
+     "q": "Posso usar para além da minha quota?",
+     "a": [
+      "Cada sócio tem direito a utilização ilimitada da embarcação, desde que a mesma se encontre disponível. As reservas podem ser efetuadas a partir de 24 horas antes, sem qualquer custo adicional.",
+      "A Nautic Squad investiu tempo, esforço e tecnologia no desenvolvimento de um programa inovador que torna o mundo da vela mais acessível, permitindo que muidas pessoas, que embora gostem de velejar não tinham oportunidade, possam agora desenvolver a sua experiencia de forma simples e segura."
+     ]
+    },
+    {
+     "q": "Como são geridos comportamentos abusivos?",
+     "a": [
+      "Como qualquer clube, temos um regulamento que prevê a exclusão de sócios que abusam das políticas da Nautic Squad e prejudicam os restantes membros. A prioridade é o respeito dos sócios entre si e assegurar a disponibilidade das embarcações para os sócios seguintes. Prezamos um ambiente cordial e colaborativo entre todos."
+     ]
+    }
+   ],
+   "closing": "Está na hora de navegar o ano todo, sem se afogar o mês inteiro!",
+   "contact": {
+    "title": "FALE CONNOSCO",
+    "intro": "A Nautic Squad navega consigo em cada etapa, por isso queremos oferecer-lhe a melhor experiência possível.",
+    "select": "Selecione o tipo de pedido que deseja realizar:",
+    "forms": [
+     {
+      "label": "Explorar mais informações sobre o clube",
+      "url": "https://forms.office.com/e/6nTuwHtfwU"
+     },
+     {
+      "label": "Agendar uma visita ou receber contacto da equipa",
+      "url": "https://forms.office.com/e/ugmNhFpCvC"
+     },
+     {
+      "label": "Aderir ao clube ou ficar em lista de espera",
+      "url": "https://forms.office.com/e/0076apC7rm"
+     }
+    ]
+   }
+  },
+  "footer": {
+   "links_label": "LINKS",
+   "links": [
+    "SAILING CLUB",
+    "SAILING ACADEMY",
+    "FROTA",
+    "QUEM SOMOS",
+    "GALERIA",
+    "CONTACTOS"
+   ],
+   "phone": "911 924 555",
+   "office_label": "Escritório",
+   "office": "Av. Marquês de Tomar, nº 35 7º andar 1050-153, Lisboa - Portugal",
+   "boats_label": "Embarcações",
+   "marinas": [
+    "Marina de Oeiras",
+    "Marina de Cascais"
+   ],
+   "social_label": "SOCIAL",
+   "after_social": [
+    "."
+   ],
+   "copyright": "© 2021 NAUTIC SQUAD"
+  }
+ },
+ "en": {
+  "home": {
+   "meta_title": "Nautic Squad | Sailing Club for Skippers | Oeiras | Lisbon",
+   "menu": [
+    "SAILING CLUB",
+    "CONCEPT",
+    "TYPES OF ASSOCIATION",
+    "BOATS",
+    "FAQ",
+    "SAILING ACADEMY",
+    "CONCEPT",
+    "TYPES OF ASSOCIATION",
+    "BOATS",
+    "FAQ",
+    "POWER CLUB",
+    "BOATS",
+    "ABOUT US",
+    "GALLERY",
+    "CONTACTS"
+   ],
+   "hero": "Sailing is a passion, but the lack of time and associated costs are an obstacle?",
+   "hero_cta": "Schedule your visit",
+   "clubs": [
+    {
+     "key": "sailing-club",
+     "name": "SAILING CLUB",
+     "text": [
+      "A club for skippers who want the freedom to sail whenever they wish, with comfort and safety, just like having their own boat, but for a fraction of the cost and hassle.",
+      "Nautic Squad members choose the sailboat and membership plan that best fits their needs, based on the number of trips they want per month. Then, they simply schedule the dates through our online app and set off to enjoy the sea and the wind."
+     ],
+     "more": "Learn more about the Sailing Club"
+    },
+    {
+     "key": "sailing-academy",
+     "name": "SAILING ACADEMY",
+     "text": [
+      "The perfect alternative for sailors who want to gain practical sailing experience, love a bit of competition, or dream of enjoying leisurely trips along the Tagus.",
+      "At Sailing Academy, members have access to a smaller, lightweight, and easy-to-handle sailboat, designed to provide the best learning experience and competitive performance."
+     ],
+     "more": "Learn more about the Sailing Academy"
+    },
+    {
+     "key": "power-club",
+     "name": "POWER CLUB",
+     "text": [
+      "The Nautic Squad Power Club was created for those who live for the passion of the sea, speed, and exclusive experiences. This club offers access to a high-performance boat, carefully maintained and ready to deliver moments of pure adrenaline and comfort.",
+      "The club provides an exclusive environment where each experience is tailored to the preferences of its members."
+     ],
+     "more": "Learn more about the Power Club"
+    }
+   ],
+   "contact_btn": "Contact Us",
+   "legacy_anchor": "OCEANVIEW",
+   "fleet_label": "BOATS",
+   "boats": [
+    {
+     "label": "Sailing Club - Oeiras Marina",
+     "text": [
+      "OceanBliss is a Sun Odyssey 350 that stands out for its completely new hull, modern silhouette, and excellent performance at the helm, offering easy handling and greater comfort in the cockpit. The smart layout, with continuous side decks and twin steering wheels, ensures safety, smooth movement, and good visibility. Inside, the bright and welcoming spaces, featuring contemporary design and more than 1.85 m of headroom, make this sailboat ideal for family cruising with comfort, well-being, and peace of mind."
+     ]
+    },
+    {
+     "label": "Sailing Club - Oeiras Marina",
+     "text": [
+      "OCEANESCAPE is a very seductive BENETEAU OCEANIS 37 LIMITED EDITION, built in 2013. The Oceanis 37 stands out for its innovative and exclusive design, with a perfect balance between fluid lines and layout. An aerodynamic, fast, practical and, above all, safe and comfortable sailboat at sea. The LIMITED EDITION awakens desire and curiosity in sailors, who quickly want to experience the incredible sensations provided by it.",
+      "With three cabins, a spacious kitchen and a comfortable lounge, OCEANESCAPE is the irresistible invitation to escape the monotony of everyday life and create incredible, unique and special memories with your chosen guests."
+     ]
+    },
+    {
+     "label": "Sailing Club - Cascais Marina",
+     "text": [
+      "The OCEANVIBES is a 1998 DUFOUR 45 CLASSIC, based at Cascais Marina. With 13.67 metres of timeless elegance, it combines solid sailing performance with the comfort of a classic yacht. Its robust construction and well-balanced design ensure stability and an enjoyable sailing experience on every nautical mile. Featuring a welcoming and spacious interior, it is the perfect retreat for those seeking unforgettable moments at sea, where freedom and tranquillity come together in perfect harmony."
+     ]
+    },
+    {
+     "label": "Sailing Academy - Oeiras Marina",
+     "text": [
+      "The OCEANFUN is a JEANNEAU SUN 2500, a versatile, agile and easy-to-handle sailboat that offers a dynamic, safe and enjoyable sailing experience. Ideal for both beginners and those looking to improve their sailing skills, it combines comfort, stability and excellent sailing performance. Measuring 7.50 metres in length, the OCEANFUN stands out for its functional design, ergonomic cockpit and ease of manoeuvrability, making it the perfect choice for enjoying sailing in a practical and relaxed way."
+     ]
+    },
+    {
+     "label": "Power Club - Oeiras Marina",
+     "text": [
+      "FIFTY FIFTY is a Quicksilver Activ 875, measuring 8.7 meters, with a capacity for 12 people, offering a versatile and exciting boating experience.",
+      "With a high-performance boat, you can enjoy speed, comfort, and freedom at sea. We ensure the boat’s availability, adapting the fleet to the preferences and needs of each member, so that every outing becomes a memorable experience."
+     ]
+    }
+   ],
+   "about": {
+    "label": "WHO WE ARE",
+    "title": "Two Entrepreneurs, One Passion: Sailing with Friends",
+    "text": [
+     "Two entrepreneurs who are, above all, maritime friends passionate about sailing!",
+     "Rui Alexandre, an engineer and entrepreneur, and Carlos Dias, a computer engineer, saw in sailing the perfect opportunity to combine two passions: sailing with friends and pursuing business ventures.",
+     "This is how Nautic Squad was born, an exclusive members’ club designed for those who want the freedom to sail without the worries of owning a boat, offering unique and memorable experiences at sea."
+    ],
+    "caption": "Rui Alexandre (left) and Carlos Dias (right)",
+    "label2": "QUEM SOMOS?"
+   },
+   "gallery_label": "GALLERY",
+   "gallery": [
+    "OCEANVIEW, Tejo River, August 2022",
+    "OCEANESCAPE, Italy, August 2021",
+    "OCEANESCAPE, Tejo River, May 2022",
+    "OCEANVIEW, Oeiras, August 2020",
+    "OCEANVIEW, Tejo River, May 2022",
+    "OCEANVIEW, La Rochelle - França, Agosto 2020",
+    "OCEANVIEW, Oeiras, May 2022",
+    "OCEANVIEW, Tejo River, May 2022",
+    "OCEANESCAPE, Oeiras, June 2022"
+   ],
+   "gallery_label2": "GALERIA",
+   "cta": "It's time to make your dream of having a boat come true!",
+   "contacts_label": "CONTACTOS",
+   "contact": {
+    "title": "CONTACT US",
+    "intro": "Nautic Squad sails with you at every step, which is why we want to offer you the best possible experience.",
+    "select": "Select the type of request you would like to make:",
+    "forms": [
+     {
+      "label": "Explore more information about the club",
+      "url": "https://forms.office.com/e/6nTuwHtfwU"
+     },
+     {
+      "label": "Schedule a visit or get in touch with the team",
+      "url": "https://forms.office.com/e/ugmNhFpCvC"
+     },
+     {
+      "label": "Join the club or join the waiting list",
+      "url": "https://forms.office.com/e/0076apC7rm"
+     }
+    ]
+   }
+  },
+  "sailing-club": {
+   "title": "Join the Sailing Club!",
+   "meta_title": "Nautic Squad | Sailing Club for Skippers | Oeiras | Lisbon",
+   "club_label": "THE CLUB",
+   "concept": [
+    "The Sailing Club is a sailing club designed for skippers who want to enjoy the freedom of sailing with friends or family, without the costs and responsibilities of owning a boat.",
+    "By becoming a member of Nautic Squad, you gain access to a specific sailboat shared with other members who share the same love for the sea, with guaranteed monthly usage according to the boat’s availability. You can sail whenever and wherever you want, with enough time to reach secluded beaches, relax in the sun, enjoy romantic sunsets, gather friends and family for meals on board, or experience unique moments that will stay in your memory forever.",
+    "The monthly fee includes all expenses: marina fees, insurance, maintenance, cleaning, administrative and operational management, taxes, and port fees."
+   ],
+   "benefits_intro": "As a Nautic Squad member, you benefit from a range of exclusive advantages:",
+   "benefits": [
+    "Access to a sailboat as skipper",
+    "Boat with a fully equipped kitchen",
+    "Maintenance services",
+    "Administrative and operational management",
+    "Support in your development as a skipper",
+    "Assistance with trip planning",
+    "Events and an active nautical community"
+   ],
+   "after": [
+    "Reservations are made easily through a web application, accessible via mobile phone or computer. Each day is divided into three fixed time slots:",
+    "morning (9:00–1:00 pm), afternoon (2:00–6:00 pm), and evening (7:00 pm–8:00 am).",
+    "Members can book consecutive time slots up to the limit of their individual quota. Simply schedule, arrive at the reserved time, and enjoy.",
+    "Being a Nautic Squad member offers the same pleasure as owning your own boat: from a quick sunset sail, a Friday outing, a weekend at sea, or even a full week of adventure or relaxation — all without worries about maintenance or repairs.",
+    "It sounds like a dream, but it’s real.",
+    "Membership is limited to the sailboat’s availability.",
+    "Secure your boat and enjoy more time sailing!"
+   ],
+   "types_label": "BECOME A MEMBER",
+   "types_intro": [
+    "You must choose which type of association is the best fit for you, with the following alternatives:"
+   ],
+   "types": [
+    {
+     "name": "Full light",
+     "text": [
+      "6 outings per month (4 on weekdays and 2 on weekends). A more viable option for those with little time, but who don’t miss the opportunity to enjoy the sailboat on a weekday and make the most of it with family and friends on weekends."
+     ]
+    },
+    {
+     "name": "Week light",
+     "text": [
+      "3 outings per month on weekdays: a more affordable version than the Weekdays plan, perfect for those who have just started sailing, are unsure how much time they can dedicate, and have more free time during the week."
+     ]
+    },
+    {
+     "name": "Weekday",
+     "text": [
+      "6 sailing tours per month during the week: sailors love it because it offers a very affordable and longer sailing option. You can make departures during the month and you can even reserve some time to organize a cruise for a few days."
+     ]
+    },
+    {
+     "name": "Weekend",
+     "text": [
+      "3 sailing tours per month during the weekend. This option is perfect for the sailor who doesn't have much time to sail. This level is a good way for those who want to start sailing, without knowing how much time they have to dedicate and can only do it on weekends."
+     ]
+    },
+    {
+     "name": "Full week",
+     "text": [
+      "9 sailing tours per month. This level provides each member with nine guaranteed reservations per month, 6 during the week and 3 at the weekend. With this level of use, you can book the sailboat for an entire week, which during the summer could represent your dream vacation in the Algarve in a marina or sailing from port to port."
+     ]
+    }
+   ],
+   "types_note": [
+    "Members can book sailing times as individual or consecutive sailings up to a full week."
+   ],
+   "team": {
+    "name": "Team - Navigate as a team",
+    "text": [
+     "Sailing is more pleasant as a team and having someone to help with manoeuvres is very useful, being mandatory to always have a crew member on board to help with manoeuvres.",
+     "If you prefer, we have the “TEAM” mode in which you share any of these membership levels with a friend, both of whom can be skippers and go out together or separately. This makes browsing more pleasant and allows for an even lower cost."
+    ]
+   },
+   "types_cta": "Secure your place",
+   "fleet_label": "BOATS",
+   "boats": [
+    {
+     "label": "Sailing Club - Oeiras Marina",
+     "text": [
+      "OCEANBLISS is a SUN ODYSSEY 350 that stands out for its completely new hull, modern silhouette, and excellent performance at the helm, offering easy handling and greater comfort in the cockpit. The smart layout, with continuous side decks and twin steering wheels, ensures safety, smooth movement, and good visibility. Inside, the bright and welcoming spaces, featuring contemporary design and more than 1.85 m of headroom, make this sailboat ideal for family cruising with comfort, well-being, and peace of mind."
+     ]
+    },
+    {
+     "label": "Sailing Club - Oeiras Marina",
+     "text": [
+      "OCEANESCAPE is a very seductive BENETEAU OCEANIS 37 LIMITED EDITION, built in 2013. The Oceanis 37 stands out for its innovative and exclusive design, with a perfect balance between fluid lines and layout. An aerodynamic, fast, practical and, above all, safe and comfortable sailboat at sea. The LIMITED EDITION awakens desire and curiosity in sailors, who quickly want to experience the incredible sensations provided by it.",
+      "With three cabins, a spacious kitchen and a comfortable lounge, OCEANESCAPE is the irresistible invitation to escape the monotony of everyday life and create incredible, unique and special memories with your chosen guests."
+     ]
+    },
+    {
+     "label": "Sailing Club - Cascais Marina",
+     "text": [
+      "The OCEANVIBES is a 1998 DUFOUR 45 CLASSIC, based at Cascais Marina. With 13.67 metres of timeless elegance, it combines solid sailing performance with the comfort of a classic yacht. Its robust construction and well-balanced design ensure stability and an enjoyable sailing experience on every nautical mile. Featuring a welcoming and spacious interior, it is the perfect retreat for those seeking unforgettable moments at sea, where freedom and tranquillity come together in perfect harmony."
+     ]
+    }
+   ],
+   "faq_label": "FAQ",
+   "faq": [
+    {
+     "q": "How does the Nautic Squad membership work?",
+     "a": [
+      "Nautic Squad is like a gym, but on the water and where you can invite family and friends. Pay a monthly fee, use the equipment, clean it when you're done and leave, without all the ownership, maintenance and administrative responsibilities. Nautic Squad provides an online scheduling system and an electronic check-in and check-out system that makes it easy to schedule your sailing time and also ensures that the boat is always clean and ready to go. This method is perfect for anyone wanting a smarter, more realistic way of navigating a new boat."
+     ]
+    },
+    {
+     "q": "How many members use the boat?",
+     "a": [
+      "Due to our different membership levels, our boats have a variable number of members. To ensure availability and exclusivity, the club limits the number of members, the usual 8 per vessel."
+     ]
+    },
+    {
+     "q": "How does the association cost?",
+     "a": [
+      "It depends on the size of the boat and the type of association but we would say much less than you might think.",
+      "Request a visit to review the options."
+     ]
+    },
+    {
+     "q": "Can I try the sailboat?",
+     "a": [
+      "Sure! Just call to schedule a visit."
+     ]
+    },
+    {
+     "q": "What is the duration of the commitment?",
+     "a": [
+      "Contracts last for 12 months"
+     ]
+    },
+    {
+     "q": "Are there maintenance fees not included?",
+     "a": [
+      "No, but if you lose equipment or damage the boat, you will have to pay for the replacement or repair up to the insurance deductible. If you need extra services, ask for the cost."
+     ]
+    },
+    {
+     "q": "Can 2 people share the same boat?",
+     "a": [
+      "Yes. We offer a team membership model that allows you to share a boat with a friend. At all times, at least one of the members must be on board, and the boat cannot be lent to third parties."
+     ]
+    },
+    {
+     "q": "How long is an exit period?",
+     "a": [
+      "Every day is divided into three periods:",
+      "9 am to 1 pm, 2 pm to 6 pm and from 7 pm to 8 am the following morning. You can schedule one period at a time or combine several for a multi-day trip."
+     ]
+    },
+    {
+     "q": "Can I spend the night on the boat?",
+     "a": [
+      "Yes, as long as you book the night period from 7 pm to 8 am the following day."
+     ]
+    },
+    {
+     "q": "Who is responsible for cleaning the boat?",
+     "a": [
+      "At the end of each use, it is the member's obligation to clean the sailboat and remove the rubbish so that it is available for the next use. At the beginning of an outing, you must CHECK-IN the application, indicating the state in which you found the vessel and CHECK-OUT when finished, indicating the events and possible maintenance needs. CHECK-IN helps hold individual members accountable by reporting the condition of the boat as they board and disembark."
+     ]
+    },
+    {
+     "q": "What are the requirements to be a member of Nautic Squad?",
+     "a": [
+      "All members must have a \"Patrão Local\" sailing license and a sailing course or experience equivalent to an RYA DAY SKIPPER."
+     ]
+    },
+    {
+     "q": "Can I use it beyond my slot?",
+     "a": [
+      "Sure! Each member is entitled to unlimited use as long as the vessel is available. You can book 24 hours in advance at no extra cost. This sounds too good to be true! Nautic Squad invested a lot of time, effort and technology in creating a program that opens the world of sailing to many people who, even enjoying it, had no opportunity to develop their experience. Let's hope you try it!"
+     ]
+    },
+    {
+     "q": "How are abusive behaviors managed?",
+     "a": [
+      "Like any club, we have regulations that provide for the exclusion of members who abuse Nautic Squad’s policies and harm other members. Our priority is mutual respect among members and ensuring the availability of the boats for the next members. We value a friendly and collaborative environment for everyone."
+     ]
+    }
+   ],
+   "closing": "It's time to sail the whole year, without drowning all month.",
+   "contact": {
+    "title": "CONTACT US",
+    "intro": "Nautic Squad sails with you at every step, which is why we want to offer you the best possible experience.",
+    "select": "Select the type of request you would like to make:",
+    "forms": [
+     {
+      "label": "Explore more information about the club",
+      "url": "https://forms.office.com/e/6nTuwHtfwU"
+     },
+     {
+      "label": "Schedule a visit or get in touch with the team",
+      "url": "https://forms.office.com/e/ugmNhFpCvC"
+     },
+     {
+      "label": "Join the club or join the waiting list",
+      "url": "https://forms.office.com/e/0076apC7rm"
+     }
+    ]
+   }
+  },
+  "sailing-academy": {
+   "title": "Join the Sailing Academy!",
+   "meta_title": "Sailing Academy | Ganhe Experiência & Viva Aventuras Abordo da Nautic Squad",
+   "club_label": "THE CLUB",
+   "concept": [
+    "The Sailing Academy is a sailing club designed for skippers who want to enjoy the freedom of sailing with friends or family, without the costs and responsibilities of owning a boat.",
+    "By becoming a member of Nautic Squad, you gain access to a specific sailboat shared with other members who share the same love for the sea, with guaranteed monthly usage according to the boat’s availability. You can sail whenever and wherever you want, with enough time to reach secluded beaches, relax in the sun, enjoy romantic sunsets, gather friends and family for meals on board, or experience unique moments that will stay in your memory forever.",
+    "The monthly fee includes all expenses: marina fees, insurance, maintenance, cleaning, administrative and operational management, taxes, and port fees."
+   ],
+   "benefits_intro": "As a Nautic Squad member, you benefit from a range of exclusive advantages:",
+   "benefits": [
+    "Access to a sailboat as skipper",
+    "Boat with a fully equipped kitchen",
+    "Maintenance services",
+    "Administrative and operational management",
+    "Support in your development as a skipper",
+    "Assistance with trip planning",
+    "Events and an active nautical community"
+   ],
+   "after": [
+    "Reservations are made easily through a web application, accessible via mobile phone or computer. Each day is divided into three fixed time slots:",
+    "morning (9:00–1:00 pm), afternoon (2:00–6:00 pm), and evening (7:00 pm–8:00 am).",
+    "Members can book consecutive time slots up to the limit of their individual quota. Simply schedule, arrive at the reserved time, and enjoy.",
+    "Being a Nautic Squad member offers the same pleasure as owning your own boat: from a quick sunset sail, a Friday outing, a weekend at sea, or even a full week of adventure or relaxation — all without worries about maintenance or repairs.",
+    "It sounds like a dream, but it’s real.",
+    "Membership is limited to the sailboat’s availability.",
+    "Secure your boat and enjoy more time sailing!"
+   ],
+   "types_label": "BECOME A MEMBER",
+   "types_intro": [
+    "To be a member of Nautic Squad you must choose which type of association is the best fit for you, with the following alternatives:"
+   ],
+   "types": [
+    {
+     "name": "Full light",
+     "text": [
+      "6 outings per month (4 on weekdays and 2 on weekends). A more viable option for those with little time, but who don’t miss the opportunity to enjoy the sailboat on a weekday and make the most of it with family and friends on weekends."
+     ]
+    },
+    {
+     "name": "Week light",
+     "text": [
+      "3 outings per month on weekdays: a more affordable version than the Weekdays plan, perfect for those who have just started sailing, are unsure how much time they can dedicate, and have more free time during the week."
+     ]
+    },
+    {
+     "name": "Full week",
+     "text": [
+      "9 sailing tours per month. This level provides each member with nine guaranteed reservations per month, 6 during the week and 3 at the weekend. With this level of use, you can book the sailboat for an entire week, which during the summer could represent your dream vacation in the Algarve in a marina or sailing from port to port."
+     ]
+    },
+    {
+     "name": "Weekday",
+     "text": [
+      "6 sailing tours per month during the week: sailors love it because it offers a very affordable and longer sailing option. You can make departures during the month and you can even reserve some time to organize a cruise for a few days."
+     ]
+    },
+    {
+     "name": "Weekend",
+     "text": [
+      "3 sailing tours per month during the weekend. This option is perfect for the sailor who doesn't have much time to sail. This level is a good way for those who want to start sailing, without knowing how much time they have to dedicate and can only do it on weekends."
+     ]
+    }
+   ],
+   "types_note": [
+    "Members can book sailing times as individual or consecutive sailings up to a full week."
+   ],
+   "team": {
+    "name": "Team sailing",
+    "text": [
+     "If you prefer, you can choose the ‘TEAM’ option, where you share any of these membership levels with a friend. Both of you can be skippers and go on outings together or separately. This makes sailing more enjoyable and allows for an even lower cost."
+    ]
+   },
+   "types_cta": "Secure your place",
+   "fleet_label": "BOATS",
+   "boats": [
+    {
+     "label": "Sailing Academy - Oeiras Marina",
+     "text": [
+      "The OCEANFUN is a JEANNEAU SUN 2500, a versatile, agile and easy-to-handle sailboat that offers a dynamic, safe and enjoyable sailing experience. Ideal for both beginners and those looking to improve their sailing skills, it combines comfort, stability and excellent sailing performance. Measuring 7.50 metres in length, the OCEANFUN stands out for its functional design, ergonomic cockpit and ease of manoeuvrability, making it the perfect choice for enjoying sailing in a practical and relaxed way."
+     ]
+    }
+   ],
+   "faq_label": "FAQ",
+   "faq": [
+    {
+     "q": "How does the Nautic Squad membership work?",
+     "a": [
+      "Nautic Squad is like a gym, but on the water and where you can invite family and friends. Pay a monthly fee, use the equipment, clean it when you're done and leave, without all the ownership, maintenance and administrative responsibilities. Nautic Squad provides an online scheduling system and an electronic check-in and check-out system that makes it easy to schedule your sailing time and also ensures that the boat is always clean and ready to go. This method is perfect for anyone wanting a smarter, more realistic way of navigating a new boat."
+     ]
+    },
+    {
+     "q": "How many members use the boat?",
+     "a": [
+      "Due to our different membership levels, our boats have a variable number of members. To ensure availability and exclusivity, the club limits the number of members, typically 8 per vessel."
+     ]
+    },
+    {
+     "q": "How does the association cost?",
+     "a": [
+      "It depends on the size of the boat and the type of membership, but we can safely say it’s much less than you might imagine! Request a visit to explore the available options"
+     ]
+    },
+    {
+     "q": "Can I try the sailboat?",
+     "a": [
+      "Sure! Just call to schedule a visit."
+     ]
+    },
+    {
+     "q": "What is the duration of contratcts?",
+     "a": [
+      "Contracts last for 12 months"
+     ]
+    },
+    {
+     "q": "Are there maintenance fees not included?",
+     "a": [
+      "No, but if you lose equipment or damage the boat, you will have to pay for the replacement or repair up to the insurance deductible. If you need extra services, ask for the cost."
+     ]
+    },
+    {
+     "q": "Can 2 people share the same boat?",
+     "a": [
+      "Yes. We offer a team membership model that allows you to share a boat with a friend. At all times, at least one of the members must be on board, and the boat cannot be lent to third parties."
+     ]
+    },
+    {
+     "q": "How long is an exit period?",
+     "a": [
+      "Every day is divided into three periods:",
+      "9 am to 1 pm, 2 pm to 6 pm and from 7 pm to 8 am the following morning. You can schedule one period at a time or combine several for a multi-day trip."
+     ]
+    },
+    {
+     "q": "Can I spend the night on the boat?",
+     "a": [
+      "Yes, as long as you book the night period from 7 pm to 8 am the following day."
+     ]
+    },
+    {
+     "q": "Who is responsible for cleaning the boat?",
+     "a": [
+      "At the end of each use, it is the member's obligation to clean the sailboat and remove the rubbish so that it is available for the next use. At the beginning of an outing, you must CHECK-IN the application, indicating the state in which you found the vessel and CHECK-OUT when finished, indicating the events and possible maintenance needs. CHECK-IN helps hold individual members accountable by reporting the condition of the boat as they board and disembark."
+     ]
+    },
+    {
+     "q": "What are the requirements to be a member of Nautic Squad?",
+     "a": [
+      "All members must have a \"Patrão Local\" sailing license and a sailing course or experience equivalent to an RYA DAY SKIPPER."
+     ]
+    },
+    {
+     "q": "Can I use it beyond my slot?",
+     "a": [
+      "Sure! Each member is entitled to unlimited use as long as the vessel is available. You can book 24 hours in advance at no extra cost. This sounds too good to be true! Nautic Squad invested a lot of time, effort and technology in creating a program that opens the world of sailing to many people who, even enjoying it, had no opportunity to develop their experience. Let's hope you try it!"
+     ]
+    },
+    {
+     "q": "How are abusive behaviors managed?",
+     "a": [
+      "Like any club, we have regulations that provide for the exclusion of members who abuse Nautic Squad’s policies and harm other members. Our priority is mutual respect among members and ensuring the availability of the boats for the next members. We value a friendly and collaborative environment for everyone."
+     ]
+    }
+   ],
+   "closing": "Are you ready to gain experience and live unforgettable adventures on board?",
+   "contact": {
+    "title": "CONTACT US",
+    "intro": "Nautic Squad sails with you at every step, which is why we want to offer you the best possible experience.",
+    "select": "Select the type of request you would like to make:",
+    "forms": [
+     {
+      "label": "Explore more information about the club",
+      "url": "https://forms.office.com/e/6nTuwHtfwU"
+     },
+     {
+      "label": "Schedule a visit or get in touch with the team",
+      "url": "https://forms.office.com/e/ugmNhFpCvC"
+     },
+     {
+      "label": "Join the club or join the waiting list",
+      "url": "https://forms.office.com/e/0076apC7rm"
+     }
+    ]
+   }
+  },
+  "power-club": {
+   "title": "Join the PowerClub!",
+   "meta_title": "POWER CLUB | Nautic Squad",
+   "club_label": "THE CLUB",
+   "concept": [
+    "Power Club was created for those who are passionate about the sea, speed, and exclusive experiences.",
+    "By becoming a member of Nautic Squad, you gain access to a dedicated sailboat, shared with a select group of individuals who share the same love for the sea, with guaranteed monthly usage according to the boat’s availability. You may sail whenever and wherever you wish, allowing ample time to reach secluded beaches, relax in the sun, enjoy memorable sunsets, gather friends and family for onboard meals, or create unique experiences that will remain in your memory.",
+    "The monthly membership fee covers all expenses: marina fees, insurance, maintenance, cleaning, administrative and operational management, taxes, and port fees."
+   ],
+   "benefits_intro": "As a Nautic Squad member, you benefit from a range of exclusive privileges:",
+   "benefits": [
+    "Access to a sailboat as skipper",
+    "Fully equipped kitchen on board",
+    "Maintenance and technical support",
+    "Comprehensive administrative and operational management",
+    "Support for skill development as a skipper",
+    "Assistance in planning voyages",
+    "Exclusive events and access to an active nautical community"
+   ],
+   "after": [
+    "Reservations are made conveniently through a web application, accessible via mobile or computer. The day is divided into three fixed time slots, morning (9:00–13:00), afternoon (14:00–18:00), and evening (19:00–20:00) with the option to book consecutive slots up to each member’s allotted quota. Simply schedule, arrive at the designated time, and enjoy.",
+    "Membership in Nautic Squad provides the pleasures of owning a private boat without the associated concerns: from a brief sunset cruise, a Friday outing, a weekend at sea, to a full week of adventure or relaxation, all with no maintenance or repair responsibilities.",
+    "Although it may seem like a dream, it is very much reality.",
+    "Membership is limited based on sailboat availability.",
+    "Secure your membership and gain more time to sail."
+   ],
+   "types_label": "BECOME A MEMBER",
+   "types_intro": [
+    "You must choose which type of association is the best fit for you, with the following alternatives:"
+   ],
+   "types": [
+    {
+     "name": "Full light",
+     "text": [
+      "6 outings per month (4 on weekdays and 2 on weekends). A more viable option for those with little time, but who don’t miss the opportunity to enjoy the sailboat on a weekday and make the most of it with family and friends on weekends."
+     ]
+    },
+    {
+     "name": "Week light",
+     "text": [
+      "3 outings per month on weekdays: a more affordable version than the Weekdays plan, perfect for those who have just started sailing, are unsure how much time they can dedicate, and have more free time during the week."
+     ]
+    },
+    {
+     "name": "Full week",
+     "text": [
+      "9 sailing tours per month. This level provides each member with nine guaranteed reservations per month, 6 during the week and 3 at the weekend. With this level of use, you can book the sailboat for an entire week, which during the summer could represent your dream vacation in the Algarve in a marina or sailing from port to port."
+     ]
+    },
+    {
+     "name": "Weekend",
+     "text": [
+      "3 sailing tours per month during the weekend. This option is perfect for the sailor who doesn't have much time to sail. This level is a good way for those who want to start sailing, without knowing how much time they have to dedicate and can only do it on weekends."
+     ]
+    },
+    {
+     "name": "Weekday",
+     "text": [
+      "6 sailing tours per month during the week: sailors love it because it offers a very affordable and longer sailing option. You can make departures during the month and you can even reserve some time to organize a cruise for a few days."
+     ]
+    }
+   ],
+   "types_note": [
+    "Members can book sailing times as individual or consecutive sailings up to a full week."
+   ],
+   "team": {
+    "name": "Team - Navigate as a team",
+    "text": [
+     "Sailing is more pleasant as a team and having someone to help with manoeuvres is very useful, being mandatory to always have a crew member on board to help with manoeuvres.",
+     "If you prefer, we have the “TEAM” mode in which you share any of these membership levels with a friend, both of whom can be skippers and go out together or separately. This makes browsing more pleasant and allows for an even lower cost."
+    ]
+   },
+   "types_cta": "Secure your place",
+   "fleet_label": "BOATS",
+   "boats": [
+    {
+     "label": "Power Club - Oeiras Marina",
+     "text": [
+      "FIFTY FIFTY is a Quicksilver Activ 875, measuring 8.7 metres in length and with a capacity for up to 12 people.",
+      "It features a modern, functional, and surprisingly spacious interior for its category, designed to maximise comfort for day trips or short stays on board.",
+      "The main cabin is bright and well-ventilated, with contemporary lines and carefully selected finishes. It includes a comfortable forward berth, ideal for resting, with integrated storage to keep the space well organised.",
+      "The interior area includes a small, versatile lounge space that can be used for relaxation or converted according to your needs. The materials used are durable and easy to maintain, without compromising elegance and comfort.",
+      "Overall, the interior of FIFTY FIFTY combines practicality, comfort, and intelligent design, making it ideal for those looking for a versatile and comfortable powerboat, ready to enjoy the sea with complete freedom."
+     ]
+    }
+   ],
+   "faq_label": "FAQ",
+   "faq": [
+    {
+     "q": "How does the Nautic Squad membership work?",
+     "a": [
+      "Nautic Squad is like a gym, but on the water and where you can invite family and friends. Pay a monthly fee, use the equipment, clean it when you're done and leave, without all the ownership, maintenance and administrative responsibilities. Nautic Squad provides an online scheduling system and an electronic check-in and check-out system that makes it easy to schedule your sailing time and also ensures that the boat is always clean and ready to go. This method is perfect for anyone wanting a smarter, more realistic way of navigating a new boat."
+     ]
+    },
+    {
+     "q": "How many members use the boat?",
+     "a": [
+      "Due to our different membership levels, our boats have a variable number of members. To ensure availability and exclusivity, the club limits the number of members, the usual 8 per vessel."
+     ]
+    },
+    {
+     "q": "How does the association cost?",
+     "a": [
+      "It depends on the size of the boat and the type of association but we would say much less than you might think.",
+      "Request a visit to review the options."
+     ]
+    },
+    {
+     "q": "Can I try the sailboat?",
+     "a": [
+      "Sure! Just call to schedule a visit."
+     ]
+    },
+    {
+     "q": "What is the duration of the contratcs?",
+     "a": [
+      "Contracts last for 12 months"
+     ]
+    },
+    {
+     "q": "Are there maintenance fees not included?",
+     "a": [
+      "No, but if you lose equipment or damage the boat, you will have to pay for the replacement or repair up to the insurance deductible. If you need extra services, ask for the cost."
+     ]
+    },
+    {
+     "q": "Can 2 people share the same boat?",
+     "a": [
+      "Yes. We offer a team membership model that allows you to share a boat with a friend. At all times, at least one of the members must be on board, and the boat cannot be lent to third parties."
+     ]
+    },
+    {
+     "q": "How long is an exit period?",
+     "a": [
+      "Every day is divided into three periods:",
+      "9 am to 1 pm, 2 pm to 6 pm and from 7 pm to 8 am the following morning. You can schedule one period at a time or combine several for a multi-day trip."
+     ]
+    },
+    {
+     "q": "Can I spend the night on the boat?",
+     "a": [
+      "Yes, as long as you book the night period from 7 pm to 8 am the following day."
+     ]
+    },
+    {
+     "q": "Who is responsible for cleaning the boat?",
+     "a": [
+      "At the end of each use, it is the member's obligation to clean the sailboat and remove the rubbish so that it is available for the next use. At the beginning of an outing, you must CHECK-IN the application, indicating the state in which you found the vessel and CHECK-OUT when finished, indicating the events and possible maintenance needs. CHECK-IN helps hold individual members accountable by reporting the condition of the boat as they board and disembark."
+     ]
+    },
+    {
+     "q": "What are the requirements to be a member of Nautic Squad?",
+     "a": [
+      "All members must have a \"Patrão Local\" sailing license and a sailing course or experience equivalent to an RYA DAY SKIPPER."
+     ]
+    },
+    {
+     "q": "Can I use it beyond my slot?",
+     "a": [
+      "Sure! Each member is entitled to unlimited use as long as the vessel is available. You can book 24 hours in advance at no extra cost. This sounds too good to be true! Nautic Squad invested a lot of time, effort and technology in creating a program that opens the world of sailing to many people who, even enjoying it, had no opportunity to develop their experience. Let's hope you try it!"
+     ]
+    },
+    {
+     "q": "How are abusive behaviors managed?",
+     "a": [
+      "Like any club, we have regulations that provide for the exclusion of members who abuse Nautic Squad’s policies and harm other members. Our priority is mutual respect among members and ensuring the availability of the boats for the next members. We value a friendly and collaborative environment for everyone."
+     ]
+    }
+   ],
+   "closing": "It's time to sail the whole year, without drowning all month.",
+   "contact": {
+    "title": "CONTACT US",
+    "intro": "Nautic Squad sails with you at every step, which is why we want to offer you the best possible experience.",
+    "select": "Select the type of request you would like to make:",
+    "forms": [
+     {
+      "label": "Explore more information about the club",
+      "url": "https://forms.office.com/e/6nTuwHtfwU"
+     },
+     {
+      "label": "Schedule a visit or get in touch with the team",
+      "url": "https://forms.office.com/e/ugmNhFpCvC"
+     },
+     {
+      "label": "Join the club or join the waiting list",
+      "url": "https://forms.office.com/e/0076apC7rm"
+     }
+    ]
+   }
+  },
+  "footer": {
+   "links_label": "LINKS",
+   "links": [
+    "SAILING CLUB",
+    "SAILING ACADEMY",
+    "BOATS",
+    "ABOUT US",
+    "GALLERY",
+    "CONTACTS"
+   ],
+   "phone": "911 924 555",
+   "office_label": "Office",
+   "office": "Av. Marquês de Tomar 35, 7º floor 1050-153, Lisbon - Portugal",
+   "boats_label": "Boats",
+   "marinas": [
+    "Oeiras Marina",
+    "Cascais Marina"
+   ],
+   "social_label": "SOCIAL",
+   "after_social": [
+    "LINKS"
+   ],
+   "copyright": "© 2021 NAUTIC SQUAD"
+  }
+ }
+}
