@@ -42,27 +42,27 @@ function ns_apply_backgrounds( $html ) {
 	);
 }
 
-$sections = array( 'hero', 'manifesto', 'como-funciona', 'frota', 'incluido', 'power-club', 'quem-somos', 'momentos', 'planos', 'academia', 'faq', 'contacto' );
+$sections = array( 'hero', 'manifesto', 'clubes', 'como-funciona', 'incluido', 'frota', 'numeros', 'planos', 'quem-somos', 'cta', 'momentos', 'faq', 'contacto' );
 
 // Frota estática (no WordPress vem de Frota → Barcos). Dados do site atual.
 $boats = array(
-	array( 'oceanbliss', 'Sailing Club · Oeiras', 'Oceanbliss', 'Jeanneau Sun Odyssey 350', array( 'Dupla roda de leme', '1,85 m altura livre' ) ),
-	array( 'oceanescape', 'Sailing Club · Oeiras', 'Oceanescape', 'Beneteau Oceanis 37 Limited Edition', array( '3 cabines', '2013' ) ),
-	array( 'oceanvibes', 'Sailing Club · Cascais', 'Oceanvibes', 'Dufour 45 Classic', array( '13,67 m', '1998' ) ),
-	array( 'oceanfun', 'Sailing Academy · Oeiras', 'Oceanfun', 'Jeanneau Sun 2500', array( '7,50 m', 'Ideal para aprender' ) ),
-	array( 'fiftyfifty', 'Power Club · Oeiras', 'Fifty Fifty', 'Quicksilver Activ 875', array( '8,7 m', '12 pessoas' ) ),
+	array( 'oceanbliss', 'Vela', 'Oceanbliss', 'Jeanneau Sun Odyssey 350', array( 'Dupla roda de leme', 'Marina de Oeiras' ) ),
+	array( 'oceanescape', 'Vela', 'Oceanescape', 'Beneteau Oceanis 37 Limited Edition', array( '3 cabines', 'Marina de Oeiras' ) ),
+	array( 'oceanvibes', 'Vela', 'Oceanvibes', 'Dufour 45 Classic', array( '13,67 m', 'Marina de Cascais' ) ),
+	array( 'oceanfun', 'Vela · Academy', 'Oceanfun', 'Jeanneau Sun 2500', array( '7,50 m', 'Marina de Oeiras' ) ),
+	array( 'fiftyfifty', 'Motor · Power Club', 'Fifty Fifty', 'Quicksilver Activ 875', array( '8,7 m', '12 pessoas', 'Marina de Oeiras' ) ),
 );
-$fleet = '<div class="ns-track">';
+$fleet = '<div class="ns-fleet__grid reveal-stagger">';
 foreach ( $boats as $i => $b ) {
-	$fleet .= '<article class="ns-boat"><figure class="ns-boat__img"><img src="' . nautic_squad_img( $b[0] ) . '" alt="' . $b[2] . '" loading="lazy"></figure>'
-		. '<span class="ns-boat__tag">' . $b[1] . '</span><span class="ns-boat__idx">0' . ( $i + 1 ) . '</span>'
+	$fleet .= '<article class="ns-boat"><figure class="ns-boat__img"><img src="' . nautic_squad_img( $b[0] ) . '" alt="' . $b[2] . '"></figure>'
+		. '<div class="ns-boat__body"><span class="ns-boat__tag">' . $b[1] . '</span>'
 		. '<h3>' . $b[2] . '</h3><p class="ns-boat__model">' . $b[3] . '</p><div class="ns-specs">';
 	foreach ( $b[4] as $s ) {
 		$fleet .= '<span>' . $s . '</span>';
 	}
-	$fleet .= '</div><a class="ns-boat__link" href="#contacto" aria-label="' . $b[2] . '"></a></article>';
+	$fleet .= '</div></div><a class="ns-boat__link" href="#contacto" aria-label="' . $b[2] . '"></a></article>';
 }
-$fleet .= '<article class="ns-boat ns-boat--end"><p class="ns-label">O número de inscrições é limitado</p><h3>Assegure <em>o seu barco.</em></h3><a class="ns-btn" href="#contacto">Agendar visita</a></article></div>';
+$fleet .= '</div>';
 
 $body = '';
 foreach ( $sections as $s ) {
@@ -99,7 +99,7 @@ $page = '<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nautic Squad — Proposta de novo site</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 /* Equivalentes mínimos dos estilos base do WordPress */
 .wp-block-image{margin:0}.wp-block-image img{height:auto}

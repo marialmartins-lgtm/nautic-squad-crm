@@ -9,24 +9,24 @@
 			"defaultGradients": false,
 			"palette": [
 				{
-					"slug": "abismo",
-					"name": "Abismo (teal profundo)",
-					"color": "#042A2F"
+					"slug": "branco",
+					"name": "Branco",
+					"color": "#FFFFFF"
 				},
 				{
-					"slug": "profundo",
-					"name": "Teal profundo",
-					"color": "#06404A"
+					"slug": "espuma",
+					"name": "Espuma",
+					"color": "#F3F9FA"
 				},
 				{
-					"slug": "teal",
-					"name": "Teal Nautic Squad (logótipo)",
-					"color": "#09848F"
+					"slug": "agua",
+					"name": "Água clara",
+					"color": "#E3F2F3"
 				},
 				{
-					"slug": "titulo",
-					"name": "Teal títulos",
-					"color": "#0397AB"
+					"slug": "aqua",
+					"name": "Aqua (cabeçalho do site atual)",
+					"color": "#A8D7DC"
 				},
 				{
 					"slug": "turquesa",
@@ -39,24 +39,29 @@
 					"color": "#10B0B9"
 				},
 				{
-					"slug": "aqua",
-					"name": "Aqua (cabeçalho)",
-					"color": "#A8D7DC"
+					"slug": "titulo",
+					"name": "Teal títulos",
+					"color": "#0397AB"
 				},
 				{
-					"slug": "agua",
-					"name": "Água clara",
-					"color": "#DBECEE"
+					"slug": "teal",
+					"name": "Teal Nautic Squad",
+					"color": "#09848F"
 				},
 				{
-					"slug": "espuma",
-					"name": "Espuma",
-					"color": "#E7F3F4"
+					"slug": "tinta",
+					"name": "Tinta (texto)",
+					"color": "#0B3A40"
 				},
 				{
-					"slug": "branco",
-					"name": "Branco",
-					"color": "#FFFFFF"
+					"slug": "cinza",
+					"name": "Cinza azulado",
+					"color": "#557479"
+				},
+				{
+					"slug": "abismo",
+					"name": "Abismo (rodapé)",
+					"color": "#042A2F"
 				}
 			],
 			"gradients": [
@@ -78,13 +83,13 @@
 			"fontFamilies": [
 				{
 					"slug": "titulos",
-					"name": "Cormorant Garamond",
-					"fontFamily": "\"Cormorant Garamond\", \"Times New Roman\", serif"
+					"name": "Plus Jakarta Sans",
+					"fontFamily": "\"Plus Jakarta Sans\", ui-sans-serif, system-ui, sans-serif"
 				},
 				{
 					"slug": "texto",
-					"name": "Manrope",
-					"fontFamily": "\"Manrope\", ui-sans-serif, system-ui, sans-serif"
+					"name": "Inter",
+					"fontFamily": "\"Inter\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif"
 				}
 			],
 			"fontSizes": [
@@ -173,7 +178,7 @@
 		},
 		"layout": {
 			"contentSize": "760px",
-			"wideSize": "1360px"
+			"wideSize": "1320px"
 		},
 		"custom": {
 			"radius": {
@@ -188,8 +193,8 @@
 	},
 	"styles": {
 		"color": {
-			"background": "var(--wp--preset--color--abismo)",
-			"text": "var(--wp--preset--color--espuma)"
+			"background": "var(--wp--preset--color--branco)",
+			"text": "var(--wp--preset--color--tinta)"
 		},
 		"typography": {
 			"fontFamily": "var(--wp--preset--font-family--texto)",
@@ -207,12 +212,12 @@
 			"heading": {
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--titulos)",
-					"fontWeight": "400",
-					"lineHeight": "1",
-					"letterSpacing": "-0.01em"
+					"fontWeight": "600",
+					"lineHeight": "1.05",
+					"letterSpacing": "-0.035em"
 				},
 				"color": {
-					"text": "var(--wp--preset--color--branco)"
+					"text": "var(--wp--preset--color--tinta)"
 				}
 			},
 			"h1": {
@@ -232,7 +237,7 @@
 			},
 			"link": {
 				"color": {
-					"text": "var(--wp--preset--color--espuma)"
+					"text": "var(--wp--preset--color--teal)"
 				},
 				":hover": {
 					"color": {
@@ -242,7 +247,7 @@
 			},
 			"button": {
 				"border": {
-					"radius": "0"
+					"radius": "999px"
 				},
 				"color": {
 					"background": "var(--wp--preset--color--turquesa)",
@@ -251,16 +256,16 @@
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--texto)",
 					"fontWeight": "600",
-					"fontSize": "0.78rem",
-					"letterSpacing": "0.22em",
-					"textTransform": "uppercase"
+					"fontSize": "0.95rem",
+					"letterSpacing": "0",
+					"textTransform": "none"
 				},
 				"spacing": {
 					"padding": {
-						"top": "1.15rem",
-						"bottom": "1.15rem",
-						"left": "2.2rem",
-						"right": "2.2rem"
+						"top": "1rem",
+						"bottom": "1rem",
+						"left": "1.6rem",
+						"right": "1.15rem"
 					}
 				},
 				":hover": {

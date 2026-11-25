@@ -6,21 +6,19 @@
  * Description: Os cinco níveis de associação e o modo Team, em fundo claro.
  */
 ?>
-<!-- wp:group {"tagName":"section","align":"full","anchor":"planos","className":"ns-section is-sand","layout":{"type":"default"}} -->
-<section id="planos" class="wp-block-group alignfull ns-section is-sand"><!-- wp:group {"className":"ns-wrap","layout":{"type":"default"}} -->
-<div class="wp-block-group ns-wrap"><!-- wp:group {"className":"ns-plans-head","layout":{"type":"default"}} -->
-<div class="wp-block-group ns-plans-head"><!-- wp:group {"layout":{"type":"default"}} -->
-<div class="wp-block-group"><!-- wp:paragraph {"className":"ns-label"} -->
-<p class="ns-label">Tipos de associação</p>
+<!-- wp:group {"tagName":"section","align":"full","anchor":"planos","className":"ns-section","layout":{"type":"default"}} -->
+<section id="planos" class="wp-block-group alignfull ns-section"><!-- wp:group {"className":"ns-wrap","layout":{"type":"default"}} -->
+<div class="wp-block-group ns-wrap"><!-- wp:group {"className":"ns-head reveal","layout":{"type":"default"}} -->
+<div class="wp-block-group ns-head reveal"><!-- wp:paragraph {"className":"ns-kicker"} -->
+<p class="ns-kicker">Tipos de associação</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:heading {"className":"ns-split"} -->
-<h2 class="wp-block-heading ns-split">Escolha <em>o seu ritmo.</em></h2>
-<!-- /wp:heading --></div>
-<!-- /wp:group -->
+<!-- wp:heading {"className":"ns-title"} -->
+<h2 class="wp-block-heading ns-title">Escolha o seu ritmo</h2>
+<!-- /wp:heading -->
 
-<!-- wp:paragraph {"className":"ns-lead reveal"} -->
-<p class="ns-lead reveal">Escolha o tipo de associação mais adequado a si e desfrute do mar e do vento. Pode reservar saídas individuais ou consecutivas, até uma semana inteira. Contratos de 12 meses.</p>
+<!-- wp:paragraph {"className":"ns-sub"} -->
+<p class="ns-sub">Escolha o tipo de associação mais adequado a si e desfrute do mar e do vento. Saídas individuais ou consecutivas, até uma semana inteira. Contratos de 12 meses.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 

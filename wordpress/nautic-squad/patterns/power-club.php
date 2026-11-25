@@ -6,8 +6,8 @@
  * Description: Imagem com revelação + destaque da lancha FIFTY FIFTY.
  */
 ?>
-<!-- wp:group {"tagName":"section","align":"full","anchor":"power-club","className":"ns-section is-ink","layout":{"type":"default"}} -->
-<section id="power-club" class="wp-block-group alignfull ns-section is-ink"><!-- wp:group {"className":"ns-wrap ns-power","layout":{"type":"default"}} -->
+<!-- wp:group {"tagName":"section","align":"full","anchor":"power-club","className":"ns-section is-dark","layout":{"type":"default"}} -->
+<section id="power-club" class="wp-block-group alignfull ns-section is-dark"><!-- wp:group {"className":"ns-wrap ns-power","layout":{"type":"default"}} -->
 <div class="wp-block-group ns-wrap ns-power"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"ns-reveal-img ns-power__img"} -->
 <figure class="wp-block-image size-full ns-reveal-img ns-power__img"><img src="<?php echo esc_url( nautic_squad_img( 'power' ) ); ?>" alt="Lancha FIFTY FIFTY do Power Club"/></figure>
 <!-- /wp:image -->

@@ -6,15 +6,15 @@
  * Description: Título fixo à esquerda e acordeão à direita.
  */
 ?>
-<!-- wp:group {"tagName":"section","align":"full","anchor":"faq","className":"ns-section","layout":{"type":"default"}} -->
+<!-- wp:group {"tagName":"section","align":"full","anchor":"faq","className":"ns-section is-foam","layout":{"type":"default"}} -->
 <section id="faq" class="wp-block-group alignfull ns-section"><!-- wp:group {"className":"ns-wrap ns-faq-wrap","layout":{"type":"default"}} -->
 <div class="wp-block-group ns-wrap ns-faq-wrap"><!-- wp:group {"className":"ns-sticky","layout":{"type":"default"}} -->
-<div class="wp-block-group ns-sticky"><!-- wp:paragraph {"className":"ns-label"} -->
-<p class="ns-label">Questões frequentes</p>
+<div class="wp-block-group ns-sticky"><!-- wp:paragraph {"className":"ns-kicker"} -->
+<p class="ns-kicker">Questões frequentes</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:heading {"className":"ns-split"} -->
-<h2 class="wp-block-heading ns-split">Antes de <em>zarpar.</em></h2>
+<!-- wp:heading {"className":"ns-title ns-title--left"} -->
+<h2 class="wp-block-heading ns-title ns-title--left">Antes de zarpar</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"className":"ns-lead"} -->

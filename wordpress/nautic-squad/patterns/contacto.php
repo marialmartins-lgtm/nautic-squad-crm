@@ -6,19 +6,19 @@
  * Description: Foto de fundo, contactos oficiais e formulário (envia email para o administrador).
  */
 ?>
-<!-- wp:group {"tagName":"section","align":"full","anchor":"contacto","className":"ns-contact ns-media is-darker","style":{"background":{"backgroundImage":{"url":"<?php echo esc_url( nautic_squad_img( 'contacto' ) ); ?>","source":"file","title":"contacto"},"backgroundSize":"cover","backgroundPosition":"50% 50%"}},"layout":{"type":"default"}} -->
-<section id="contacto" class="wp-block-group alignfull ns-contact ns-media is-darker"><!-- wp:group {"className":"ns-contact__grid","layout":{"type":"default"}} -->
+<!-- wp:group {"tagName":"section","align":"full","anchor":"contacto","className":"ns-contact is-dark","layout":{"type":"default"}} -->
+<section id="contacto" class="wp-block-group alignfull ns-contact is-dark"><!-- wp:group {"className":"ns-contact__grid","layout":{"type":"default"}} -->
 <div class="wp-block-group ns-contact__grid"><!-- wp:group {"layout":{"type":"default"}} -->
-<div class="wp-block-group"><!-- wp:paragraph {"className":"ns-label reveal"} -->
-<p class="ns-label reveal">Contactos</p>
+<div class="wp-block-group"><!-- wp:paragraph {"className":"ns-kicker ns-kicker--light reveal"} -->
+<p class="ns-kicker ns-kicker--light reveal">Contactos</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"className":"ns-split"} -->
-<h2 class="wp-block-heading ns-split">Está na hora <em>de zarpar.</em></h2>
+<h2 class="wp-block-heading ns-split">Está na hora de tirar do papel <em>o seu sonho de ter um barco.</em></h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"className":"ns-lead reveal"} -->
-<p class="ns-lead reveal">A Nautic Squad navega consigo em cada etapa. Agende uma visita, peça mais informações ou junte-se ao clube.</p>
+<p class="ns-lead reveal">A Nautic Squad navega consigo em cada etapa, por isso queremos oferecer-lhe a melhor experiência possível. Agende uma visita, peça mais informações ou junte-se ao clube.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:html -->

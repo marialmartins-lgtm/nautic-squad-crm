@@ -182,7 +182,15 @@
 			steps.forEach(function (s, i) { if (s.getBoundingClientRect().top < vh * 0.55) active = i; });
 			steps.forEach(function (s, i) { s.classList.toggle('is-active', i === active); });
 			figs.forEach(function (f, i) { f.classList.toggle('is-active', i === Math.min(active, figs.length - 1)); });
-			if (media) media.setAttribute('data-count', '0' + (active + 1) + ' / 0' + steps.length);
+			if (media) {
+				media.setAttribute('data-count', '0' + (active + 1) + ' / 0' + steps.length);
+				/* a caixa assume o formato (horizontal/vertical) da foto ativa */
+				var im = figs[Math.min(active, figs.length - 1)] && figs[Math.min(active, figs.length - 1)].querySelector('img');
+				if (im && im.naturalWidth && media._ar !== im.src) {
+					media.style.aspectRatio = im.naturalWidth + ' / ' + im.naturalHeight;
+					media._ar = im.src;
+				}
+			}
 		});
 
 		requestAnimationFrame(frame);

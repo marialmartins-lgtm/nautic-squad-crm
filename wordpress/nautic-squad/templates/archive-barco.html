@@ -8,11 +8,33 @@
 <!-- wp:group {"className":"ns-boat","layout":{"type":"default"}} -->
 <div class="wp-block-group ns-boat"><!-- wp:post-featured-image {"isLink":true} /-->
 
-<!-- wp:post-terms {"term":"tipo_barco"} /-->
+<!-- wp:group {"className":"ns-boat__body","layout":{"type":"default"}} -->
+<div class="wp-block-group ns-boat__body"><!-- wp:post-terms {"term":"tipo_barco"} /-->
 
 <!-- wp:post-title {"level":3,"isLink":true} /-->
 
-<!-- wp:post-excerpt {"className":"ns-boat__model"} /--></div>
+<!-- wp:paragraph {"metadata":{"bindings":{"content":{"source":"core/post-meta","args":{"key":"ns_modelo"}}}},"className":"ns-boat__model"} -->
+<p class="ns-boat__model"></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"ns-specs","layout":{"type":"default"}} -->
+<div class="wp-block-group ns-specs"><!-- wp:paragraph {"metadata":{"bindings":{"content":{"source":"core/post-meta","args":{"key":"ns_comprimento"}}}}} -->
+<p></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"metadata":{"bindings":{"content":{"source":"core/post-meta","args":{"key":"ns_capacidade"}}}}} -->
+<p></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"metadata":{"bindings":{"content":{"source":"core/post-meta","args":{"key":"ns_ano"}}}}} -->
+<p></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"metadata":{"bindings":{"content":{"source":"core/post-meta","args":{"key":"ns_marina"}}}}} -->
+<p></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
 <!-- /wp:group -->
 <!-- /wp:post-template --></div>
 <!-- /wp:query --></main>
