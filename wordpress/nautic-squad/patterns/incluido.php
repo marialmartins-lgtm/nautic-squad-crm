@@ -1,19 +1,19 @@
 <?php
 /**
- * Title: Citação em imagem + tudo incluído
+ * Title: Citação em imagem + mensalidade
  * Slug: nautic-squad/incluido
  * Categories: nautic-squad
- * Description: Imagem em parallax com citação gigante, seguida da lista do que a mensalidade inclui.
+ * Description: Imagem em parallax com citação gigante, seguida do que a mensalidade inclui e das vantagens de sócio.
  */
 ?>
 <!-- wp:group {"tagName":"section","align":"full","className":"ns-quote ns-media","style":{"background":{"backgroundImage":{"url":"<?php echo esc_url( nautic_squad_img( 'incluido' ) ); ?>","source":"file","title":"incluido"},"backgroundSize":"cover","backgroundPosition":"50% 50%"}},"layout":{"type":"default"}} -->
 <section class="wp-block-group alignfull ns-quote ns-media"><!-- wp:group {"layout":{"type":"default"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"className":"ns-label reveal"} -->
-<p class="ns-label reveal">Tudo incluído</p>
+<p class="ns-label reveal">Sailing Club</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"className":"ns-split"} -->
-<h2 class="wp-block-heading ns-split">Tu navegas. <em>Nós tratamos do resto.</em></h2>
+<h2 class="wp-block-heading ns-split">Navegue o ano todo, <em>sem se afogar o mês inteiro.</em></h2>
 <!-- /wp:heading --></div>
 <!-- /wp:group --></section>
 <!-- /wp:group -->
@@ -26,7 +26,11 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"ns-lead"} -->
-<p class="ns-lead">Uma única mensalidade cobre todas as despesas do barco. Sem surpresas, sem faturas de estaleiro. E com a opção <strong>TEAM</strong>, partilhas o plano com um amigo.</p>
+<p class="ns-lead">Inclui todas as despesas. Passa a ter acesso a um veleiro específico, partilhado com outros membros que partilham o mesmo amor pelo mar, com utilização mensal garantida.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"ns-perks"} -->
+<p class="ns-perks"><strong>Vantagens de sócio:</strong> acesso a um veleiro como skipper · barco com cozinha 100% equipada · apoio na evolução como skipper · apoio na preparação de viagens · eventos e uma comunidade náutica ativa.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -48,7 +52,7 @@
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li>Gestão do barco</li>
+<li>Gestão administrativa e operacional</li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->

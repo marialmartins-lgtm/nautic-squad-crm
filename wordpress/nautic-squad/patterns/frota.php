@@ -11,11 +11,11 @@
 <div class="wp-block-group ns-hscroll__sticky"><!-- wp:group {"className":"ns-hscroll__head","layout":{"type":"default"}} -->
 <div class="wp-block-group ns-hscroll__head"><!-- wp:group {"layout":{"type":"default"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"className":"ns-label"} -->
-<p class="ns-label">A frota</p>
+<p class="ns-label">A frota — Oeiras &amp; Cascais</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"className":"ns-split"} -->
-<h2 class="wp-block-heading ns-split">Escolhe <em>o teu barco.</em></h2>
+<h2 class="wp-block-heading ns-split">Escolha <em>o seu barco.</em></h2>
 <!-- /wp:heading --></div>
 <!-- /wp:group -->
 

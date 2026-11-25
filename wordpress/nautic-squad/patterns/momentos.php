@@ -1,17 +1,17 @@
 <?php
 /**
- * Title: Momentos (galeria)
+ * Title: Galeria
  * Slug: nautic-squad/momentos
  * Categories: nautic-squad, gallery
  * Description: Galeria em mosaico com revelação das imagens ao scroll.
  */
 ?>
-<!-- wp:group {"tagName":"section","align":"full","anchor":"momentos","className":"ns-section","layout":{"type":"default"}} -->
-<section id="momentos" class="wp-block-group alignfull ns-section"><!-- wp:group {"className":"ns-wrap","layout":{"type":"default"}} -->
+<!-- wp:group {"tagName":"section","align":"full","anchor":"galeria","className":"ns-section","layout":{"type":"default"}} -->
+<section id="galeria" class="wp-block-group alignfull ns-section"><!-- wp:group {"className":"ns-wrap","layout":{"type":"default"}} -->
 <div class="wp-block-group ns-wrap"><!-- wp:group {"className":"ns-gallery-head","layout":{"type":"default"}} -->
 <div class="wp-block-group ns-gallery-head"><!-- wp:group {"layout":{"type":"default"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"className":"ns-label"} -->
-<p class="ns-label">Momentos</p>
+<p class="ns-label">Galeria</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"className":"ns-split"} -->
@@ -20,29 +20,21 @@
 <!-- /wp:group -->
 
 <!-- wp:paragraph -->
-<p><a class="ns-link" href="https://www.instagram.com/nautic.squad/" target="_blank" rel="noreferrer noopener">@nautic.squad</a></p>
+<p><a class="ns-link" href="<?php echo esc_url( nautic_squad_info( 'instagram' ) ); ?>" target="_blank" rel="noreferrer noopener">@nautic.squad</a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"ns-gallery","layout":{"type":"default"}} -->
 <div class="wp-block-group ns-gallery"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"ns-reveal-img"} -->
-<figure class="wp-block-image size-full ns-reveal-img"><img src="<?php echo esc_url( nautic_squad_img( 'momento-1' ) ); ?>" alt="Fim de tarde ao largo"/><figcaption class="wp-element-caption">Fim de tarde ao largo</figcaption></figure>
-<!-- /wp:image -->
-
-<!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"ns-reveal-img"} -->
-<figure class="wp-block-image size-full ns-reveal-img"><img src="<?php echo esc_url( nautic_squad_img( 'momento-2' ) ); ?>" alt="Água transparente"/><figcaption class="wp-element-caption">Água transparente</figcaption></figure>
-<!-- /wp:image -->
-
-<!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"ns-reveal-img"} -->
-<figure class="wp-block-image size-full ns-reveal-img"><img src="<?php echo esc_url( nautic_squad_img( 'momento-3' ) ); ?>" alt="Horizonte aberto"/><figcaption class="wp-element-caption">Horizonte aberto</figcaption></figure>
-<!-- /wp:image -->
-
-<!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"ns-reveal-img"} -->
-<figure class="wp-block-image size-full ns-reveal-img"><img src="<?php echo esc_url( nautic_squad_img( 'momento-4' ) ); ?>" alt="Ondas e vento"/><figcaption class="wp-element-caption">Ondas e vento</figcaption></figure>
-<!-- /wp:image -->
-
-<!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"ns-reveal-img"} -->
-<figure class="wp-block-image size-full ns-reveal-img"><img src="<?php echo esc_url( nautic_squad_img( 'momento-5' ) ); ?>" alt="A bordo"/><figcaption class="wp-element-caption">A bordo</figcaption></figure>
+<figure class="wp-block-image size-full ns-reveal-img"><img src="<?php echo esc_url( nautic_squad_img( 'momento-1' ) ); ?>" alt="OCEANESCAPE, Sicília — Itália, 2021"/><figcaption class="wp-element-caption">OCEANESCAPE, Sicília — Itália, 2021</figcaption></figure>
+<!-- /wp:image --><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"ns-reveal-img"} -->
+<figure class="wp-block-image size-full ns-reveal-img"><img src="<?php echo esc_url( nautic_squad_img( 'momento-2' ) ); ?>" alt="OCEANESCAPE, Rio Tejo, 2022"/><figcaption class="wp-element-caption">OCEANESCAPE, Rio Tejo, 2022</figcaption></figure>
+<!-- /wp:image --><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"ns-reveal-img"} -->
+<figure class="wp-block-image size-full ns-reveal-img"><img src="<?php echo esc_url( nautic_squad_img( 'momento-3' ) ); ?>" alt="FIFTY FIFTY, Marina de Oeiras"/><figcaption class="wp-element-caption">FIFTY FIFTY, Marina de Oeiras</figcaption></figure>
+<!-- /wp:image --><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"ns-reveal-img"} -->
+<figure class="wp-block-image size-full ns-reveal-img"><img src="<?php echo esc_url( nautic_squad_img( 'momento-4' ) ); ?>" alt="OCEANVIEW, La Rochelle — França, 2020"/><figcaption class="wp-element-caption">OCEANVIEW, La Rochelle — França, 2020</figcaption></figure>
+<!-- /wp:image --><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"ns-reveal-img"} -->
+<figure class="wp-block-image size-full ns-reveal-img"><img src="<?php echo esc_url( nautic_squad_img( 'momento-5' ) ); ?>" alt="Pôr do sol a bordo"/><figcaption class="wp-element-caption">Pôr do sol a bordo</figcaption></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></section>

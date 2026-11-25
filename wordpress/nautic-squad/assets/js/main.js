@@ -19,8 +19,10 @@
 	/* Imagens que falham: esconder o ícone partido (fica o fundo escuro) */
 	$$('img').forEach(function (img) {
 		function fail() { img.classList.add('ns-img-failed'); }
-		if (img.complete && img.naturalWidth === 0 && img.getAttribute('src')) fail();
-		else img.addEventListener('error', fail);
+		img.addEventListener('error', fail);
+		window.addEventListener('load', function () {
+			if (img.complete && img.naturalWidth === 0 && img.getAttribute('src') && img.loading !== 'lazy') fail();
+		});
 	});
 
 	/* Imagens de fundo -> camada animável (para zoom/parallax) ------------- */

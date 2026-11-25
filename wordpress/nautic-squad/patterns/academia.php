@@ -10,22 +10,22 @@
 <section class="wp-block-group alignfull ns-cta ns-media"><!-- wp:group {"className":"ns-cta__inner","layout":{"type":"default"}} -->
 <div class="wp-block-group ns-cta__inner"><!-- wp:group {"layout":{"type":"default"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"className":"ns-label reveal"} -->
-<p class="ns-label reveal">Sailing Academy</p>
+<p class="ns-label reveal">Sailing Academy — Marina de Oeiras</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"className":"ns-split"} -->
-<h2 class="wp-block-heading ns-split">Aprende <em>a velejar.</em></h2>
+<h2 class="wp-block-heading ns-split">Aprenda <em>a velejar.</em></h2>
 <!-- /wp:heading --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"reveal","layout":{"type":"default"}} -->
 <div class="wp-block-group reveal"><!-- wp:paragraph -->
-<p>Ainda a dar os primeiros bordos? A bordo do OCEANFUN, um Jeanneau Sun 2500 ágil e fácil de manobrar, ganhas a experiência de que precisas para te tornares sócio.</p>
+<p>A alternativa perfeita para quem quer ganhar experiência prática, adora uma competição ou sonha com passeios tranquilos. A bordo do OCEANFUN, um Jeanneau Sun 2500 leve, ágil e fácil de manobrar.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons -->
 <div class="wp-block-buttons"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/sailing-academy/' ) ); ?>">Conhecer a academia</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/' ) ); ?>sailing-academy/">Saiba mais sobre a Academy</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div>

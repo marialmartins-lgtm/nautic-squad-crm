@@ -1,9 +1,9 @@
 <?php
 /**
- * Title: Manifesto
+ * Title: Manifesto + números
  * Slug: nautic-squad/manifesto
  * Categories: nautic-squad, text
- * Description: Texto grande que se ilumina palavra a palavra com o scroll.
+ * Description: Texto grande que se ilumina palavra a palavra com o scroll, seguido de números do clube.
  */
 ?>
 <!-- wp:group {"tagName":"section","align":"full","anchor":"manifesto","className":"ns-section ns-manifesto","layout":{"type":"default"}} -->
@@ -13,17 +13,11 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"ns-manifesto__text"} -->
-<p class="ns-manifesto__text">Velejar é uma paixão. Mas a falta de tempo e os custos de ter um barco são um obstáculo? Na Nautic Squad, tu escolhes quando sair. Marina, seguro, manutenção e limpeza — deixa connosco.</p>
+<p class="ns-manifesto__text">A Nautic Squad é como um ginásio, mas na água — e para onde pode convidar família e amigos. Paga uma mensalidade, reserva o seu tempo, navega. Sem as responsabilidades de ter barco próprio.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:group {"className":"ns-manifesto__foot","layout":{"type":"default"}} -->
-<div class="wp-block-group ns-manifesto__foot"><!-- wp:paragraph -->
-<p>Um clube para skippers que querem a liberdade de navegar quando quiserem, com conforto e segurança.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-<p>Veleiros nas marinas de Oeiras e de Cascais e a lancha do Power Club, prontos a sair.</p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:group --></div>
+<!-- wp:html -->
+<div class="ns-stats-row reveal-stagger"><div><strong>3</strong><span>clubes: vela, academia e motor</span></div><div><strong>2</strong><span>marinas: Oeiras e Cascais</span></div><div><strong>8</strong><span>sócios por embarcação, em média — para garantir disponibilidade</span></div><div><strong>24h</strong><span>de antecedência chegam para reservar uma saída extra, sem custos</span></div></div>
+<!-- /wp:html --></div>
 <!-- /wp:group --></section>
 <!-- /wp:group -->

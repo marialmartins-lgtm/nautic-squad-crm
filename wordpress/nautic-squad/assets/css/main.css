@@ -105,9 +105,10 @@ a { color: inherit; }
 
 /* Imagens com revelação (clip) */
 .ns-reveal-img { position: relative; overflow: hidden; background: var(--fallback-img); margin: 0; }
-.ns-reveal-img img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.25); transition: transform 2s var(--ease); }
-.ns-js .ns-reveal-img { clip-path: inset(100% 0 0 0); transition: clip-path 1.6s var(--ease-io); }
-.ns-js .ns-reveal-img.is-visible { clip-path: inset(0 0 0 0); }
+.ns-reveal-img img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.25); transition: transform 2s var(--ease), clip-path 1.6s var(--ease-io); }
+/* o recorte fica na imagem (não na figura) para o IntersectionObserver detetar a figura */
+.ns-js .ns-reveal-img img { clip-path: inset(100% 0 0 0); }
+.ns-js .ns-reveal-img.is-visible img { clip-path: inset(0 0 0 0); }
 .ns-reveal-img.is-visible img { transform: scale(1); }
 
 /* Grão de filme + barras de cinema */
@@ -433,7 +434,7 @@ html:not(.ns-js) .ns-loader { display: none; }
 .ns-main .wp-block-post-content > .alignfull { max-width: none; }
 
 /* Editor: tudo visível */
-.editor-styles-wrapper .reveal, .editor-styles-wrapper .ns-reveal-img { opacity: 1 !important; transform: none !important; clip-path: none !important; }
+.editor-styles-wrapper .reveal, .editor-styles-wrapper .ns-reveal-img, .editor-styles-wrapper .ns-reveal-img img { opacity: 1 !important; transform: none !important; clip-path: none !important; }
 
 /* Animações ----------------------------------------------------------------- */
 @keyframes ns-grain { 0%, 100% { transform: translate(0, 0); } 20% { transform: translate(-5%, 3%); } 40% { transform: translate(4%, -6%); } 60% { transform: translate(-3%, 6%); } 80% { transform: translate(6%, 2%); } }
@@ -467,3 +468,51 @@ img.ns-img-failed { visibility: hidden; }
 .ns-team h3 { color: var(--branco) !important; font-size: clamp(2.2rem, 3.6vw, 3.4rem); }
 .ns-team h3 em { color: var(--noite) !important; }
 @media (max-width: 760px) { .ns-team { grid-template-columns: 1fr; gap: 1rem; padding: 2rem 1.6rem; } }
+
+/* ---- Conteúdo real (v3) ---- */
+.ns-logo img { height: 52px; width: auto; transition: height .6s var(--ease); }
+.ns-header.is-scrolled .ns-logo img { height: 42px; }
+.ns-header__meta a { text-decoration: none; }
+.ns-loader__logo { width: 120px; height: auto; margin: 0 auto; animation: ns-fade 1.2s var(--ease) both; }
+@keyframes ns-fade { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+
+/* Números do clube */
+.ns-stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 5rem !important; padding-top: 2.4rem; border-top: 1px solid var(--line); }
+.ns-stats-row div { display: grid; gap: .6rem; align-content: start; }
+.ns-stats-row strong { font: 300 clamp(3rem, 6vw, 5.4rem)/.9 var(--serif); color: var(--turquesa); }
+.ns-stats-row span { font-size: .9rem; color: rgba(231, 243, 244, .65); max-width: 26ch; }
+@media (max-width: 860px) { .ns-stats-row { grid-template-columns: 1fr 1fr; } }
+
+.ns-perks { margin-top: 1.6rem !important; font-size: .92rem; color: rgba(231, 243, 244, .7); max-width: 46ch; line-height: 1.9; }
+.ns-perks strong { color: var(--turquesa); font-weight: 600; }
+
+/* Quem somos */
+.ns-about { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 7vw, 7rem); align-items: center; }
+.ns-about > * { margin: 0; }
+.ns-about__text > * { margin: 0 0 1.4rem; }
+.ns-about__text p:last-child { color: rgba(231, 243, 244, .7); max-width: 46ch; }
+.ns-about__img { aspect-ratio: 4/5; }
+.ns-about__img figcaption { position: absolute; left: 1.2rem; bottom: 1rem; z-index: 2; margin: 0; font-size: .66rem; letter-spacing: .26em; text-transform: uppercase; color: var(--areia); text-shadow: 0 1px 12px rgba(0, 0, 0, .6); }
+@media (max-width: 900px) { .ns-about { grid-template-columns: 1fr; } }
+
+/* Tipos de associação */
+.ns-plan-table { border-top: 1px solid rgba(4, 42, 47, .18); }
+.ns-plan-row { display: grid; grid-template-columns: 1fr .8fr 2fr; gap: 2rem; align-items: baseline; padding: 1.8rem 0; border-bottom: 1px solid rgba(4, 42, 47, .18); transition: padding .6s var(--ease), background-color .4s; }
+.ns-plan-row:hover { padding-left: 1.2rem; background: rgba(255, 255, 255, .45); }
+.ns-plan-row h3 { margin: 0; font-size: clamp(1.8rem, 3vw, 2.8rem); color: var(--noite); }
+.ns-plan-row strong { font-size: .74rem; letter-spacing: .24em; text-transform: uppercase; color: var(--oceano); }
+.ns-plan-row p { margin: 0; color: rgba(4, 42, 47, .75); }
+@media (max-width: 760px) { .ns-plan-row { grid-template-columns: 1fr; gap: .4rem; } }
+.ns-team { grid-template-columns: auto 1fr auto !important; }
+.ns-team .wp-block-button__link { background: var(--branco); color: var(--oceano); }
+.ns-team .wp-block-button__link:hover { color: var(--branco); }
+@media (max-width: 860px) { .ns-team { grid-template-columns: 1fr !important; } }
+
+/* Contactos */
+.ns-quick { display: flex; flex-wrap: wrap; gap: 1.4rem 2rem; margin-top: 2.4rem; padding-top: 1.6rem; border-top: 1px solid var(--line); }
+.ns-quick .ns-link { color: var(--turquesa); }
+.ns-footer__logo img { width: 140px; height: auto; }
+.ns-social { display: flex; gap: .6rem; margin-top: 1.6rem; }
+.ns-social a { width: 42px; height: 42px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 50%; transition: background-color .4s, border-color .4s, color .4s; }
+.ns-social a:hover { background: var(--turquesa); border-color: var(--turquesa); color: var(--branco); }
+.ns-social svg { width: 18px; height: 18px; }

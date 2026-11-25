@@ -42,19 +42,19 @@ function ns_apply_backgrounds( $html ) {
 	);
 }
 
-$sections = array( 'hero', 'manifesto', 'como-funciona', 'frota', 'incluido', 'power-club', 'momentos', 'planos', 'academia', 'faq', 'contacto' );
+$sections = array( 'hero', 'manifesto', 'como-funciona', 'frota', 'incluido', 'power-club', 'quem-somos', 'momentos', 'planos', 'academia', 'faq', 'contacto' );
 
-// Frota estática (no WordPress vem de Frota → Barcos).
+// Frota estática (no WordPress vem de Frota → Barcos). Dados do site atual.
 $boats = array(
-	array( 'vela-1', 'Sailing Club · Oeiras', 'Oceanbliss', 'Jeanneau Sun Odyssey 350', array( 'Vela', 'Cockpit duplo leme', 'Oeiras' ) ),
-	array( 'vela-2', 'Sailing Club · Oeiras', 'Oceanescape', 'Beneteau Oceanis 37 Limited Edition', array( '3 cabines', '2013', 'Oeiras' ) ),
-	array( 'passo-3', 'Sailing Club · Cascais', 'Oceanvibes', 'Dufour 45 Classic', array( '13,67 m', '1998', 'Cascais' ) ),
-	array( 'oceanfun', 'Sailing Academy · Oeiras', 'Oceanfun', 'Jeanneau Sun 2500', array( '7,50 m', 'Academia', 'Oeiras' ) ),
-	array( 'motor-1', 'Power Club · Oeiras', 'Fifty Fifty', 'Quicksilver Activ 875', array( '8,7 m', '12 pessoas', 'Oeiras' ) ),
+	array( 'oceanbliss', 'Sailing Club · Oeiras', 'Oceanbliss', 'Jeanneau Sun Odyssey 350', array( 'Dupla roda de leme', '1,85 m altura livre' ) ),
+	array( 'oceanescape', 'Sailing Club · Oeiras', 'Oceanescape', 'Beneteau Oceanis 37 Limited Edition', array( '3 cabines', '2013' ) ),
+	array( 'oceanvibes', 'Sailing Club · Cascais', 'Oceanvibes', 'Dufour 45 Classic', array( '13,67 m', '1998' ) ),
+	array( 'oceanfun', 'Sailing Academy · Oeiras', 'Oceanfun', 'Jeanneau Sun 2500', array( '7,50 m', 'Ideal para aprender' ) ),
+	array( 'fiftyfifty', 'Power Club · Oeiras', 'Fifty Fifty', 'Quicksilver Activ 875', array( '8,7 m', '12 pessoas' ) ),
 );
 $fleet = '<div class="ns-track">';
 foreach ( $boats as $i => $b ) {
-	$fleet .= '<article class="ns-boat"><figure class="ns-boat__img"><img src="' . nautic_squad_img( $b[0] ) . '" alt="" loading="lazy"></figure>'
+	$fleet .= '<article class="ns-boat"><figure class="ns-boat__img"><img src="' . nautic_squad_img( $b[0] ) . '" alt="' . $b[2] . '" loading="lazy"></figure>'
 		. '<span class="ns-boat__tag">' . $b[1] . '</span><span class="ns-boat__idx">0' . ( $i + 1 ) . '</span>'
 		. '<h3>' . $b[2] . '</h3><p class="ns-boat__model">' . $b[3] . '</p><div class="ns-specs">';
 	foreach ( $b[4] as $s ) {
@@ -62,7 +62,7 @@ foreach ( $boats as $i => $b ) {
 	}
 	$fleet .= '</div><a class="ns-boat__link" href="#contacto" aria-label="' . $b[2] . '"></a></article>';
 }
-$fleet .= '<article class="ns-boat ns-boat--end"><p class="ns-label">Próxima saída</p><h3>O teu lugar <em>a bordo.</em></h3><a class="ns-btn" href="#contacto">Falar connosco</a></article></div>';
+$fleet .= '<article class="ns-boat ns-boat--end"><p class="ns-label">O número de inscrições é limitado</p><h3>Assegure <em>o seu barco.</em></h3><a class="ns-btn" href="#contacto">Agendar visita</a></article></div>';
 
 $body = '';
 foreach ( $sections as $s ) {
@@ -72,20 +72,16 @@ foreach ( $sections as $s ) {
 }
 $footer = ns_render( $theme . '/patterns/footer.php' );
 
-$logo   = nautic_squad_svg( 'logo' );
-$menu   = array( 'como-funciona' => 'Como funciona', 'frota' => 'Frota', 'power-club' => 'Power Club', 'momentos' => 'Momentos', 'planos' => 'Planos', 'contacto' => 'Contacto' );
-$links  = '';
+// Cabeçalho: o mesmo padrão do tema; o bloco Navegação é trocado por um menu estático.
+$menu  = array( 'como-funciona' => 'Sailing Club', 'frota' => 'Frota', 'power-club' => 'Power Club', 'quem-somos' => 'Quem somos', 'galeria' => 'Galeria', 'planos' => 'Associação', 'contacto' => 'Contactos' );
+$links = '';
 foreach ( $menu as $id => $label ) {
 	$links .= '<a href="#' . $id . '"><span>' . $label . '</span></a>';
 }
-$header = '<div class="ns-loader" aria-hidden="true"><div class="ns-loader__inner"><div class="ns-loader__word"><span>Nautic Squad</span></div><div class="ns-loader__bar"></div></div></div><div class="ns-grain" aria-hidden="true"></div>
-<header class="ns-header"><div class="ns-header__inner">
-<a class="ns-logo" href="#">' . $logo . 'Nautic Squad</a>
-<div class="ns-header__right"><span class="ns-header__meta">Oeiras · Cascais</span><div class="wp-block-buttons"><div class="wp-block-button is-style-ghost"><a class="wp-block-button__link" href="#contacto">Ser sócio</a></div></div>
-<button class="ns-menu-btn" data-menu-toggle aria-label="Abrir menu">Menu <i></i></button></div>
-</div></header>
-<div class="ns-overlay" style="--ns-overlay-img:url(\'' . nautic_squad_img( 'passo-3' ) . '\')"><nav class="ns-overlay__nav">' . $links . '</nav>
-<div class="ns-overlay__aside"><p class="ns-label">Marina de Oeiras</p><p>Avenida Marginal, 2780-267 Oeiras<br><a href="tel:+351911924555">+351 911 924 555</a><br><a href="https://www.instagram.com/nautic.squad/">@nautic.squad</a></p></div>
+$header = ns_render( $theme . '/patterns/header.php' );
+$header = preg_replace( '/<!-- wp:navigation .*?<!-- \/wp:navigation -->/s', '<button class="ns-menu-btn" data-menu-toggle aria-label="Abrir menu">Menu <i></i></button>', $header );
+$header .= '<div class="ns-overlay" style="--ns-overlay-img:url(\'' . nautic_squad_img( 'momento-1' ) . '\')"><nav class="ns-overlay__nav">' . $links . '</nav>
+<div class="ns-overlay__aside"><p class="ns-label">Nautic Squad</p><p>Marina de Oeiras · Marina de Cascais<br><a href="tel:+351911924555">911 924 555</a><br><a href="mailto:sales@nauticsquad.com">sales@nauticsquad.com</a></p></div>
 <button class="ns-menu-btn ns-overlay__close" data-menu-toggle aria-label="Fechar menu">Fechar <i></i></button></div>';
 
 $html = $header . '<main class="ns-home">' . $body . '</main>' . $footer;
@@ -101,7 +97,7 @@ $page = '<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nautic Squad — Proposta cinematográfica</title>
+<title>Nautic Squad — Proposta de novo site</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -118,6 +114,16 @@ $page = '<!doctype html>
 </body>
 </html>
 ';
+
+// Embute as imagens (data URI) para a pré-visualização abrir sozinha, num único ficheiro.
+$page = preg_replace_callback(
+	'#\.\./nautic-squad/(assets/img/[a-z0-9-]+\.(jpg|png))#',
+	function ( $m ) use ( $theme ) {
+		$mime = 'png' === $m[2] ? 'image/png' : 'image/jpeg';
+		return 'data:' . $mime . ';base64,' . base64_encode( file_get_contents( $theme . '/' . $m[1] ) );
+	},
+	$page
+);
 
 $out = dirname( __DIR__ ) . '/preview/index.html';
 file_put_contents( $out, $page );

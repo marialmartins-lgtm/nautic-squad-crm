@@ -15,7 +15,7 @@ Tudo editável no editor do WordPress, sem page builders.
 3. **Aparência → Editor → Site → Logótipo**: carregar o logótipo oficial.
 4. **Frota → Adicionar barco**: título, imagem de destaque (vertical 4:5 fica melhor), tipo (Vela/Motor) e a caixa
    "Ficha técnica". Os barcos aparecem sozinhos na faixa horizontal da página inicial e em `/frota`.
-5. Criar as páginas `sailing-academy` e `politica-de-privacidade`.
+5. Criar as páginas `sailing-club`, `sailing-academy`, `power-club` e `politica-de-privacidade` (os padrões "Nautic Squad" no inseridor ajudam a montá-las).
 6. Ver o formulário de contacto: os pedidos chegam ao email de **Definições → Geral**.
 
 ## Fotografias e vídeo
@@ -24,12 +24,12 @@ Tudo editável no editor do WordPress, sem page builders.
 |---|---|
 | Qualquer secção com imagem de fundo (abertura, "Tu navegas", Academia, Contacto) | No editor, selecionar o Grupo → Estilos → **Imagem de fundo** |
 | Imagens normais (passos, Power Club, galeria) | Clicar na imagem → **Substituir** |
-| Sem editor | Colocar ficheiros em `nautic-squad/assets/img/` com o nome do slot: `hero.jpg`, `passo-1.jpg` … `passo-3.jpg`, `incluido.jpg`, `power.jpg`, `momento-1.jpg` … `momento-5.jpg`, `academia.jpg`, `contacto.jpg` |
+| Sem editor | Substituir o ficheiro com o mesmo nome em `nautic-squad/assets/img/`: `hero`, `passo-1..3`, `incluido`, `power`, `quem-somos`, `momento-1..5`, `academia`, `contacto`, `oceanbliss`, `oceanescape`, `oceanvibes`, `oceanfun`, `fiftyfifty` (.jpg) e `logo-branco` / `logo-teal` (.png) |
 | **Vídeo na abertura** | Colocar `nautic-squad/assets/video/hero.mp4` (≈10–20 s, sem som, 1920×1080, < 8 MB). Passa a tocar em loop automaticamente |
 
-> As fotos atuais são **provisórias** (Unsplash, carregadas diretamente do site deles) — não foi possível
-> aceder a www.nauticsquad.com nem verificá-las a partir do ambiente de desenvolvimento. Se alguma não carregar,
-> aparece um fundo azul-escuro no lugar. Devem ser substituídas pelas fotografias da Nautic Squad.
+> As fotografias, o logótipo e os textos foram retirados do site atual **nauticsquad.com** (PT) e otimizados
+> para a web. Algumas fotos do site atual têm resolução baixa (ex.: `hero.jpg` 1263 px, `oceanvibes.jpg` 426 px) —
+> vale a pena substituí-las pelos originais em alta resolução.
 
 ## Efeitos
 
@@ -63,7 +63,8 @@ Tipos de letra: **Cormorant Garamond** (títulos) e **Manrope** (texto), via Goo
 
 ## A confirmar antes de publicar
 
-- Fotografias, vídeo e logótipo oficiais
+- Fotografias em alta resolução e (opcional) vídeo para a abertura
+- Páginas interiores: Sailing Club, Sailing Academy e Power Club (slugs `sailing-club`, `sailing-academy`, `power-club`)
 - Frota (pré-visualização, segundo o site atual): OCEANBLISS (Sun Odyssey 350, Oeiras), OCEANESCAPE (Oceanis 37 LE, Oeiras),
   OCEANVIBES (Dufour 45 Classic, Cascais), OCEANFUN (Jeanneau Sun 2500, Academia), FIFTY FIFTY (Power Club)
 - Preços dos planos Weekday / Weekend / Team e textos da Sailing Academy

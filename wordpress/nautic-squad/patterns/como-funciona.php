@@ -35,11 +35,11 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">Escolhe <em>o teu barco.</em></h3>
+<h3 class="wp-block-heading">Escolha <em>o seu veleiro.</em></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Veleiro ou lancha, decides em que barco queres navegar e quantas saídas queres fazer por mês. O plano adapta-se a ti.</p>
+<p>Escolha o barco e o modelo de associação que melhor se adapta a si, consoante o número de saídas mensais que deseja. O número de inscrições é limitado à disponibilidade de cada barco.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -49,11 +49,11 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">Reserva <em>em segundos.</em></h3>
+<h3 class="wp-block-heading">Agende <em>na aplicação.</em></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Marca as tuas datas na aplicação online, a qualquer hora e onde quer que estejas. Sem telefonemas, sem esperas.</p>
+<p>Reserve pela aplicação web, no telemóvel ou no computador. O dia divide-se em três períodos — manhã (9h–13h), tarde (14h–18h) e noite (19h–08h) — e pode juntar períodos consecutivos até uma semana inteira.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -63,11 +63,11 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">Larga <em>amarras.</em></h3>
+<h3 class="wp-block-heading">Compareça <em>e aproveite.</em></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Chegas à marina e o barco está pronto. Tu só tens de navegar — taxas, seguro, manutenção e limpeza estão incluídos.</p>
+<p>Faça check-in na aplicação, largue amarras e, no fim, check-out. Marina, seguro, manutenção, limpeza, gestão e taxas portuárias estão incluídos na mensalidade.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
